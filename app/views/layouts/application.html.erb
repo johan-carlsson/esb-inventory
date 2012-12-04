@@ -3,12 +3,75 @@
 <head>
   <title>ServiceCatalog</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "redpill_sidebar/redpill_sidebar.css", :media => "all" %>  
+  <%= stylesheet_link_tag    "redpill_table/redpill_table.css", :media => "all" %>  
+  <%= stylesheet_link_tag    "redpill_toolbar/redpill_toolbar.css", :media => "all" %>  
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+
+<body>
+  <div id="wrapper">
+  	<noscript>
+  		<div id="noscript">
+  			<%= "[This web application requires javascript.]" %>
+  		</div>
+  	</noscript>
+  	<div id="right-wrap">
+  		<div id="right">
+				<div id="progress_indicator">
+				<%# 	<%= render :partial => 'shared/progress_indicator' %1> %>
+				</div>
+			  <%= render :partial => "layouts/search" %>
+			<%# <div id="info-logotype"></div> %>
+				<div id="notice">
+				<%= render :partial => 'layouts/notice' %>
+				</div>
+
+			<div id="window">
+				<div class="bottomRightCorner"><div class="bottomLeftCorner"><div class="topRightCorner"><div class="topLeftCorner">
+		  			<div id="content_box">
+							<div id="window-header">
+								<h3><%= render(:partial => 'layouts/window_header') %></h3>
+							</div>	
+		  				<%= yield %>
+		  			</div>
+		  		</div></div></div></div>
+		  	</div>
+  		</div>
+  	</div>
+
+  	<div id="left">
+			<a href="/license.html" target="blank">
+				<div id="logotype"></div>
+			</a>
+
+
+			<%= render :partial => 'layouts/sidebar' %>
+			
+						
+  		<%# <% if DEBUG %1> %>
+				<%# <div id="debug"> %>
+					<%# <%= render :partial => 'layouts/debug' %1> %>
+				<%# </div> %>
+  		<%# <% end %1> %>
+  	</div>
+
+  </div>
+
+	<%# IE6 min-width hack %>
+	 <script type="text/javascript">
+	//<![CDATA[
+	 if (document.body.clientWidth < 980)
+	 {
+	 document.body.style.width = 980;
+	 }
+	//]]>
+	</script>
+ 
+
 
 </body>
 </html>

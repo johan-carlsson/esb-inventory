@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* Buttons css */
+
+.button {
+	float: left;
+	background: transparent url("/assets/buttons/button-left.gif") left top no-repeat;
+	padding: 0px 10px;
+	height: 22px;
+}
+
+.button a {
+	float: left;
+	display: block;
+	background: transparent url("/assets/buttons/button-right.gif") right top no-repeat;
+	*padding: 2px 10px 0 0;
+	padding: 4px 10px 0 0;
+	height: 22px;
+	font-size: 1em;
+	color: #000;
+	text-decoration: none;
+}
+
+div#filter_button {
+	float: right;
+}
+
+#inset_button {
+	float: right;
+	margin: 0pt 10px 10px 0pt;
+}
+
+#new_group .button {
+	margin: 5px 0;
+}
+
+/* predicates plus minus images */
+
+.predicate img {
+	margin-left: 2px;
+	vertical-align: middle;
+	*vertical-align: text-bottom;
+}
+
+input.controller_button {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+div#additional_information_buttons {
+	float: right;
+}
+

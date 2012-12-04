@@ -1,0 +1,5 @@
+<% if controller.action_name == 'show' && respond_to?(:current_resource)  %>
+	<%= current_resource %>
+<% else %>
+	<%= controller.controller_name.titleize %>
+<% end %>

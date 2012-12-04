@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* Tag cloud css */
+
+div#tag_cloud {
+	border: 1px solid #B4B4B4;
+	background-color: #EAEAEA;
+	text-align: center;
+	padding: 5px;
+	line-height: 180%;
+	text-decoration: none;
+}
+
+div#tag_cloud a:link {
+	color: #4967A5;
+	text-decoration: none;
+	font-weight: 100;
+	padding: 0 3px;
+}
+
+div#tag_cloud a:visited {
+	color: #4967A5;
+	text-decoration: none;
+}
+
+div#tag_cloud a:hover {
+	color: #fff;
+	background-color: #4967A5;
+}
+
+div#tag_cloud a.nube1 {
+	margin-left: 6px;
+	font-size: 1em;
+}
+
+div#tag_cloud a.nube2 {
+	margin-left: 6px;
+	font-size: 1.5em;
+}
+
+div#tag_cloud a.nube3 {
+	margin-left: 6px;
+	font-size: 2.0em;
+}
+
+div#tag_cloud a.nube4 {
+	margin-left: 6px;
+	font-size: 2.5em;
+}
+
+div#tag_cloud a.nube5 {
+	margin-left: 6px;
+	font-size: 3.0em;
+}
+
+div#tag_cloud a.nube6 {
+	margin-left: 6px;
+	font-size: 3.5em;
+}

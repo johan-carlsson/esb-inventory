@@ -1,13 +1,128 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+@charset "utf-8";
+/* Aplication css */
+
+@import "message.css";						/* Messages */
+@import "window.css";						/* Window */
+@import "buttons.css";						/* Buttons */
+
+/* Css that acts inside window */
+@import "tabs.css";							/* Tabs menu */
+@import "toolbar.css";						/* Toolbar menu */
+@import "mail.css";							/* Mail function */
+
+@import "show.css";							/* Show */
+@import "edit.css";							/* Edit */
+@import "ticket.css";						/* Ticket */
+@import "election.css";						/* Election */
+@import "tag_cloud.css";					/* Tag cloud */
+@import "search.css";						/* Search boxes and result */
+@import "audits.css";						
+@import "pdf_label_form.css";
+@import "csv_export.css";
+
+
+body {
+	background: transparent url("/assets/application/body_bg.gif") repeat-x top;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 92%;
+	line-height: 160%;
+	margin: 0pt;
+	padding: 0pt;
+	min-width: 1020px;
+	width: 100%;
+	width: expression(document.body.clientWidth < 1020? "1020px": "auto");
+}
+
+div#result {
+	margin: 0;
+	padding: 5px 14px 18px 14px;
+	font-size: 1.0em;
+}
+
+div#wrapper {
+	margin: 0pt auto 0pt 0pt;
+	width: 99%;
+}
+
+div#logotype {
+	background: transparent url("/assets/application/logotype_demo.gif") no-repeat scroll 0%;
+	height: 80px;
+	margin: 0pt 0pt 0pt 10px;
+	width: 188px;
+}
+
+div#info-logotype {
+	background: url("/assets/application/skl-info.gif") no-repeat scroll 0%;
+	position: absolute;
+	top:40px;
+	left:230px;
+	
+	width: 440px;
+	height: 30px;
+}
+
+
+div#right-wrap {
+	float: right;
+	margin-left: -220px;
+	width: 100%;
+}
+
+div#right {
+	margin-left: 220px;
+}
+
+div#content_box {
+	margin-top: 85px;
+}
+
+div#left {
+	float: left;
+	width: 220px;
+}
+
+img { border:none; behavior: url(/javascripts/iepngfix.htc) }  /* IE hack for PNG transparency*/
+
+div#policy, div#group_pdf_report {
+	margin-left:45px;
+}
+
+div#policy a:visited{
+	color:blue;
+}
+
+
+/* No javascript */
+
+div#noscript {
+	background: transparent url("/assets/message/notice.jpg") no-repeat;
+	width: 540px;
+	height: 80px;
+	color: #000;
+	position: absolute;
+	display: block;
+	left: 230px;
+	top: 0px;
+	text-align: center;
+	padding: 30px 30px 0 0;
+	line-height: 18px;
+	font-size: 1.3em;
+	text-decoration: blink;
+}
+
+/* Debugging tool */
+
+div#debug {
+	border:1px solid #999999;
+	margin:5px;
+	position:absolute;
+	top:700px;
+	z-index:-1;
+}
+
+
+/* Clear */
+
+div.clr {
+	clear: both;
+}

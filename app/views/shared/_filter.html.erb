@@ -1,0 +1,7 @@
+<% open||=false %>
+<% open=true if params[:search_for] %>
+<%= redpill_toolbar do |toolbar| %>
+	<li id="filter" >
+		<%= render :partial => "shared/filter_form" %>
+	</li>
+<% end %>

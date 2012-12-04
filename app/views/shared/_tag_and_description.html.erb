@@ -1,0 +1,13 @@
+<tr class="empty">
+	<th>&nbsp;</th>
+	<td>&nbsp;</td>
+	<th>&nbsp;</th>
+	<td>&nbsp;</td>
+</tr>
+
+<tr>
+	<th><%= "Tags".t %>:</th>
+	<td><%= h record.tag_list %></td>
+	<th><%= "Description".t %>:</th>
+	<td><%=simple_format(h(record.description)) %></td>
+</tr>

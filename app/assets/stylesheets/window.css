@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* Main window */
+
+div#window {
+	background-color: #e0e0e0;
+	margin-top: 20px;
+}
+
+/* Corners window */
+
+div.bottomLeftCorner { background: transparent url("../assets/window/bottomLeftCorner.gif") bottom left no-repeat; }
+div.bottomRightCorner { background: transparent url("../assets/window/bottomRightCorner.gif") bottom right no-repeat; }
+div.topLeftCorner { background: transparent url("../assets/window/topLeftCorner.gif") top left no-repeat; }
+div.topRightCorner { background: transparent url("../assets/window/topRightCorner.gif") top right no-repeat;}
+
+/* Corners window */
+
+/* Window header */
+
+div#window-header {
+	margin: 0 40px;
+	padding: 8px 0 0 0;
+}
+
+div#window-header h3 {
+	margin: 0;
+	text-align: center;
+	color: #fff;
+	font-weight: normal;
+}
+
+/* Window header */
+
+/* Window header Links */
+
+div#window-header h3 a:link {
+	margin: 0;
+	text-align: center;
+	color: #eee;
+	text-decoration: none;
+}
+
+div#window-header h3 a:hover {
+	margin: 0;
+	text-align: center;
+	color: #fff;
+	text-decoration: underline;
+}
+
+div#window-header h3 a:visited {
+	margin: 0;
+	text-align: center;
+	color: #eee;
+	text-decoration: none;
+}
+
+/* Window header Links */

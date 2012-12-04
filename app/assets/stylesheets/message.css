@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* Error messages */
+
+#errorExplanation {
+	background-color: #F0F0F0;
+	border: 2px solid red;
+	margin: 5px auto 20px auto;
+	padding: 7px 7px 12px;
+	width: 400px;
+}
+
+#errorExplanation h2 {
+	background-color: #CC0000;
+	color: #FFFFFF;
+	font-weight: bold;
+	margin: -7px;
+	padding: 5px 5px 5px 15px;
+	text-align: left;
+	font-size: 1.4em;
+	line-height: 1.2em;
+}
+
+#errorExplanation p {
+	color: #333333;
+	margin-bottom: 0pt;
+	padding: 5px;
+}
+
+#errorExplanation ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#errorExplanation ul li {
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: square;
+}
+
+.fieldWithErrors {
+	background-color: red;
+	padding: 2px;
+}
+
+/* Error messages */
+
+/* Progress */
+
+#progress_indicator {
+	position: absolute;
+	right: 30px;
+	top: 10px;
+}
+
+/* Progress */
+
+/* Notice */
+
+#notice{
+	*height:0;
+}
+
+#flash {
+	background: transparent url("/assets/message/notice.jpg") no-repeat;
+	width: 540px;
+	height: 80px;
+	color: #000;
+	position: absolute;
+	display: block;
+	left: 230px;
+	top: 0px;
+	text-align: center;
+	padding: 20px 30px 0 0;
+	line-height: 18px;
+}
+
+/* Notice */
+
+.fieldWithErrors {
+  background-color: transparent;
+	padding: none;
+}
+
+.fieldWithErrors input, .fieldWithErrors select, .fieldWithErrors textarea, .fieldWithErrors iframe, .fieldWithErrors table   {
+  border: 2px solid red;
+}
+
+/* Fix for tiny mce mail field*/
+.fieldWithErrors table#email_body_tbl{
+   border: 2px solid red;
+}

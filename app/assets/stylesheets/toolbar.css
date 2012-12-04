@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* Toolbar css */
+
+* html div#table_toolbar_panel {
+	margin: 10px 0 0 0;
+}
+
+div#table_toolbar_panel {
+	margin: 10px 0;
+	*margin: 10px 0 10px 0;	/* IE 6/7 Hack */
+	*padding-top: 10px;		/* IE 6/7 Hack */
+}
+
+div#collection_toolbar {
+	float: left;
+}
+
+div#paginator {
+	float: right;
+	margin-right: 10px;
+}
+
+
+div#object_toolbar, div#jobs_toolbar, div#show_job_toolbar {
+	float: left;
+	margin-left: 10px;
+}
+
+
+ul#cpanel li.paginator_text {
+	line-height:20px;
+}
+

@@ -1,0 +1,3 @@
+page.replace_html 'table', :partial => 'table'
+page.replace_html 'collection_toolbar', :partial => 'shared/collection_toolbar'
+page.replace_html 'paginator', :partial => 'shared/paginator'

@@ -1,0 +1,35 @@
+<% name||=controller.controller_name %>
+<% name.downcase! %>
+<% image ||=  "sidebar/#{name}.png" %>
+<% if controller.action_name == "index" || @show_index_toolbar %>
+	<%= redpill_toolbar do |toolbar| %>
+	<%= toolbar.image(image) %>
+	<%= toolbar.text(name.titlecase) %>
+	<%= toolbar.item(	{:class => :new, :tooltip => "Add" + ' ' + name.singularize + " (#{shortcut_modifier}-n)" },
+										{:action => "new"},
+										{:accesskey => "N"} ,@new_button_disabled) %>
+										
+	<% if controller.respond_to?("csv_export_form") && !(name == "saved_searches" && controller.action_name == "index") %>									
+	<%= toolbar.remote_item({:class => :export, :tooltip => "Export %s csv" % name },
+													{:url => {:action => "csv_export_form"}.reverse_merge(params), :method => :get}.merge(confirm_export_option),
+													{},
+													@edit_button_disabled) %>
+	<% end %>
+	
+
+
+	<% if controller.respond_to?("pdf_label_report_form") && !(name == "saved_searches" && controller.action_name == "index") %>												
+	<%= toolbar.remote_item({:class => :print, :tooltip => "Export %s to pdf for label print out" % name },
+													{:url => {:action => "pdf_label_report_form"}.reverse_merge(params), :method => :get}.merge(confirm_export_option),
+													{},
+													@edit_button_disabled) %>
+																					
+	<% end %>
+	
+	<% end %>
+<% else %>
+<%# CSS FIX %>
+<div id="collection_toolbar" style="height:32px; background: none"></div>
+<% end %>
+
+

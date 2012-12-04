@@ -1,0 +1,5 @@
+/* overrides rule to ensure that the sorting arrows are correctly placed in IE7. */
+table.redpill_table th span.sort {
+	height: 12px;
+  margin-bottom:4px;
+}

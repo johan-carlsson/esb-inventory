@@ -1,0 +1,78 @@
+<% name ||= "Street".t %>
+<% inherited_address ||= nil %>
+
+<tr>
+	<th><%= name %> :</th>
+	<td>
+	  <label class="inherited_address_placeholder"><%= inherited_address && inherited_address.street_line_1 %></label>
+  	<%= f.text_field :street_line_1,{:tabindex => auto_index(LEFT_COLUMN_INDEX_OFFSET), :class => "address" } %>
+	</td>
+	<th><%= "Postalcode".t %>:</th>
+	<td>
+	  <label class="inherited_address_placeholder"><%= inherited_address && inherited_address.postalcode %></label>
+	  <%= f.text_field :postalcode,{:tabindex => auto_index(LEFT_COLUMN_INDEX_OFFSET), :class => "address" } %>
+	</td>
+
+</tr>
+<tr>
+	<th><%= name + ' ' + "line 2".t %> :</th>
+	<td>
+	  <label class="inherited_address_placeholder"><%= inherited_address && inherited_address.street_line_2 %></label>
+	  <%= f.text_field :street_line_2,{:tabindex => auto_index(LEFT_COLUMN_INDEX_OFFSET),:class => "address"} %>
+	</td>
+	<th><%= "City".t %>:</th>
+	<td>
+	  <label class="inherited_address_placeholder"><%= inherited_address && inherited_address.city %></label>
+	  <%= f.text_field :city,{:tabindex => auto_index(LEFT_COLUMN_INDEX_OFFSET),:class => "address"} %>
+	</td>
+</tr>
+<tr>
+	<th><%= name + ' ' + "line 3". t%>:</th>
+	<td>
+	  <label class="inherited_address_placeholder"><%= inherited_address && inherited_address.street_line_3 %></label>
+	  <%= f.text_field :street_line_3,{:tabindex => auto_index(LEFT_COLUMN_INDEX_OFFSET),:class => "address"} %>
+	</td>
+	<th><%= "Country".t %>:</th>
+	<td>
+	  <label class="inherited_address_placeholder"><%= inherited_address && inherited_address.country %></label>
+	  <%= f.text_field :country,{:tabindex => auto_index(LEFT_COLUMN_INDEX_OFFSET),:class => "address"} %>
+	</td>
+</tr>
+
+<script type="text/javascript" charset="utf-8">   
+  function show_inherited_address_information(){
+    jQuery("label.inherited_address_placeholder").each(function(){
+      jQuery(this).show();
+    });
+  }
+
+  function hide_inherited_address_information(){
+    jQuery("label.inherited_address_placeholder").each(function(){
+      jQuery(this).hide();
+    });
+  }
+  
+  function is_address_empty(){
+    return $$("input.address").all(function(e){return e.value== ''})
+  }
+
+  jQuery(document).ready(function() {
+    if(is_address_empty()){
+      show_inherited_address_information();
+    };
+
+    jQuery("input.address").focus(function () {
+      hide_inherited_address_information();
+    });
+    
+    jQuery("label.inherited_address_placeholder").click(function () {
+      $(this).next().focus();
+    });
+
+    jQuery("input.address").blur(function () {
+      if(is_address_empty()){
+        show_inherited_address_information();
+      };
+    });
+  })
+</script>

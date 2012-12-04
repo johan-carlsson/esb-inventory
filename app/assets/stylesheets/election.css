@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* Election css */
+
+table.item, table.election-result {
+	width: 100%;
+	padding: 0;
+}
+
+.election-result th {
+	background: url("/assets/election/table-header.gif") repeat-x top;
+	padding: 0 5px;
+	height: 25px;
+	text-align: left;
+}
+
+.election-result td {
+	background: #F9F9F9;
+	padding: 0 5px;
+	color: #000;
+	text-align:right;
+}
+
+.election-result td.party {
+	text-align: left;
+}
+
+.election-result tr:hover td { 
+	background: url("/assets/election/table-header-sorted.gif") repeat-x top;
+	color: #fff;
+}

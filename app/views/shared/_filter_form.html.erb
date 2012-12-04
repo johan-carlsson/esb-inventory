@@ -1,0 +1,8 @@
+<div id="filter_form">
+	<form name="filter_form" action="" style="display:inline;" >
+		<%= text_field_tag("search_for", params[:search_for],
+		:placeholder => "Filter",:tabindex=> auto_index  , :accesskey => 'F', 
+		:disabled=> @search_field_disabled,:title  => "#{shortcut_modifier}-f",:autocomplete=>"off") %>
+	</form>
+</div>
+<%= render :partial => 'shared/filter_field_observer'%>		

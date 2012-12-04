@@ -1,0 +1,12 @@
+<tr>
+	<th></th><td></td>
+	<th></th><td></td>
+</tr>
+<%= f.text_area :tag_list,{:cols => 27, :rows => 3, :onfocus => "tags_tooltip(this)"} %>
+<%= f.text_area :description,{:cols => 27, :rows => 3, :id  => :tag_input} %>
+
+<tr>
+	<td colspan="4">
+			<%= render(:partial => "shared/tags_tooltip") %>
+	</td>
+</tr>

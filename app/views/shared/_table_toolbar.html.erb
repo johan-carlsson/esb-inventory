@@ -1,0 +1,17 @@
+<% name||=controller.controller_name %>
+<div id="table_toolbar_panel">
+	<div id="collection_toolbar">			
+		<%= render(:partial => 'shared/collection_toolbar',:locals => {:name => name}) %>		
+	</div>
+
+	<div id="filter_toolbar">
+	<%= render :partial => 'shared/filter'  %>
+	</div>
+	
+	<div id="paginator">
+	<%= render :partial => 'shared/paginator' %>
+	</div>
+	
+
+	<div class="clr"></div>	
+</div>

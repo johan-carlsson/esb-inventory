@@ -1,0 +1,8 @@
+page.replace dom_id(current_resource), :partial => 'form',:locals => {:remote => true} 
+
+page.replace_html 'notice', :partial => "layouts/notice"
+page << "fade_flash.delay(4);"
+flash.discard
+
+page.replace_html 'debug', :partial => 'layouts/debug' if DEBUG
+

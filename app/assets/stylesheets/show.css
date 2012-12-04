@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* Show */
+
+table.show a:link {
+	color: #4967A5;
+}
+
+table.show a:visited {
+	color: #4967A5;
+}
+
+table.show a:hover {
+	color: #175be8;
+}
+
+table.show {
+	margin: 0px 0pt 5px;
+}
+
+table.show th {
+	background: #F0F0F0 url("/assets/show/inset-line.gif") repeat-y scroll right center;
+	padding: 2px;
+	text-align:right;
+	width: 25%;
+}
+
+table.show td {
+	background: #F9F9F9 url("/assets/show/inset-line.gif") repeat-y scroll right center;
+	padding: 2px;
+	text-align: left;
+	width: 25%;
+}
+
+div.show {
+	background: #F0F0F0;
+	font-size: 0.8em;
+	line-height: 130%;
+	margin: 7px 14px 0 14px;
+	padding: 0 0 40px 0;
+}

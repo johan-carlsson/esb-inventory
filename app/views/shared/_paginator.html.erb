@@ -1,0 +1,21 @@
+<%= redpill_toolbar do |toolbar| %>
+  <% if @pages%>    
+    <%= toolbar.remote_item({:class => :left, :tooltip => "#{shortcut_modifier}-," },
+								               {:method => :get, :url => {:params => params.merge({:page => @pages.current.previous})} }, 
+										           {:href => url_for(:params => params.merge({:page => @pages.current.previous})), 
+										           :title => "#{shortcut_modifier}-," ,:accesskey => ","}, @pages.current.previous.blank?) %>
+		
+    <%= toolbar.remote_item({:class => :right, :tooltip => "#{shortcut_modifier}-." },
+								               {:method => :get, :url => {:params => params.merge({:page => @pages.current.next})} }, 
+										           {:href => url_for(:params => params.merge({:page => @pages.current.next})),
+										           :title => "#{shortcut_modifier}-." , :accesskey => "."}, @pages.current.next.blank?) %>
+
+		<%= toolbar.text(paginator_text,:id => :paginator_text) %>
+
+	<% else %>
+	  <%= toolbar.disabled_item(:class => "left") %>
+	  <%= toolbar.disabled_item(:class => "right") %>
+	<% end %>
+	
+<% end %>
+

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* Audits Form */
+
+span.change_symbol {
+	background: transparent url("/assets/audits/change.png") center no-repeat;
+	padding: 0px 15px;
+}
+
+div#table table.revisions tr:hover td { 
+background: transparent none;
+color: #000;
+}
+
+div#table table.revisions tr:hover a {
+color: #000;
+}

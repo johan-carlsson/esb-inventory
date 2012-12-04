@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* Edit */
+
+#edit {
+	font-size: 0.8em;
+}
+
+tr.header {
+	display: none;
+}
+
+table.edit {
+	margin: 0px 0pt 5px;
+}
+
+table.edit th {
+	background: #F0F0F0 url("/assets/edit/inset-line.gif") repeat-y scroll right center;
+	padding: 2px;
+	text-align:right;
+	width: 25%;
+}
+
+table.edit td {
+	background: #F9F9F9 url("/assets/edit/inset-line.gif") repeat-y scroll right center;
+	padding: 2px;
+	text-align: left;
+	width: 25%;
+}
+
+form.edit {
+	background: #F0F0F0;
+	font-size: 0.8em;
+	line-height: 130%;
+	margin: 7px 14px 0 14px;
+	padding: 0 0 40px 0;
+}
+
+form.new {
+	background: none;
+	font-size: 0.8em;
+	line-height: 130%;
+	margin: 7px 14px 5px 14px;
+	padding: 0 0 20px 0;
+}
+
+* html form#new_unit {
+	width: 96%;
+}
+
+* html form#new_group {
+	width: 96%;
+}
+
+td div.auto_complete ul li.selected {
+	background-color: #6281C2;
+}
+
+.autocomplete {
+	background: #fff url("../assets/edit/lightbulb.gif") no-repeat right top;
+	padding: 2px 8px;
+}
+
+table.redpill_tabular_form td.footer, table.redpill_tabular_form_reader td.footer, table.redpill_tabular_form tr.header td, table.redpill_tabular_form_reader tr.header td {
+	background: none;
+}
+
+input[type=submit],input[type=button]  {
+	margin-right: 10px;
+}
+
+label.inherited_address_placeholder {
+  color:gray;
+  font-style: italic;
+  padding-left:5px;
+  padding-top:5px;
+  position:absolute;
+  display:none;
+}

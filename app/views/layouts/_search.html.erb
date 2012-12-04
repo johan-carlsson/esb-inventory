@@ -1,0 +1,10 @@
+<div id="search">
+	<div id="search_form">
+		<form name="search_form" action="/search" method="get" style="display:inline;" >
+			<%= text_field_tag("query", params[:query], :placeholder => "Search", 
+																								
+																									:accesskey => 'F', 
+                                                  :disabled=> @search_field_disabled) %>
+		</form>
+	</div>
+</div>
