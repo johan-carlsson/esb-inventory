@@ -1,23 +1,14 @@
-<h1>Listing providers</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @providers.each do |provider| %>
-  <tr>
-    <td><%= provider.name %></td>
-    <td><%= link_to 'Show', provider %></td>
-    <td><%= link_to 'Edit', edit_provider_path(provider) %></td>
-    <td><%= link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% content_for :window_header do %>
+<%= if controller.action_name == "index"
+	"providers"
+	else
+		controller.action_name.titleize
+end %>
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New Provider', new_provider_path %>
+<div id="result">
+	<%= render :partial => 'shared/table_toolbar' %>
+	<div id="table">
+		<%= render :partial => "table" %>	
+	</div>
+</div>

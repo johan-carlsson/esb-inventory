@@ -20,7 +20,6 @@ module FormHelper
     end
 
     object_name = (options[:object_name] || ActionController::RecordIdentifier.singular_class_name(object))
-
     # default options
     html_options = options[:html] || {}
     html_options.reverse_merge!(:id => dom_id(object))
@@ -31,8 +30,8 @@ module FormHelper
     end
     options[:html] = html_options
 
-    #Check if the _erbout hack exists. The _erbout variable was removed in Rails 2.3
-    if eval('defined?(_erbout)', proc)
+    # #Check if the _erbout hack exists. The _erbout variable was removed in Rails 2.3
+    if eval('defined?(_erbout)', proc.binding)
       _erbout = eval('_erbout', proc) #Needed for propagating the proper context to the form_for    
       _erbout = '' if read_only
     end
@@ -42,21 +41,22 @@ module FormHelper
     else
       form_method = :form_for
     end
-
     # We have to use dup because form_for and url_for seems to modify its argument 
-    url= (options[:url] || @template.url_for(record_or_name_or_array.dup))
+    url= (options[:url] || url_for(record_or_name_or_array))
 
-    send form_method,record_or_name_or_array.dup,(options||{}).merge(:builder => Redpill::FormBuilders::TabularFormBuilder) do |tabular_form|
+    send form_method,record_or_name_or_array,(options||{}).merge(:builder => TabularFormBuilder) do |tabular_form|
       tabular_form.read_only = read_only
       tabular_form.remote = remote
       tabular_form.object = object
       tabular_form.url = url
       tabular_form.object_name = object_name
       tabular_form.record_or_name_or_array = record_or_name_or_array
-      concat(tabular_form.error_messages, proc.binding) 
-      concat(tabular_form.begin_table, proc.binding)
-      proc.call(tabular_form)
-      concat(tabular_form.end_table, proc.binding)
+      html=""
+      html+=tabular_form.error_messages.to_s
+      html+=tabular_form.begin_table
+      html+=capture(tabular_form,&proc)
+      html+=tabular_form.end_table
+      html.html_safe
     end    
   end
 
@@ -82,8 +82,8 @@ module FormHelper
 
         args << options
 
-        return add_column_pair(field.to_s.humanize.t+':'+mandatory(field).to_s, super(field, *args)) unless read_only
-        return add_column_pair(field.to_s.humanize.t+':', self.object.send(field.to_s.sub(/_id$/, '')))
+        return add_column_pair(field.to_s.humanize+':'+mandatory(field).to_s, super(field, *args)) unless read_only
+        return add_column_pair(field.to_s.humanize+':', self.object.send(field.to_s.sub(/_id$/, '')))
       end 
     end
 
@@ -100,7 +100,7 @@ module FormHelper
           </span>
         </span>
       HTML
-      add_column_pair(association.to_s.humanize.t+':'+mandatory(association).to_s, @template.belongs_to_auto_completer(object_name, association, method, options, default_tag_options.merge(tag_options), completion_options.merge(default_completion_options))+spinner)
+      add_column_pair(association.to_s.humanize+':'+mandatory(association).to_s, @template.belongs_to_auto_completer(object_name, association, method, options, default_tag_options.merge(tag_options), completion_options.merge(default_completion_options))+spinner)
     end
 
     def initialize(*args)
@@ -117,12 +117,12 @@ module FormHelper
       @current_column = 0
       ret_val = "<table class='redpill_tabular_form#{'_reader' if @read_only}' width='100%' border='0' cellspacing='0' cellpadding='0'>"
       ret_val += '<tr class="header">' if with_header_row
-      return ret_val
+      return ret_val.html_safe
     end
 
     def end_table
       @table_open = false
-      return '</tr></table>'
+      return '</tr></table>'.html_safe
     end
 
     def footer(footer_content)
@@ -139,38 +139,38 @@ module FormHelper
         <tr>
       HTML
       @current_column = 0
-      return return_val
+      return return_val.html_safe
     end
 
     def submit_and_cancel
       tags = submit_tag
       tags += cancel_tag
-      return form_content(tags)
+      return form_content(tags.html_safe)
     end
 
     def submit_and_cancel_buttons
       tags = submit_tag
       tags += cancel_button_tag
-      return form_content(tags)
+      return form_content(tags.html_safe)
     end
 
     def submit_tag
-      @template.submit_tag("Save".t, {:class=> "controller_button",:tabindex => 500, :accesskey => 'S', :title=>"#{@template.shortcut_modifier}-s",:class => "save"})
+      @template.submit_tag("Save", {:class=> "controller_button",:tabindex => 500, :accesskey => 'S', :title=>"#{@template.shortcut_modifier}-s",:class => "save"})
     end
 
     def cancel_tag
       if remote
-        @template.link_to_remote('Cancel'.t, {:url => url, :method => :get,:tabindex => 501, :accesskey => 'Z', :title=>"#{@template.shortcut_modifier}-z",:class => "cancel"})
+        @template.link_to_remote('Cancel', {:url => url, :method => :get,:tabindex => 501, :accesskey => 'Z', :title=>"#{@template.shortcut_modifier}-z",:class => "cancel"})
       else
-        @template.link_to('Cancel'.t, url, :tabindex => 501, :accesskey => 'Z', :title=>"#{@template.shortcut_modifier}-z",:class => "cancel")
+        @template.link_to('Cancel', url, :tabindex => 501, :accesskey => 'Z', :title=>"#{@template.shortcut_modifier}-z",:class => "cancel")
       end
     end
 
     def cancel_button_tag
       if remote
-        @template.button_to_remote('Cancel'.t, {:url => url, :method => :get,:tabindex => 501, :accesskey => 'Z', :title=>"#{@template.shortcut_modifier}-z",:class => "cancel"})
+        @template.button_to_remote('Cancel', {:url => url, :method => :get,:tabindex => 501, :accesskey => 'Z', :title=>"#{@template.shortcut_modifier}-z",:class => "cancel"})
       else
-        @template.button_to('Cancel'.t, '', :tabindex => 501, :accesskey => 'Z', :title=>"#{@template.shortcut_modifier}-z",:class => "cancel",:onclick => "window.location = \"#{url}\";return false")
+        @template.button_to('Cancel', '', :tabindex => 501, :accesskey => 'Z', :title=>"#{@template.shortcut_modifier}-z",:class => "cancel",:onclick => "window.location = \"#{url}\";return false")
       end
     end
 
@@ -199,11 +199,11 @@ module FormHelper
       @current_column %= @number_of_columns
       tags += @template.content_tag(column1_tag, column1) + @template.content_tag(column2_tag, column2)
       tags += new_row if @current_column == 0
-      tags
+      tags.html_safe
     end
 
     def empty_column
-      return add_column_pair('&nbsp;', '&nbsp;')
+      return add_column_pair('&nbsp;'.html_safe, '&nbsp;'.html_safe)
     end
 
     def empty
@@ -219,26 +219,26 @@ module FormHelper
       missing_cols.times do
         tags += empty_column()
       end
-      return tags
+      return tags.html_safe
     end
 
     def error_messages
-      (@template.error_messages_for(object_name)) || ''
+      # (@template.error_messages_for(object_name)) || ''
     end
 
     private
     def mandatory(field)
       # The regular expression /^#{c.to_s}(_id)?$/ is used so <field> matches <field>_id but not <field>_whatever
-      validates_presence_of_columns = (object.class.read_inheritable_attribute(:validates_presence_of_columns)  || [])
-      mandatory = "*" if validates_presence_of_columns.find{|c| /^#{c.to_s}(_id)?$/ =~ field.to_s} 
+      # validates_presence_of_columns = (object.class.read_inheritable_attribute(:validates_presence_of_columns)  || [])
+      # mandatory = "*" if validates_presence_of_columns.find{|c| /^#{c.to_s}(_id)?$/ =~ field.to_s} 
     end
 
     def new_row
-      close_row() + "<tr>\n"
+      close_row() + "<tr>\n".html_safe
     end
 
     def close_row
-      "</tr>\n"
+      "</tr>\n".html_safe
     end
   end
 

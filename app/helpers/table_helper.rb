@@ -1,5 +1,5 @@
 module TableHelper
-  def redpill_table(collection,options={}, &block)
+   def redpill_table(collection,options={}, &block)
     table = Table.new(self,options, collection)
     yield table
     return table.render_table.html_safe
@@ -105,8 +105,8 @@ module TableHelper
         attrs = column_def.map { |key, value| %(#{key}="#{value}" ) }          
         if sortable && !options[:disable_sorting]
           headers += <<-HTML
-              <th #{attrs.to_s}#{sort_class(order)}>
-          #{sort_link(column_name.humanize, order)}
+              <th #{attrs.join(' ').to_s}#{sort_class(order)}>
+                #{sort_link(column_name.humanize, order)}
               </th>
           HTML
         else
@@ -147,5 +147,5 @@ module TableHelper
 
   end 
 
-
+  
 end

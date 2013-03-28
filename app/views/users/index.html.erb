@@ -1,23 +1,14 @@
-<h1>Listing users</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% content_for :window_header do %>
+<%= if controller.action_name == "index"
+	"users"
+	else
+		controller.action_name.titleize
+end %>
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New User', new_user_path %>
+<div id="result">
+	<%= render :partial => 'shared/table_toolbar' %>
+	<div id="table">
+		<%= render :partial => "table" %>	
+	</div>
+</div>

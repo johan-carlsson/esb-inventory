@@ -1,9 +1,9 @@
 <%= redpill_sidebar do |sidebar|  %>
   <%= sidebar.item("Services",services_path) %>
-  <span id="fik_services_sub_items" class="sub_items" style="">
-		  <li class="sub_item selected">
+  <span id="fik_services_sub_items" class="sub_items" style="<%= 'display:none' unless current_controller?(:services)%>">
+    <li class="sub_item <%= "selected" if current_controller?(:services)  %>">
         <a href="http://0.0.0.0:3000/services">
-         <span class="label">FIK Services</span>
+         <span class="label">ESB Services</span>
         </a>
       </li>
 
@@ -18,6 +18,6 @@
   <%= sidebar.item("Consumers",consumers_path) %>
   <%= sidebar.item("Contacts",contacts_path) %>
   <%= sidebar.item("Users",users_path) %>
-  <%= sidebar.item("Roles",roles_path) %>
+  <%= sidebar.item("Sign out",users_path) %>
 <% end %>
 

@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Service.create([{name: 'getPerson'},{name:  "searchEstate"}] )
+Consumer.create([{name:  "HALO"},{name:  "H82"}] )
+Provider.create([{name: "S70"},{name: "KIS"}] )

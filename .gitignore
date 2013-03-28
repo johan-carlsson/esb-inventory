@@ -15,3 +15,7 @@
 /tmp
 
 .DS_Store
+.vimrc
+tags
+.ruby-gemset
+.ruby-version

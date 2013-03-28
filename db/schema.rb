@@ -11,13 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121129194243) do
-
-  create_table "clients", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130326192817) do
 
   create_table "consumers", :force => true do |t|
     t.string   "name"
@@ -32,19 +26,7 @@ ActiveRecord::Schema.define(:version => 20121129194243) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "groups", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "providers", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "roles", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -57,11 +39,17 @@ ActiveRecord::Schema.define(:version => 20121129194243) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "systems", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "subscriptions", :force => true do |t|
+    t.integer  "service_id"
+    t.integer  "consumer_id"
+    t.date     "starts_at"
+    t.date     "ends_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
+
+  add_index "subscriptions", ["consumer_id"], :name => "index_subscriptions_on_consumer_id"
+  add_index "subscriptions", ["service_id"], :name => "index_subscriptions_on_service_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

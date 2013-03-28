@@ -1,16 +1,20 @@
 ServiceCatalog::Application.routes.draw do
+
   resources :contacts
 
-  resources :consumers
+  resources :consumers do 
+    resources :subscriptions, :controller => "consumer_subscriptions"
+  end
 
   resources :providers
 
-  resources :roles
-
   resources :users
 
-  resources :services
-
+  resources :services do
+    resources :subscriptions, :controller => "service_subscriptions"
+  end
+  
+  root :to => 'services#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

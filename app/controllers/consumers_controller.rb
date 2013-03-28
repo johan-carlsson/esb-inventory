@@ -60,7 +60,7 @@ class ConsumersController < ApplicationController
 
     respond_to do |format|
       if @consumer.update_attributes(params[:consumer])
-        format.html { redirect_to @consumer, notice: 'Consumer was successfully updated.' }
+        format.html { redirect_to consumer_subscriptions_url(@consumer), notice: 'Consumer was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

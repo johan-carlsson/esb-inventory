@@ -1,0 +1,3 @@
+class ServiceSubscriptionsController < SubscriptionsController
+  
+end
