@@ -9,6 +9,10 @@
 	  <th><%= "Category" %>:</th>
 		<td><%= service.category %></td>
 	</tr>
+  <tr>
+    <th><%= "Provider" %></th> 
+    <td><%=  link_to(service.provider,provider_url(service.provider)) if service.provider %> </td>
+  </tr>
 </table>
 
 <%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => service.class.to_s.pluralize.downcase, :id => service.id} %>
