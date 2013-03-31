@@ -16,7 +16,7 @@ class ServicesController < ApplicationController
     @service = Service.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { redirect_to service_subscriptions_url(@service) }
       format.json { render json: @service }
     end
   end

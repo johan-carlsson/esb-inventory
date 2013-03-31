@@ -1,7 +1,8 @@
-<div id="unit_tab" class="tab">
+<div id="consumers_tab" class="tab">
 	<ul class="tabs">
+		<%= tab_for("ReadMe", root_path ,{}) %>
 		<%= tab_for("Services", services_path ,{:selected=>true}) %>
-		<%= tab_for("Statistics", consumers_path ,{}) %>
+		<%= tab_for("Statistics", root_path ,{}) %>
 	</ul>
 </div>
 

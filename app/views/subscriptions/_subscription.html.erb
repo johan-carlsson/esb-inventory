@@ -5,12 +5,12 @@
 <table class="show" width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
 	  <th><%= "Service" %>:</th>
-		<td><%= subscription.service %></td>
+		<td><%= link_to(subscription.service,service_url(subscription.service)) %></td>
 	  <th><%= "Consumer" %>:</th>
-		<td><%= subscription.consumer %></td>
+		<td><%= link_to(subscription.consumer,consumer_url(subscription.consumer)) %></td>
 	</tr>
 </table>
-<% end %>
 
 <%= render :partial => 'object_toolbar'  %>
 
+<% end %>

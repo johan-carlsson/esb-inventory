@@ -10,7 +10,7 @@
 		<td></td>
 	</tr>
 </table>
+
+<%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => user.class.to_s.pluralize.downcase, :id => user.id} %>
+
 <% end %>
-
-	<%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => user.class.to_s.pluralize.downcase, :id => user.id} %>
-

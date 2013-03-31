@@ -75,14 +75,14 @@ class ConsumerSubscriptionsController < SubscriptionsController
   end
 
 
-  # DELETE /subscriptions/1
-  # DELETE /subscriptions/1.json
+  # DELETE /consumer/1/subscriptions/1
+  # DELETE /consumer/1/subscriptions/1.json
   def destroy
     @subscription = @consumer.subscriptions.find(params[:id])
     @subscription.destroy
 
     respond_to do |format|
-      format.html { redirect_to consumer_subscriptions_url }
+      format.html { redirect_to subscriptions_url }
       format.json { head :no_content }
     end
   end

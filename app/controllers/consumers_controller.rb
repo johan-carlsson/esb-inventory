@@ -16,7 +16,7 @@ class ConsumersController < ApplicationController
     @consumer = Consumer.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { redirect_to consumer_subscriptions_url(@consumer) }
       format.json { render json: @consumer }
     end
   end

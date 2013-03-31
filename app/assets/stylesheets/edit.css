@@ -28,11 +28,11 @@ table.edit td {
 }
 
 form.edit {
-	background: #F0F0F0;
+	background: none;
 	font-size: 0.8em;
 	line-height: 130%;
 	margin: 7px 14px 0 14px;
-	padding: 0 0 40px 0;
+	padding: 0 0 20px 0;
 }
 
 form.new {
@@ -43,13 +43,6 @@ form.new {
 	padding: 0 0 20px 0;
 }
 
-* html form#new_unit {
-	width: 96%;
-}
-
-* html form#new_group {
-	width: 96%;
-}
 
 td div.auto_complete ul li.selected {
 	background-color: #6281C2;

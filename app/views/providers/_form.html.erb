@@ -1,21 +1,14 @@
-<%= form_for(@provider) do |f| %>
-  <% if @provider.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@provider.errors.count, "error") %> prohibited this provider from being saved:</h2>
+<% remote ||= false %>
+<% dom_id = if  @provider.new_record?
+	"new_service"
+else
+	dom_id(@provider)
+end
+%>
 
-      <ul>
-      <% @provider.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= redpill_tabular_form(@provider,{:object_name => 'provider'},{:remote => remote}) do |f| %> 
+	<%= f.text_field :name %>	
+ <%= f.text_field :identifier %>	 
+	
+	<%= f.submit_and_cancel_buttons %>
 <% end %>

@@ -14,47 +14,60 @@
 ActiveRecord::Schema.define(:version => 20130326192817) do
 
   create_table "consumers", :force => true do |t|
-    t.string   "name"
+    t.string   "name",       :null => false
+    t.string   "identifier"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
+  add_index "consumers", ["name"], :name => "index_consumers_on_name", :unique => true
+
   create_table "contacts", :force => true do |t|
-    t.string   "name"
+    t.string   "name",       :null => false
     t.string   "email"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
+  add_index "contacts", ["name"], :name => "index_contacts_on_name", :unique => true
+
   create_table "providers", :force => true do |t|
-    t.string   "name"
+    t.string   "name",       :null => false
+    t.string   "identifier"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "providers", ["name"], :name => "index_providers_on_name", :unique => true
 
   create_table "services", :force => true do |t|
-    t.string   "name"
-    t.string   "type"
+    t.string   "name",       :null => false
+    t.string   "category"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
+  add_index "services", ["name", "category"], :name => "index_services_on_name_and_category", :unique => true
+
   create_table "subscriptions", :force => true do |t|
-    t.integer  "service_id"
-    t.integer  "consumer_id"
+    t.integer  "service_id",  :null => false
+    t.integer  "consumer_id", :null => false
     t.date     "starts_at"
     t.date     "ends_at"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
+  add_index "subscriptions", ["consumer_id", "service_id"], :name => "index_subscriptions_on_consumer_id_and_service_id", :unique => true
   add_index "subscriptions", ["consumer_id"], :name => "index_subscriptions_on_consumer_id"
   add_index "subscriptions", ["service_id"], :name => "index_subscriptions_on_service_id"
 
   create_table "users", :force => true do |t|
-    t.string   "name"
+    t.string   "name",       :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "users", ["name"], :name => "index_users_on_name", :unique => true
 
 end

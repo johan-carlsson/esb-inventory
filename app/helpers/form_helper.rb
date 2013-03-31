@@ -96,7 +96,7 @@ module FormHelper
       spinner= <<-HTML
         <span class="auto_complete_image">
           <span id="#{association}_#{method}" style="display:none;" class="auto_complete_spinner">
-      #{@template.image_tag("/plugin_assets/redpill_form_builders/images/autocomplete-spinner.gif")}
+      #{@template.image_tag("/assets/redpill_form_builders/images/autocomplete-spinner.gif")}
           </span>
         </span>
       HTML
@@ -224,6 +224,32 @@ module FormHelper
 
     def error_messages
       # (@template.error_messages_for(object_name)) || ''
+      #  <% if @niss.errors.any? %>
+    # <div id="error_explanation">
+    #   <h2><%= pluralize(@niss.errors.count, "error") %> prohibited this niss from being saved:</h2>
+
+    #   <ul>
+    #   <% @niss.errors.full_messages.each do |msg| %>
+    #     <li><%= msg %></li>
+    #   <% end %>
+    #   </ul>
+    # </div>
+  # <% end %>
+      html=''
+      if object.errors.any?
+        error_messages=object.errors.full_messages.map do |msg|
+          @template.content_tag(:li,msg)
+        end.join.html_safe
+
+        html=@template.content_tag(:div,:id => "errorExplanation") do
+            @template.content_tag(:h2,"#{@template.pluralize(object.errors.count, 'error')} prohibited this #{object_name} from being saved") +
+            @template.content_tag(:p) +
+            @template.content_tag(:ul,error_messages)
+        end
+      end
+      return html
+      
+
     end
 
     private

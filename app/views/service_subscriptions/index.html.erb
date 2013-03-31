@@ -2,15 +2,12 @@
 
 <%# render :partial => "window_header" %>
 
-<%= render :partial => '/consumers/consumer' %>
+<%= render :partial => '/services/service' %>
 
-
-<br></br>
-
-<%= render :partial => "consumers/tabs", :locals => {:group => @consumer} %>
+<%= render :partial => "services/tabs", :locals => {:group => @service} %>
 
 <div id="result">
-	<%= render :partial => 'shared/table_toolbar', :locals => {:name => "services"} %>
+	<%= render :partial => 'shared/table_toolbar', :locals => {:name => "consumers"} %>
 		<div id="table">
 			<%= render :partial => "table" %>
 		</div>

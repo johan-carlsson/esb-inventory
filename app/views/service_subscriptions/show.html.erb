@@ -1,15 +1,2 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Service:</b>
-  <%= @subscription.service %>
-</p>
-
-<p>
-  <b>Consumer:</b>
-  <%= @subscription.consumer %>
-</p>
-
-
-<%= link_to 'Edit', edit_subscription_path(@subscription) %> |
-<%= link_to 'Back', subscriptions_path %>
+<%= render :partial => "subscription" %>
+<div>&nbsp;</div>

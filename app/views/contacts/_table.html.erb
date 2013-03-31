@@ -3,5 +3,6 @@
 
 <%= redpill_table(contacts,table_options) do |table| 
 	table.add_column(:name => :name,:width => "50%") { |o| link_to(o.name, polymorphic_url(o)) }
+  table.add_column(:name => :email, :width => "50%",&:email)
 	table.row_linker { |o| polymorphic_url(o) }
 end %>

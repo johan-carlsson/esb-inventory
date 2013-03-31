@@ -6,11 +6,11 @@
 	<tr>
 	  <th><%= "Name" %>:</th>
 		<td><%= service.name %></td>
-		 <th></th>
-		<td></td>
+	  <th><%= "Category" %>:</th>
+		<td><%= service.category %></td>
 	</tr>
 </table>
+
+<%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => service.class.to_s.pluralize.downcase, :id => service.id} %>
+
 <% end %>
-
-	<%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => service.class.to_s.pluralize.downcase, :id => service.id} %>
-

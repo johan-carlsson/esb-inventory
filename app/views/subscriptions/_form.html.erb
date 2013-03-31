@@ -1,25 +1,14 @@
-<%= form_for(@subscription) do |f| %>
-  <% if @subscription.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@subscription.errors.count, "error") %> prohibited this subscription from being saved:</h2>
+<% remote ||= false %>
+<% dom_id = if  @subscription.new_record?
+	"new_service"
+else
+	dom_id(@subscription)
+end
+%>
 
-      <ul>
-      <% @subscription.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :service %><br />
-    <%= f.text_field :service %>
-  </div>
-  <div class="field">
-    <%= f.label :consumer %><br />
-    <%= f.text_field :consumer %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= redpill_tabular_form([@consumer,@subscription],{:object_name => 'subscription'},{:remote => remote}) do |f| %> 
+	<%= f.text_field :name %>	
+ <%= f.text_field :category %>	 
+	
+	<%= f.submit_and_cancel_buttons %>
 <% end %>

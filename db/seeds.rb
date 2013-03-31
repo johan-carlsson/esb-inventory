@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Service.create([{name: 'getPerson'},{name:  "searchEstate"}] )
+Service.create([{name: 'getPerson', category: "Person"},{name:  "searchEstate",category: "Estate"}] )
 Consumer.create([{name:  "HALO"},{name:  "H82"}] )
 Provider.create([{name: "S70"},{name: "KIS"}] )
+Subscription.create([{service_name: "getPerson",consumer_name: "HALO"},{service_name: "searchEstate", consumer_name: "H82"}] )

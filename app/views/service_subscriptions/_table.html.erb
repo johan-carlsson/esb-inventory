@@ -2,6 +2,8 @@
 <% table_options||={} %>
 
 <%= redpill_table(subscriptions,table_options) do |table| 
-	table.add_column(:name => :name,:width => "50%") { |o| link_to(o.name, polymorphic_url(o)) }
-	table.row_linker { |o| polymorphic_url(o) }
+	table.add_column(:name => :name,:width => "50%") { |o| link_to(o.consumer, service_subscription_url(@service,o)) }
+  table.add_column(:name => "id",:width =>"50%") { |o| o.consumer.identifier}
+	table.row_linker { |o|  service_subscription_url(@service,o)}
 end %>
+
