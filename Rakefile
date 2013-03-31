@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-ServiceCatalog::Application.load_tasks
+EsbInventory::Application.load_tasks

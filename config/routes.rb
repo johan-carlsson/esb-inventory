@@ -1,4 +1,4 @@
-ServiceCatalog::Application.routes.draw do
+EsbInventory::Application.routes.draw do
 
   resources :contacts
 
