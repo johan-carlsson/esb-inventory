@@ -41,5 +41,8 @@ group :development do
    gem 'pry'
    gem 'pry-nav'
    gem 'debugger'
+   gem 'better_errors'
+   gem 'binding_of_caller'
+   gem 'meta_request'
 end
 
