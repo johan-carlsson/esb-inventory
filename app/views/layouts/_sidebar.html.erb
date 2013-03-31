@@ -1,6 +1,6 @@
 <%= redpill_sidebar do |sidebar|  %>
   <%= sidebar.item("Services",services_path,:selected => select_services_sidebar_item?) %>
-  <span id="fik_services_sub_items" class="sub_items" style="<%= 'display:none' unless current_controller?(:services)%>">
+  <span id="fik_services_sub_items" class="sub_items" style="<%= 'display:none' %>">
     <li class="sub_item <%= "selected" if false %>">
         <a href="http://0.0.0.0:3000/services">
          <span class="label">ESB Services</span>
