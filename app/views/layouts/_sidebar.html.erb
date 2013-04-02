@@ -20,6 +20,7 @@
   <%# <%= sidebar.item("ReadMe",root_url,:image => "sidebar/case.png") %1> %>
   <%= sidebar.item("Users",users_path) %>
   <%# <%= sidebar.item("Trash","trash", :image => "sidebar/trashes.png") %1> %>
-  <%= sidebar.item("Sign out","sign_out") %>
+  <%= sidebar.item("Sign out",logout_path) if current_user%>
+  <%= sidebar.item("Log in",login_path) if !current_user%>
 <% end %>
 

@@ -1,53 +1,23 @@
-@charset "utf-8";
-/* Login page */
-
-body {
-	background: #efefef;
-	font-family: Arial,Helvetica,sans-serif;
-	font-size: 92%;
+body { font-family:Arial,Helvetica,sans-serif; font-size: smaller; }
+a:link, a:visited { color: #00c; text-decoration: none;}
+h1 {text-align: center; margin-top: 3em;}
+#page { width: 20em; margin: 4em auto 2em auto;}
+label {font-size: 90%; font-style: italic;}
+input[type="text"], input[type="password"] {width: 17em;}
+fieldset { border: 1px solid #aaa; padding: 1em; background: #eee; }
+#notice { 
+	padding: 1em; 
+	margin: 2em 10em; 
+	background: #cfc;
+	border: 1px solid #8f8;
 }
-
-div#login {
-	text-align: center;
-	position: relative;
-	*top: 60px; /* IE 6/7 Hack */
-	top: 100px;
+#footer a { color: inherit; border-bottom: 1px dotted #aaa; }
+#footer { 
+	border-top: 1px solid #ddd;
+	padding: .4em 0;
+	margin: 4em 2em;
+	text-align: right;
+	color: #aaa;
 }
-
-div#forgot_password {
-	margin: 20px;
-	position: relative;
-	*top: 80px;	/* IE 6/7 Hack */
-	top: 100px;
-	text-align: center;
-}
-
-div#application {
-	background: transparent url("/assets/login/login.gif") no-repeat scroll 0%;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	top: 60px;
-	width: 400px;
-	height: 280px;
-}
-
-div#errorExplanation {
-}
-
-div#errorExplanation h2 {
-	display: none;
-}
-
-div#errorExplanation p {
-	display: none;
-}
-
-div#errorExplanation ul li {
-	list-style-image: none;
-	list-style-position: outside;
-	list-style-type: square;
-}
-
-div.fieldWithErrors {
-}
+#logo { text-align: center; margin: 4em 0;}
+#logo img { width: 303px; height: 22px;}

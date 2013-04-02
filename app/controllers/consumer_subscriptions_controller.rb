@@ -1,6 +1,5 @@
 class ConsumerSubscriptionsController < SubscriptionsController
  
-
   before_filter :get_consumer
 
   # GET /service/1/subscriptions

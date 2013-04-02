@@ -1,21 +1,17 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<% remote ||= false %>
+<% dom_id = if  @user.new_record?
+	"new_service"
+else
+	dom_id(@user)
+end
+%>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= redpill_tabular_form(@user,{:object_name => 'user'},{:remote => remote}) do |f| %> 
+	<%= f.text_field :name %>	
+ <%= f.password_field :password %>	 
+ <%= f.password_field :password_confirmation %>	 
+	
+	<%= f.submit_and_cancel_buttons %>
 <% end %>
+
+
