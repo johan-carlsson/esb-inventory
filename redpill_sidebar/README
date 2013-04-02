@@ -1,8 +1,0 @@
-RedpillSidebar
-==============
-
-This is a Sidebar engine for applications developed by Redpill.
-
-Requires the rails engines plugin:
-
-script/plugin install http://svn.rails-engines.org/plugins/engines
