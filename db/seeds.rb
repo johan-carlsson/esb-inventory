@@ -5,7 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Service.create([{name: 'getPerson', category: "Person"},{name:  "searchEstate",category: "Estate"}] )
-Consumer.create([{name:  "HALO"},{name:  "H82"}] )
-Provider.create([{name: "S70"},{name: "KIS"}] )
-Subscription.create([{service_name: "getPerson",consumer_name: "HALO"},{service_name: "searchEstate", consumer_name: "H82"}] )
+Service.create([{name: 'getPerson', category: "Person"},{name:  "searchComputer",category: "Hardware"}] )
+Consumer.create([{name:  "Twitter"},{name:  "MacRumors"}] )
+Provider.create([{name: "Apple"},{name: "Facebook"}] )
+Subscription.create([{service_name: "getPerson",consumer_name: "Twitter"},{service_name: "searchComputer", consumer_name: "MacRumors"}] )
+User.create({:name => "test",:password =>"test",:password_confirmation => "test"})
