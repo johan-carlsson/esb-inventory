@@ -50,10 +50,10 @@ div#wrapper {
 }
 
 div#logotype {
-	background: transparent url("/assets/application/logotype_demo.gif") no-repeat scroll 0%;
+	background: transparent url("/assets/application/logo.png") no-repeat scroll 0%;
 	height: 80px;
 	margin: 0pt 0pt 0pt 10px;
-	width: 188px;
+	width: 200px;
 }
 
 div#info-logotype {
