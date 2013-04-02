@@ -2,10 +2,12 @@ class ConsumersController < ApplicationController
   # GET /consumers
   # GET /consumers.json
   def index
+    @show_csv_export_button=true
     @consumers = Consumer.all
 
     respond_to do |format|
       format.html # index.html.erb
+      format.csv # index.csv.rb
       format.json { render json: @consumers }
     end
   end

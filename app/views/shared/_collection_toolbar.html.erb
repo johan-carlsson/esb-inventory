@@ -9,22 +9,15 @@
 										{:action => "new"},
 										{:accesskey => "N"} ,@new_button_disabled) %>
 										
-	<% if controller.respond_to?("csv_export_form") && !(name == "saved_searches" && controller.action_name == "index") %>									
-	<%= toolbar.remote_item({:class => :export, :tooltip => "Export %s csv" % name },
-													{:url => {:action => "csv_export_form"}.reverse_merge(params), :method => :get}.merge(confirm_export_option),
+	<% if @show_csv_export_button %>									
+	<%= toolbar.item({:class => :export, :tooltip => "Export %s csv" % name },
+                   {:format => :csv},
 													{},
-													@edit_button_disabled) %>
+													@csv_export_button_disabled) %>
 	<% end %>
 	
 
 
-	<% if controller.respond_to?("pdf_label_report_form") && !(name == "saved_searches" && controller.action_name == "index") %>												
-	<%= toolbar.remote_item({:class => :print, :tooltip => "Export %s to pdf for label print out" % name },
-													{:url => {:action => "pdf_label_report_form"}.reverse_merge(params), :method => :get}.merge(confirm_export_option),
-													{},
-													@edit_button_disabled) %>
-																					
-	<% end %>
 	
 	<% end %>
 <% else %>
