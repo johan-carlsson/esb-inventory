@@ -3,9 +3,10 @@ class ServicesController < ApplicationController
   # GET /services.json
   def index
     @services = Service.all
-
+    @show_csv_export_button=true
     respond_to do |format|
       format.html # index.html.erb
+      format.csv # index.csv.rb
       format.json { render json: @services }
     end
   end
