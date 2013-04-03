@@ -1,6 +1,18 @@
 /*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
  *= require jquery.ui.all
  */
+
 @charset "utf-8";
 
 
@@ -27,7 +39,7 @@
 
 
 body {
-	background: transparent url("/assets/application/body_bg.gif") repeat-x top;
+	background: transparent image-url("/assets/application/body_bg.gif") repeat-x top;
 	font-family: Arial,Helvetica,sans-serif;
 	font-size: 92%;
 	line-height: 160%;
@@ -50,14 +62,14 @@ div#wrapper {
 }
 
 div#logotype {
-	background: transparent url("/assets/application/esb_inventory.gif") no-repeat scroll 0%;
+	background: transparent image-url("/assets/application/esb_inventory.gif") no-repeat scroll 0%;
 	height: 80px;
 	margin: 0pt 0pt 0pt 10px;
 	width: 200px;
 }
 
 div#info-logotype {
-	background: url("/assets/application/skl-info.gif") no-repeat scroll 0%;
+	background: image-url("/assets/application/skl-info.gif") no-repeat scroll 0%;
 	position: absolute;
 	top:40px;
 	left:230px;
@@ -100,7 +112,7 @@ div#policy a:visited{
 /* No javascript */
 
 div#noscript {
-	background: transparent url("/assets/message/notice.jpg") no-repeat;
+	background: transparent image-url("/assets/message/notice.jpg") no-repeat;
 	width: 540px;
 	height: 80px;
 	color: #000;

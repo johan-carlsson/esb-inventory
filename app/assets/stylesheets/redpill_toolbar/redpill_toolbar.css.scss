@@ -1,0 +1,174 @@
+#table_toolbar_panel {
+	margin: 10px 0;
+	*margin: 10px 0 0 0;	/* IE 6/7 Hack */
+	*padding-top: 10px;		/* IE 6/7 Hack */
+}
+
+div.toolbar_wrapper {
+  height: 22px;
+  background: image-url("/assets/redpill_toolbar/toolbar_left.gif") no-repeat top left;
+	float:left;
+}
+
+ul.toolbar {
+	float: left;
+	background: image-url("/assets/redpill_toolbar/toolbar_right.gif") no-repeat top right;
+	display: block;
+	list-style: none;
+	padding: 0 12px 0 11px;
+	margin: 0;
+}
+
+ul.toolbar li {
+	float: left;
+	overflow: hidden;
+	height: 22px;
+}
+
+ul.toolbar li a {
+	float: left;
+	overflow: hidden;
+	padding: 11px 18px;
+}
+
+ul.toolbar li.toolbar_item_text {
+	background: image-url("/assets/redpill_toolbar/toolbar_background.gif") repeat-x top;
+	padding: 1px 10px 0px 5px;
+	width:auto;
+	font-size:13px;
+	line-height:20px;
+}
+
+ul.toolbar span {
+	float: left;
+	background: image-url("/assets/redpill_toolbar/toolbar_background.gif") repeat-x top;
+	padding: 0;
+}
+
+ul.toolbar li.image {
+	background: image-url("/assets/redpill_toolbar/toolbar_background.gif") repeat-x top;
+	padding: 0;
+}
+
+#toolbar img {
+	width: 32px;
+	height: 32px;
+}
+
+
+/*Icons*/
+ul.toolbar li.cloud a {
+	background: image-url("/assets/redpill_toolbar/cloud.gif");
+}
+
+ul.toolbar li.delete a {
+	background: image-url("/assets/redpill_toolbar/delete.gif");
+}
+
+ul.toolbar li.get a {
+	background: image-url("/assets/redpill_toolbar/download.gif");
+}
+
+ul.toolbar li.edit a {
+	background: image-url("/assets/redpill_toolbar/edit.gif");
+}
+
+ul.toolbar li.empty a {
+	background: image-url("/assets/redpill_toolbar/emty.gif");
+}
+
+ul.toolbar li.list a {
+	background: image-url("/assets/redpill_toolbar/list.gif");
+}
+
+ul.toolbar li.new a {
+	background: image-url("/assets/redpill_toolbar/new.gif");
+}
+
+ul.toolbar li.restore a {
+	background: image-url("/assets/redpill_toolbar/recycle.gif");
+}
+
+ul.toolbar li.vcard a {
+	background: image-url("/assets/redpill_toolbar/vcard.gif");
+}
+
+ul.toolbar li.pdf a {
+	background: image-url("/assets/redpill_toolbar/pdf.gif");
+}
+
+ul.toolbar li.tree a {
+	background: image-url("/assets/redpill_toolbar/tree.gif");
+}
+
+ul.toolbar li.table a {
+	background: image-url("/assets/redpill_toolbar/table.gif");
+}
+
+ul.toolbar li.left a {
+	background: image-url("/assets/redpill_toolbar/left.gif");
+}
+
+ul.toolbar li.right a {
+	background: image-url("/assets/redpill_toolbar/right.gif");
+}
+
+ul.toolbar li.export a {
+		background: image-url("/assets/redpill_toolbar/export.gif");
+}
+
+ul.toolbar li.print a {
+		background: image-url("/assets/redpill_toolbar/print.gif");
+}
+
+ul.toolbar li.send a {
+		background: image-url("/assets/redpill_toolbar/send.gif");
+}
+
+ul.toolbar li.email a {
+		background: image-url("/assets/redpill_toolbar/send.gif");
+}
+
+ul.toolbar li.reminder a {
+		background: image-url("/assets/redpill_toolbar/reminder.gif");
+}
+
+ul.toolbar li.revised a {
+		background: image-url("/assets/redpill_toolbar/revised.gif");
+}
+
+ul.toolbar li.send_test a {
+		background: image-url("/assets/redpill_toolbar/send_test.gif");
+}
+
+ul.toolbar li.envelope_csv a {
+	background: image-url("/assets/redpill_toolbar/envelope_csv.gif");
+}
+
+ul.toolbar li.filter a {
+	background: url("/assets/redpill_toolbar/filter.gif");
+	padding: 11px 22px;
+}
+
+
+ul.toolbar li.paginator_text {
+	background: url("/assets/toolbar/cpanel_bg.gif") repeat-x top;
+	padding: 0 5px;
+	width: auto;
+	line-height: 22px;
+}
+
+
+ul.toolbar li a:hover {
+	background-position: 0 44px;
+}
+
+ul.toolbar li a.disabled, span.disabled {
+	background-position: 0 22px;
+}
+
+ul.toolbar li a.selected {
+	background-position: 0 44px;
+}
+
+

@@ -39,18 +39,18 @@ p.label_preview {
 }
 
 div.row_item_bottom_left { 
-	background: transparent url("../assets/pdf_label_form/row_item_bottom_left.gif") bottom left no-repeat; 
+	background: transparent image-url("../assets/pdf_label_form/row_item_bottom_left.gif") bottom left no-repeat; 
 	*height: 1%;
 }
 div.row_item_bottom_right { 
-	background: transparent url("../assets/pdf_label_form/row_item_bottom_right.gif") bottom right no-repeat;
+	background: transparent image-url("../assets/pdf_label_form/row_item_bottom_right.gif") bottom right no-repeat;
 }
 div.row_item_top_left { 
-	background: transparent url("../assets/pdf_label_form/row_item_top_left.gif") top left no-repeat; 
+	background: transparent image-url("../assets/pdf_label_form/row_item_top_left.gif") top left no-repeat; 
 	padding: 10px 10px 14px 10px;
 }
 div.row_item_top_right { 
-	background: transparent url("../assets/pdf_label_form/row_item_top_right.gif") top right no-repeat;
+	background: transparent image-url("../assets/pdf_label_form/row_item_top_right.gif") top right no-repeat;
 }
 
 a.remove_label_row img {

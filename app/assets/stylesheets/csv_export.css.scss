@@ -27,7 +27,7 @@ div#csv_export_dialog{
 
 li.csv_sortable_column{
   list-style-type: none;
-  background:transparent url("../assets/csv_export/row_background.gif") repeat-x scroll;
+  background:transparent image-url("../assets/csv_export/row_background.gif") repeat-x scroll;
   font-size: 80%;
   height:19px;
   margin:0;
@@ -83,16 +83,16 @@ h3.export_csv_hint {
 }
 
 div.export_column_bottom_left {
-  background: transparent url("../assets/csv_export/export_column_bottom_left.gif") bottom left no-repeat; 
+  background: transparent image-url("../assets/csv_export/export_column_bottom_left.gif") bottom left no-repeat; 
 }
 div.export_column_bottom_right { 
-  background: transparent url("../assets/csv_export/export_column_bottom_right.gif") bottom right no-repeat;
+  background: transparent image-url("../assets/csv_export/export_column_bottom_right.gif") bottom right no-repeat;
 }
 div.export_column_top_left { 
-  background: transparent url("../assets/csv_export/export_column_top_left.gif") top left no-repeat; 
+  background: transparent image-url("../assets/csv_export/export_column_top_left.gif") top left no-repeat; 
   *padding: 4px 4px 14px 10px;
   padding: 4px 4px 11px 10px;
 }
 div.export_column_top_right { 
-  background: transparent url("../assets/csv_export/export_column_top_right.gif") top right no-repeat;
+  background: transparent image-url("../assets/csv_export/export_column_top_right.gif") top right no-repeat;
 }

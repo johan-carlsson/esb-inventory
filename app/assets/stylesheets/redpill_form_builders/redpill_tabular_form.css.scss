@@ -5,14 +5,14 @@ table.redpill_tabular_form tr.header th {
 }
 
 table.redpill_tabular_form th, table.redpill_tabular_form_reader th {
-	background:#EAEAEA url(/assets/redpill_form_builders/inset-line.gif) repeat-y scroll right center;
+	background:#EAEAEA image-url("/assets/redpill_form_builders/inset-line.gif") repeat-y scroll right center;
 	padding:2px;
 	text-align:right;
 	width:20%;
 }
 
 table.redpill_tabular_form td, table.redpill_tabular_form_reader td {
-	background:#EAEAEA url(/assets/redpill_form_builders/inset-line.gif) repeat-y scroll right center;
+	background:#EAEAEA image-url("/assets/redpill_form_builders/inset-line.gif") repeat-y scroll right center;
 	padding:2px;
 	text-align:left;
 	width:30%;
@@ -28,7 +28,7 @@ table.redpill_tabular_form tr.header td, table.redpill_tabular_form_reader tr.he
 }
 
 table.redpill_tabular_form_reader td {
-	background:#FFFFFF url(/assets/redpill_form_builders/inset-line.gif) repeat-y scroll right center;
+	background:#FFFFFF image-url("/assets/redpill_form_builders/inset-line.gif") repeat-y scroll right center;
 }
 
 table.redpill_tabular_form input.save{
@@ -36,7 +36,7 @@ table.redpill_tabular_form input.save{
 }
 
 .ui-autocomplete-input {
-	background: #fff url(/assets/redpill_form_builders/lightbulb.gif) no-repeat right top;
+	background: #fff image-url("/assets/redpill_form_builders/lightbulb.gif") no-repeat right top;
 	padding: 2px 8px;
 }
 
