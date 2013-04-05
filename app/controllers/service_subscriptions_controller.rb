@@ -79,7 +79,7 @@ class ServiceSubscriptionsController < SubscriptionsController
     @subscription.destroy
 
     respond_to do |format|
-      format.html { redirect_to subscriptions_url }
+      format.html { redirect_to service_subscriptions_url(@service) }
       format.json { head :no_content }
     end
   end
