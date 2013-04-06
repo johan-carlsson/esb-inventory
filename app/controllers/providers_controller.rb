@@ -16,7 +16,7 @@ class ProvidersController < ApplicationController
     @provider = Provider.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { redirect_to provider_services_url(@provider) } 
       format.json { render json: @provider }
     end
   end
@@ -79,5 +79,16 @@ class ProvidersController < ApplicationController
       format.html { redirect_to providers_url }
       format.json { head :no_content }
     end
+  end
+
+
+  def services
+    @show_index_toolbar=true
+    @provider = Provider.find(params[:provider_id])
+    @services=@provider.services.order(:name)
+    respond_to do |format|
+      format.html # services.html.erb
+      format.json { render json: @services }
+    end 
   end
 end

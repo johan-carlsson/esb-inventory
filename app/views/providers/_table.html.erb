@@ -2,7 +2,7 @@
 <% table_options||={} %>
 
 <%= redpill_table(providers,table_options) do |table| 
-	table.add_column(:name => :name,:width => "50%") { |o| link_to(o.name, polymorphic_url(o)) }
+	table.add_column(:name => :name,:width => "50%") { |o| link_to(o.name, provider_services_url(o)) }
   table.add_column(:name => "id", :order => "providers.identifier", :width => "50%",&:identifier)
-	table.row_linker { |o| polymorphic_url(o) }
+	table.row_linker { |o| provider_services_url(o) }
 end %>

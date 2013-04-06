@@ -1,13 +1,17 @@
 <% name||=controller.controller_name %>
+<% show_new_button=true if show_new_button!=false %>
+<% show_csv_export_button=true if show_csv_export_button!=false %>
 <% name.downcase! %>
 <% image ||=  "sidebar/#{name}.png" %>
 <% if controller.action_name == "index" || @show_index_toolbar %>
 	<%= redpill_toolbar do |toolbar| %>
 	<%= toolbar.image(image) %>
 	<%= toolbar.text(name.titlecase) %>
+  <% if show_new_button %>
 	<%= toolbar.item(	{:class => :new, :tooltip => "Add" + ' ' + name.singularize + " (#{shortcut_modifier}-n)" },
 										{:action => "new"},
-										{:accesskey => "N"} ,@new_button_disabled) %>
+                      {:accesskey => "N"} ,@new_button_disabled) %>
+  <% end %>
 										
 	<% if @show_csv_export_button %>									
 	<%= toolbar.item({:class => :export, :tooltip => "Export %s csv" % name },

@@ -1,0 +1,12 @@
+<%# render :partial => "window_header" %>
+
+<%= render :partial => '/providers/provider' %>
+
+<%= render :partial => "providers/tabs" %>
+
+<div id="result">
+  <%= render :partial => 'shared/table_toolbar', :locals => {:name => "services",:show_new_button => false} %>
+		<div id="table">
+			<%= render :partial => "services/table" %>
+		</div>
+</div>

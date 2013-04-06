@@ -11,7 +11,9 @@ EsbInventory::Application.routes.draw do
     resources :subscriptions, :controller => "consumer_subscriptions"
   end
 
-  resources :providers
+  resources :providers do
+    get "services"
+  end
 
   resources :users
 
