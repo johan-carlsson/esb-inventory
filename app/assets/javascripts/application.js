@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require_tree .
 //= require jquery.ui.autocomplete
+//= require jquery.ui.datepicker
+
+jQuery(document).ready(function($) {
+    $( ".datepicker" ).datepicker({ dateFormat: "yy-mm-dd" });
+});

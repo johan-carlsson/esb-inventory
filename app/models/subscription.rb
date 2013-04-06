@@ -5,7 +5,7 @@ class Subscription < ActiveRecord::Base
   validates_uniqueness_of :service_id, :scope => :consumer_id, :message => "already has a subscription for this consumer"
   validates_presence_of :consumer_id,:service_id
 
-  attr_accessible :service_name,:consumer_name
+  attr_accessible :service_name,:consumer_name,:starts_at,:ends_at
 
   def consumer_name
     self.consumer.try(:name)

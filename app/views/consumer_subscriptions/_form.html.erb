@@ -8,5 +8,8 @@ end
 
 <%= redpill_tabular_form([@consumer,@subscription],{:object_name => 'subscription'},{:remote => remote}) do |f| %> 
   <%= f.text_field :service_name, data: {autocomplete_source: Service.order(:name).map(&:name)} %>
+  <%= f.empty_column %>
+  <%= f.text_field :starts_at, :class => "datepicker" %>
+  <%= f.text_field :ends_at, :class => "datepicker" %>
 	<%= f.submit_and_cancel_buttons %>
 <% end %>

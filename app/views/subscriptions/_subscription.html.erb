@@ -9,6 +9,12 @@
 	  <th><%= "Consumer" %>:</th>
 		<td><%= link_to(subscription.consumer,consumer_url(subscription.consumer)) %></td>
 	</tr>
+  <tr>
+	  <th><%= "Starts at" %>:</th>
+		<td><%= subscription.starts_at %></td>
+	  <th><%= "Ends at" %>:</th>
+    <td><%= subscription.ends_at %></td>
+  </tr>
 </table>
 
 <%= render :partial => 'object_toolbar'  %>
