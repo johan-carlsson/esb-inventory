@@ -2,7 +2,7 @@ class ProvidersController < ApplicationController
   # GET /providers
   # GET /providers.json
   def index
-    @providers = Provider.all
+    @providers = Provider.order(:name).all
 
     respond_to do |format|
       format.html # index.html.erb
