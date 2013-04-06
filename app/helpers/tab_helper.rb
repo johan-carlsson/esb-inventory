@@ -4,7 +4,11 @@ module TabHelper
       return unless access_authorized_to_url?(options,html_options)
     end
 
-    klass = if (current_page?(options) || html_options[:selected])
+   klass = if html_options[:selected]==false
+              'tab'
+            elsif html_options[:selected]==true
+              'selected_tab'
+            elsif (current_page?(options))
               'selected_tab'
             else
               'tab'
