@@ -15,7 +15,7 @@
 /tmp
 
 /config/database.yml
-
+/public/assets/
 .DS_Store
 .vimrc
 tags
