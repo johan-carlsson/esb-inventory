@@ -57,15 +57,6 @@ div#logotype {
 	width: 200px;
 }
 
-div#info-logotype {
-	background: image-url("application/skl-info.gif") no-repeat scroll 0%;
-	position: absolute;
-	top:40px;
-	left:230px;
-	
-	width: 440px;
-	height: 30px;
-}
 
 
 div#right-wrap {
@@ -134,27 +125,4 @@ div.clr {
 }
 
 
-/* ul.ui-autocomplete { */
-/*   position: absolute; */
-/*   list-style: none; */
-/*   margin: 0; */
-/*   padding: 0; */
-/*   border: solid 1px #999; */
-/*   cursor: default; */
-/* } */
-/* ul.ui-autocomplete li { */
-/*     background-color: #FFF; */
-/*     border-top: solid 1px #DDD; */
-/*     margin: 0; */
-/*     padding: 0; */
-/* } */
-/* ul.ui-autocomplete a { */
-/*       color: #000; */
-/*       display: block; */
-/*       padding: 3px; */
-/* } */
-/* ul.ui-autocomplete a.ui-state-hover, a.ui-state-active { */
-/*       background-color: #FFFCB2; */
-/* } */
 
-.ui-helper-hidden-accessible { display:none; }
