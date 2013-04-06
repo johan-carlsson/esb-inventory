@@ -13,6 +13,7 @@ EsbInventory::Application.routes.draw do
 
   resources :providers do
     get "services"
+    get "consumers"
   end
 
   resources :users

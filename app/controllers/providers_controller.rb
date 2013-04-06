@@ -81,11 +81,25 @@ class ProvidersController < ApplicationController
     end
   end
 
-
+  # GET /providers/1/services
+  # GET /providers/1/services.json
   def services
     @show_index_toolbar=true
     @provider = Provider.find(params[:provider_id])
     @services=@provider.services.order(:name)
+    respond_to do |format|
+      format.html # services.html.erb
+      format.json { render json: @services }
+    end 
+  end
+
+
+  # GET /providers/1/consumers
+  # GET /providers/1/consumers.json
+  def consumers
+    @show_index_toolbar=true
+    @provider = Provider.find(params[:provider_id])
+    @consumers=@provider.consumers.order(:name)
     respond_to do |format|
       format.html # services.html.erb
       format.json { render json: @services }
