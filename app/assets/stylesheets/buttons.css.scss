@@ -3,7 +3,7 @@
 
 .button {
 	float: left;
-	background: transparent image-url("/assets/buttons/button-left.gif") left top no-repeat;
+	background: transparent image-url("buttons/button-left.gif") left top no-repeat;
 	padding: 0px 10px;
 	height: 22px;
 }
@@ -11,7 +11,7 @@
 .button a {
 	float: left;
 	display: block;
-	background: transparent image-url("/assets/buttons/button-right.gif") right top no-repeat;
+	background: transparent image-url("buttons/button-right.gif") right top no-repeat;
 	*padding: 2px 10px 0 0;
 	padding: 4px 10px 0 0;
 	height: 22px;

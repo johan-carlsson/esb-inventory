@@ -23,7 +23,7 @@
 }
 
 #table table th {
-	background: image-url("/assets/redpill_table/header.gif") repeat-x top;
+	background: image-url("redpill_table/header.gif") repeat-x top;
 	padding: 0 5px;
 	height: 24px;
 	text-align: left;
@@ -35,11 +35,11 @@
 }
 
 #table table th.sortup, #table table th.sortdown {
-	background: image-url("/assets/redpill_table/header-sorted.gif") repeat-x top;
+	background: image-url("redpill_table/header-sorted.gif") repeat-x top;
 }
 
 #table table.edit th {
-	background: #EAEAEA image-url("/assets/redpill_table/inset-line.gif") repeat-y scroll right center;
+	background: #EAEAEA image-url("redpill_table/inset-line.gif") repeat-y scroll right center;
 }
 
 #table table th a {
@@ -53,7 +53,7 @@
 }
 
 #table tr:hover td { 
-	background: image-url("/assets/redpill_table/row-hover.gif") repeat-x top;
+	background: image-url("redpill_table/row-hover.gif") repeat-x top;
 	color: #fff;
 }
 
@@ -62,16 +62,16 @@ color: #fff;
 }
 
 #table table th.unsorted a {
-	background: transparent image-url('/assets/redpill_table/unsort.gif') no-repeat right;
+	background: transparent image-url('redpill_table/unsort.gif') no-repeat right;
 }
 
 #table table th.sortup a {
-	background: transparent image-url('/assets/redpill_table/sortup.gif') no-repeat right;
+	background: transparent image-url('redpill_table/sortup.gif') no-repeat right;
 	color: #fff;
 }
 
 #table table th.sortdown a {
-	background: transparent image-url('/plugin_assets/redpill_table/sortdown.gif') no-repeat right;
+	background: transparent image-url('redpill_table/sortdown.gif') no-repeat right;
 	color: #fff;
 }
 

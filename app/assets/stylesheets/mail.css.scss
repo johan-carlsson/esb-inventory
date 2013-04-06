@@ -46,7 +46,7 @@ span.attachment_filename{
 }
 
 span.remove_attachment_icon{
-  background-image: image-url("/assets/email/remove.gif");
+  background-image: image-url("email/remove.gif");
   background-repeat: no-repeat;
   height: 18px;
   width: 18px;
@@ -57,7 +57,7 @@ span.remove_attachment_icon{
 }
 
 span.attachment_file_icon{
-  background-image: image-url("/assets/email/file.png");
+  background-image: image-url("email/file.png");
   background-repeat: no-repeat;
   height: 18px;
   width: 18px;
@@ -68,7 +68,7 @@ span.attachment_file_icon{
 
 
 div#paperclip{
-  background-image: image-url("/assets/email/paperclip.png");
+  background-image: image-url("email/paperclip.png");
   background-repeat: no-repeat;
   height: 18px;
   width: 18px;

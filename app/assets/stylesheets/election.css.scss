@@ -7,7 +7,7 @@ table.item, table.election-result {
 }
 
 .election-result th {
-	background: image-url("/assets/election/table-header.gif") repeat-x top;
+	background: image-url("election/table-header.gif") repeat-x top;
 	padding: 0 5px;
 	height: 25px;
 	text-align: left;
@@ -25,6 +25,6 @@ table.item, table.election-result {
 }
 
 .election-result tr:hover td { 
-	background: image-url("/assets/election/table-header-sorted.gif") repeat-x top;
+	background: image-url("election/table-header-sorted.gif") repeat-x top;
 	color: #fff;
 }

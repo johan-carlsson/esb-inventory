@@ -10,35 +10,25 @@
  *
  *= require_self
  *= require jquery.ui.autocomplete
+ *= require message
+ *= require window
+ *= require buttons
+ *= require tabs
+ *= require toolbar
+ *= require show
+ *= require edit
+ *= require search
+ *= require_directory ./redpill_form_builders
+ *= require_directory ./redpill_sidebar
+ *= require_directory ./redpill_table
+ *= require_directory ./redpill_toolbar
  */
 
 @charset "utf-8";
 
 
-/* Aplication css */
-
-@import "message.css";						/* Messages */
-@import "window.css";						/* Window */
-@import "buttons.css";						/* Buttons */
-
-/* Css that acts inside window */
-@import "tabs.css";							/* Tabs menu */
-@import "toolbar.css";						/* Toolbar menu */
-@import "mail.css";							/* Mail function */
-
-@import "show.css";							/* Show */
-@import "edit.css";							/* Edit */
-@import "ticket.css";						/* Ticket */
-@import "election.css";						/* Election */
-@import "tag_cloud.css";					/* Tag cloud */
-@import "search.css";						/* Search boxes and result */
-@import "audits.css";						
-@import "pdf_label_form.css";
-@import "csv_export.css";
-
-
 body {
-	background: transparent image-url("/assets/application/body_bg.gif") repeat-x top;
+	background: transparent image-url("application/body_bg.gif") repeat-x top;
 	font-family: Arial,Helvetica,sans-serif;
 	font-size: 92%;
 	line-height: 160%;
@@ -61,14 +51,14 @@ div#wrapper {
 }
 
 div#logotype {
-	background: transparent image-url("/assets/application/esb_inventory.gif") no-repeat scroll 0%;
+	background: transparent image-url("application/esb_inventory.gif") no-repeat scroll 0%;
 	height: 80px;
 	margin: 0pt 0pt 0pt 10px;
 	width: 200px;
 }
 
 div#info-logotype {
-	background: image-url("/assets/application/skl-info.gif") no-repeat scroll 0%;
+	background: image-url("application/skl-info.gif") no-repeat scroll 0%;
 	position: absolute;
 	top:40px;
 	left:230px;
@@ -111,7 +101,7 @@ div#policy a:visited{
 /* No javascript */
 
 div#noscript {
-	background: transparent image-url("/assets/message/notice.jpg") no-repeat;
+	background: transparent image-url("message/notice.jpg") no-repeat;
 	width: 540px;
 	height: 80px;
 	color: #000;

@@ -2,7 +2,7 @@
 /* Tabs */
 
 div.tab {
-	background: image-url("/assets/tabs/tabs-bg.gif") repeat-x bottom;
+	background: image-url("tabs/tabs-bg.gif") repeat-x bottom;
 	margin: 0 14px 0 14px;
 }
 
@@ -15,20 +15,20 @@ ul.tabs {
 
 li.tab {
 	float: left;
-	background: image-url("/assets/tabs/tabs-left.gif") no-repeat top left;
+	background: image-url("tabs/tabs-left.gif") no-repeat top left;
 	margin-right: 3px;
 	padding-left: 5px;
 }
 
 li.selected_tab {
 	float: left;
-	background: image-url("/assets/tabs/tabs-left-active.gif") no-repeat top left;
+	background: image-url("tabs/tabs-left-active.gif") no-repeat top left;
 	margin-right: 3px;
 	padding-left: 5px;
 }
 
 li.tab a {
-	background: image-url("/assets/tabs/tabs-right.gif") no-repeat top right;
+	background: image-url("tabs/tabs-right.gif") no-repeat top right;
 	display: block;
 	padding: 3px 15px 9px 10px;
 	*padding: 2px 15px 8px 10px;	/* Internet Explorer hack ie6/ie7 */
@@ -38,7 +38,7 @@ li.tab a {
 }
 
 li.selected_tab a {
-	background: image-url("/assets/tabs/tabs-right-active.gif") no-repeat top right;
+	background: image-url("tabs/tabs-right-active.gif") no-repeat top right;
 	display: block;
 	padding: 3px 15px 9px 10px;
 	*padding: 3px 15px 8px 10px;	/* Internet Explorer hack ie6/ie7 */

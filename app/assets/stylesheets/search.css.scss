@@ -3,7 +3,7 @@
 
 #search {
 	position: absolute;
-	background: transparent image-url("/assets/search/search.gif") left top no-repeat;
+	background: transparent image-url("search/search.gif") left top no-repeat;
 	width: 185px;
 	top: 40px;
 	right: 20px;
@@ -39,12 +39,12 @@
 /* Filter */
 
 #table_toolbar_panel #filter {
-	background: transparent image-url("/assets/search/filter_bg.gif") no-repeat;
+	background: transparent image-url("search/filter_bg.gif") no-repeat;
 	width: 170px;
 }
 
 #table_toolbar_panel #filter_image {
-	background: transparent image-url("/assets/search/filter.gif") no-repeat scroll left top;
+	background: transparent image-url("search/filter.gif") no-repeat scroll left top;
 	height: 22px;
 	margin-top: 0px;
 	width: 22px;
@@ -100,7 +100,7 @@ div#filter_toolbar {
 
 .pagination span.current {
 	font-weight: bold;
-	background: transparent image-url("/assets/search/apple-circle.gif") no-repeat 50% 50%;
+	background: transparent image-url("search/apple-circle.gif") no-repeat 50% 50%;
 
 }
 .pagination a {
@@ -136,7 +136,7 @@ div#total_hits {
 }
 
 #hits a:hover {
-	background: transparent image-url("/assets/search/a-hover.gif") repeat-x;
+	background: transparent image-url("search/a-hover.gif") repeat-x;
 	color: #fff;
 }
 
