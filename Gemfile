@@ -50,3 +50,7 @@ group :development do
    gem 'meta_request'
 end
 
+group :heroku do
+  gem 'thin'  
+end
+
