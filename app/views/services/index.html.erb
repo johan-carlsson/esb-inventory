@@ -1,3 +1,4 @@
+<% services||=@services %>
 <% content_for :window_header do %>
 <%= if controller.action_name == "index"
 	"Services"
@@ -7,8 +8,8 @@ end %>
 <% end %>
 
 <div id="result">
-	<%= render :partial => 'shared/table_toolbar' %>
+  <%= render :partial => 'shared/table_toolbar', :locals => {:collection => services} %>
 	<div id="table">
-		<%= render :partial => "table" %>	
+    <%= render :partial => "table", :locals => {:services => services} %>	
 	</div>
 </div>

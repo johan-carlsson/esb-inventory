@@ -1,4 +1,4 @@
-
+<% subscriptions||=@subscriptions%>
 
 <%# render :partial => "window_header" %>
 
@@ -7,8 +7,8 @@
 <%= render :partial => "services/tabs" %>
 
 <div id="result">
-	<%= render :partial => 'shared/table_toolbar', :locals => {:name => "consumers"} %>
+  <%= render :partial => 'shared/table_toolbar', :locals => {:name => "consumers", :collection => subscriptions} %>
 		<div id="table">
-			<%= render :partial => "table" %>
+      <%= render :partial => "table", :locals => {:subscriptions => subscriptions} %>
 		</div>
 </div>

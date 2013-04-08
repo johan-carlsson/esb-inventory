@@ -1,3 +1,4 @@
+<% collection||=[] %>
 <% name||=controller.controller_name %>
 <% show_new_button=true if show_new_button!=false %>
 <div id="table_toolbar_panel">
@@ -10,7 +11,7 @@
 	</div>
 	
 	<div id="paginator">
-	<%= render :partial => 'shared/paginator' %>
+    <%= render :partial => 'shared/paginator', :locals => {:collection => collection} %>
 	</div>
 	
 

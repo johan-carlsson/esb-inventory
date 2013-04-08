@@ -2,7 +2,7 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
-    @services = Service.order(:name).all
+    @services = Service.order(:name).page(params[:page])
     @show_csv_export_button=true
     respond_to do |format|
       format.html # index.html.erb
