@@ -3,7 +3,7 @@ class ServicesController < ApplicationController
   # GET /services.json
   def index
     params[:order]||='services.name'
-    @services = Service.order(orderparams[:order]).page(params[:page])
+    @services = Service.order(params[:order]).page(params[:page])
     @show_csv_export_button=true
     respond_to do |format|
       format.html # index.html.erb
