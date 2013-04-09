@@ -4,7 +4,7 @@ class SubscriptionsController < ApplicationController
   # GET /service/1/subscriptions
   # GET /service/1/subscriptions.json
   def index
-    @subscriptions = @subscriber.subscriptions.page(params[:page])
+    @subscriptions = @subscriber.subscriptions.includes(:consumer,:service).order(params[:order]).page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

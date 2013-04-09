@@ -135,17 +135,17 @@ module TableHelper
       key += " desc" if @base.params[:order] == param
       options = {
         :url => {:params => @base.params.merge({:order => key, :page => nil})},
-        :method => :get,
+        :method => :get
       }
       html_options = {
         :title => "Sort by %s" % text.downcase ,
-        :href => @base.url_for(:method => :get ,:params => @base.params.merge({:order => key, :page => nil})),
-        :onclick => "return false;"
+        :href => @base.url_for(:method => :get ,:params => @base.params.merge({:order => key, :page => nil}))
       }
       return @base.link_to(text, options, html_options)+"<span class='sort'></span>".html_safe
     end
 
   end 
+
 
   def paginator_text(collection=[])
     return if collection.empty?

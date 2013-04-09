@@ -3,7 +3,8 @@ class ConsumersController < ApplicationController
   # GET /consumers.json
   def index
     @show_csv_export_button=true
-    @consumers = Consumer.order(:name).page(params[:page])
+    params[:order] ||= 'consumers.name'
+    @consumers = Consumer.order(params[:order]).page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

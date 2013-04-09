@@ -2,7 +2,8 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.order(:name).page(params[:page])
+    params[:order] ||= 'contacts.name'
+    @contacts = Contact.order(params[:order]).page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

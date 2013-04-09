@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    params[:order] ||= 'users.name'
     @users = User.order(:name).page(params[:page])
 
     respond_to do |format|
