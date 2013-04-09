@@ -85,9 +85,10 @@ class ProvidersController < ApplicationController
   # GET /providers/1/services
   # GET /providers/1/services.json
   def services
+    params[:order]||='services.name'
     @show_index_toolbar=true
     @provider = Provider.find(params[:provider_id])
-    @services=@provider.services.order(:name)
+    @services=@provider.services.order(params[:order])
     respond_to do |format|
       format.html # services.html.erb
       format.json { render json: @services }
@@ -98,9 +99,10 @@ class ProvidersController < ApplicationController
   # GET /providers/1/consumers
   # GET /providers/1/consumers.json
   def consumers
+    params[:order]||='consumers.name'
     @show_index_toolbar=true
     @provider = Provider.find(params[:provider_id])
-    @consumers=@provider.consumers.order(:name)
+    @consumers=@provider.consumers.order(params[:order])
     respond_to do |format|
       format.html # services.html.erb
       format.json { render json: @services }
