@@ -1,4 +1,5 @@
 class Contact < ActiveRecord::Base
+  stampable
   attr_accessible :email, :name
 
   validates_presence_of :name

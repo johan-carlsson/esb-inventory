@@ -1,4 +1,5 @@
 class Consumer < ActiveRecord::Base
+  stampable
   attr_accessible :name,:identifier
 
   has_many :subscriptions

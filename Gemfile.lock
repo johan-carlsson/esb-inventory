@@ -1,3 +1,9 @@
+GIT
+  remote: http://github.com/insphire/userstamp.git
+  revision: dd22a8d6cb47ce04af1437398c227e14c6a7d9c5
+  specs:
+    userstamp (2.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -159,4 +165,5 @@ DEPENDENCIES
   sqlite3
   thin
   uglifier (>= 1.0.3)
+  userstamp!
   will_paginate

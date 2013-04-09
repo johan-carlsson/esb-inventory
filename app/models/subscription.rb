@@ -1,4 +1,5 @@
 class Subscription < ActiveRecord::Base
+  stampable
   belongs_to :service
   belongs_to :consumer
 

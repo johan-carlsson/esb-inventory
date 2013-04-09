@@ -11,13 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130402060342) do
+ActiveRecord::Schema.define(:version => 20130409184115) do
 
   create_table "consumers", :force => true do |t|
     t.string   "name",       :null => false
     t.string   "identifier"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "updated_by"
+    t.integer  "created_by"
   end
 
   add_index "consumers", ["name"], :name => "index_consumers_on_name", :unique => true
@@ -27,6 +29,8 @@ ActiveRecord::Schema.define(:version => 20130402060342) do
     t.string   "email"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "updated_by"
+    t.integer  "created_by"
   end
 
   add_index "contacts", ["name"], :name => "index_contacts_on_name", :unique => true
@@ -36,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20130402060342) do
     t.string   "identifier"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "updated_by"
+    t.integer  "created_by"
   end
 
   add_index "providers", ["name"], :name => "index_providers_on_name", :unique => true
@@ -46,6 +52,8 @@ ActiveRecord::Schema.define(:version => 20130402060342) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "provider_id"
+    t.integer  "updated_by"
+    t.integer  "created_by"
   end
 
   add_index "services", ["name", "category"], :name => "index_services_on_name_and_category", :unique => true
@@ -58,6 +66,8 @@ ActiveRecord::Schema.define(:version => 20130402060342) do
     t.date     "ends_at"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "updated_by"
+    t.integer  "created_by"
   end
 
   add_index "subscriptions", ["consumer_id", "service_id"], :name => "index_subscriptions_on_consumer_id_and_service_id", :unique => true
@@ -69,6 +79,8 @@ ActiveRecord::Schema.define(:version => 20130402060342) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
+    t.integer  "updated_by"
+    t.integer  "created_by"
   end
 
   add_index "users", ["name"], :name => "index_users_on_name", :unique => true

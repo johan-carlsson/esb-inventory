@@ -1,4 +1,5 @@
 class Provider < ActiveRecord::Base
+  stampable
   attr_accessible :name,:identifier
   
   has_many :services 
