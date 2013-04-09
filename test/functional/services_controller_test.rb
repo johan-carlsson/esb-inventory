@@ -2,7 +2,8 @@ require 'test_helper'
 
 class ServicesControllerTest < ActionController::TestCase
   setup do
-    @service = services(:one)
+    login_as(:admin)
+    @service = services(:getFriends)
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class ServicesControllerTest < ActionController::TestCase
 
   test "should create service" do
     assert_difference('Service.count') do
-      post :create, service: { name: @service.name }
+      post :create, service: { name: "A service" }
     end
 
     assert_redirected_to service_path(assigns(:service))
@@ -26,7 +27,7 @@ class ServicesControllerTest < ActionController::TestCase
 
   test "should show service" do
     get :show, id: @service
-    assert_response :success
+    assert_redirected_to service_subscriptions_url(@service) 
   end
 
   test "should get edit" do

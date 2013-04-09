@@ -2,7 +2,8 @@ require 'test_helper'
 
 class ProvidersControllerTest < ActionController::TestCase
   setup do
-    @provider = providers(:one)
+    login_as(:admin)
+    @provider = providers(:twitter)
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class ProvidersControllerTest < ActionController::TestCase
 
   test "should create provider" do
     assert_difference('Provider.count') do
-      post :create, provider: { name: @provider.name }
+      post :create, provider: { name: "A provider" }
     end
 
     assert_redirected_to provider_path(assigns(:provider))
@@ -26,7 +27,7 @@ class ProvidersControllerTest < ActionController::TestCase
 
   test "should show provider" do
     get :show, id: @provider
-    assert_response :success
+    assert_redirected_to provider_services_url(@provider) 
   end
 
   test "should get edit" do

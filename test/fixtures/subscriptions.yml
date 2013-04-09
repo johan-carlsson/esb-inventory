@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  service: 
-  consumer: 
+beatles_friends:
+  service: getFriends 
+  consumer: beatles 
 
-two:
-  service: 
-  consumer: 
+redpill_tweets:
+  service: searchTweets 
+  consumer: redpill 

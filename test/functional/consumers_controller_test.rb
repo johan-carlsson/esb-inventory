@@ -2,7 +2,8 @@ require 'test_helper'
 
 class ConsumersControllerTest < ActionController::TestCase
   setup do
-    @consumer = consumers(:one)
+    login_as(:admin)
+    @consumer = consumers(:beatles)
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class ConsumersControllerTest < ActionController::TestCase
 
   test "should create consumer" do
     assert_difference('Consumer.count') do
-      post :create, consumer: { name: @consumer.name }
+      post :create, consumer: { name: "Jim" }
     end
 
     assert_redirected_to consumer_path(assigns(:consumer))
@@ -26,7 +27,8 @@ class ConsumersControllerTest < ActionController::TestCase
 
   test "should show consumer" do
     get :show, id: @consumer
-    assert_response :success
+     assert_redirected_to consumer_subscriptions_path(assigns(:consumer))
+
   end
 
   test "should get edit" do
@@ -36,7 +38,7 @@ class ConsumersControllerTest < ActionController::TestCase
 
   test "should update consumer" do
     put :update, id: @consumer, consumer: { name: @consumer.name }
-    assert_redirected_to consumer_path(assigns(:consumer))
+    assert_redirected_to consumer_subscriptions_path(assigns(:consumer))
   end
 
   test "should destroy consumer" do

@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
+beatles:
+  name: Beatles
 
-two:
-  name: MyString
+redpill:
+  name: Redpill

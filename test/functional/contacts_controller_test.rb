@@ -2,7 +2,8 @@ require 'test_helper'
 
 class ContactsControllerTest < ActionController::TestCase
   setup do
-    @contact = contacts(:one)
+    login_as(:admin)
+    @contact = contacts(:nisse)
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class ContactsControllerTest < ActionController::TestCase
 
   test "should create contact" do
     assert_difference('Contact.count') do
-      post :create, contact: { email: @contact.email, name: @contact.name }
+      post :create, contact: { email: "test@test.se", name: "Test Testsson" }
     end
 
     assert_redirected_to contact_path(assigns(:contact))
