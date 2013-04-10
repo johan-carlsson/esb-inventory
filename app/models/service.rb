@@ -4,7 +4,7 @@ class Service < ActiveRecord::Base
 
   default_scope where(:deleted_at => nil)
 
-  has_many :subscription
+  has_many :subscriptions, :dependent => :destroy
   belongs_to :provider
 
   validates_presence_of :name

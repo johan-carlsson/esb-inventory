@@ -4,7 +4,7 @@ class Consumer < ActiveRecord::Base
 
   default_scope where(:deleted_at => nil)
 
-  has_many :subscriptions
+  has_many :subscriptions, :dependent => :destroy
 
   validates_presence_of :name
   validates_uniqueness_of :name
