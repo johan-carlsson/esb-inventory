@@ -27,6 +27,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'will_paginate'
 gem 'userstamp', :git => "http://github.com/insphire/userstamp.git"
+gem 'permanent_records'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

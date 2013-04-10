@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409184115) do
+ActiveRecord::Schema.define(:version => 20130410174606) do
 
   create_table "consumers", :force => true do |t|
     t.string   "name",       :null => false
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130409184115) do
     t.datetime "updated_at", :null => false
     t.integer  "updated_by"
     t.integer  "created_by"
+    t.datetime "deleted_at"
   end
 
   add_index "consumers", ["name"], :name => "index_consumers_on_name", :unique => true
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20130409184115) do
     t.datetime "updated_at", :null => false
     t.integer  "updated_by"
     t.integer  "created_by"
+    t.datetime "deleted_at"
   end
 
   add_index "contacts", ["name"], :name => "index_contacts_on_name", :unique => true
@@ -42,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20130409184115) do
     t.datetime "updated_at", :null => false
     t.integer  "updated_by"
     t.integer  "created_by"
+    t.datetime "deleted_at"
   end
 
   add_index "providers", ["name"], :name => "index_providers_on_name", :unique => true
@@ -54,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20130409184115) do
     t.integer  "provider_id"
     t.integer  "updated_by"
     t.integer  "created_by"
+    t.datetime "deleted_at"
   end
 
   add_index "services", ["name", "category"], :name => "index_services_on_name_and_category", :unique => true
@@ -68,11 +72,22 @@ ActiveRecord::Schema.define(:version => 20130409184115) do
     t.datetime "updated_at",  :null => false
     t.integer  "updated_by"
     t.integer  "created_by"
+    t.datetime "deleted_at"
   end
 
   add_index "subscriptions", ["consumer_id", "service_id"], :name => "index_subscriptions_on_consumer_id_and_service_id", :unique => true
   add_index "subscriptions", ["consumer_id"], :name => "index_subscriptions_on_consumer_id"
   add_index "subscriptions", ["service_id"], :name => "index_subscriptions_on_service_id"
+
+  create_table "trashes", :force => true do |t|
+    t.string   "trashable_name"
+    t.string   "trashable_type"
+    t.integer  "trashable_id"
+    t.text     "trashable_data"
+    t.datetime "created_at",                       :null => false
+    t.integer  "transaction_id",    :default => 0, :null => false
+    t.integer  "transaction_index", :default => 0, :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name",            :null => false
@@ -81,6 +96,7 @@ ActiveRecord::Schema.define(:version => 20130409184115) do
     t.string   "password_digest"
     t.integer  "updated_by"
     t.integer  "created_by"
+    t.datetime "deleted_at"
   end
 
   add_index "users", ["name"], :name => "index_users_on_name", :unique => true

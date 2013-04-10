@@ -1,7 +1,10 @@
 class Subscription < ActiveRecord::Base
   stampable
+  default_scope where(:deleted_at => nil)
+
   belongs_to :service
   belongs_to :consumer
+
 
   validates_uniqueness_of :service_id, :scope => :consumer_id, :message => "already has a subscription for this consumer"
   validates_presence_of :consumer_id,:service_id

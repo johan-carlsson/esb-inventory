@@ -2,7 +2,9 @@ class Service < ActiveRecord::Base
   stampable
   attr_accessible :name,:category,:provider_name
 
-  has_many :subscriptions
+  default_scope where(:deleted_at => nil)
+
+  has_many :subscription
   belongs_to :provider
 
   validates_presence_of :name

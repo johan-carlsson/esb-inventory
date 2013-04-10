@@ -1,5 +1,6 @@
 class Contact < ActiveRecord::Base
   stampable
+  default_scope where(:deleted_at => nil)
   attr_accessible :email, :name
 
   validates_presence_of :name

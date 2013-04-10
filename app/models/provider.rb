@@ -2,6 +2,8 @@ class Provider < ActiveRecord::Base
   stampable
   attr_accessible :name,:identifier
   
+  default_scope where(:deleted_at => nil)
+
   has_many :services 
   has_many :subscriptions, :through => :services  
   has_many :consumers, :through => :subscriptions, :uniq => true 
