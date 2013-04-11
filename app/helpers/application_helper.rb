@@ -19,7 +19,7 @@ module ApplicationHelper
   end
 
   def select_consumers_sidebar_item?
-    ["consumers","consumer_subscriptions"].include?(controller.controller_name)
+    ["consumers","consumer_subscriptions","consumer_contacts"].include?(controller.controller_name)
   end
 
   def select_services_sidebar_item?
