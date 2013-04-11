@@ -2,7 +2,7 @@
 <% show_new_button=true if show_new_button!=false %>
 <% show_csv_export_button=true if show_csv_export_button!=false %>
 <% name.downcase! %>
-<% image ||=  "sidebar/#{name}.png" %>
+<% image ||=  "sidebar/#{name.gsub(" ","_")}.png" %>
 <% if controller.action_name == "index" || @show_index_toolbar %>
 	<%= redpill_toolbar do |toolbar| %>
 	<%= toolbar.image(image) %>
