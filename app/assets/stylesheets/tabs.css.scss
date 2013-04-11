@@ -46,3 +46,8 @@ li.selected_tab a {
 	font-weight: 900;
 	text-decoration: none;
 }
+
+li.tab a.disabled {
+  text-decoration:line-through;
+}
+

@@ -1,9 +1,9 @@
 <div id="unit_tab" class="tab">
 	<ul class="tabs">
-		<%= tab_for("ReadMe",  {} ,{selected: false}) %>
+		<%= tab_for("ReadMe",  {} ,{selected: false,:class => "disabled"}) %>
 		<%= tab_for("Consumers", service_subscriptions_url) %>
-    <%= tab_for("Statistics", {} ,{selected: false}) %>
-		<%= tab_for("Issues",  {} ,{selected: false}) %>
+    <%= tab_for("Statistics", {} ,{selected: false,:class => "disabled"}) %>
+		<%= tab_for("Issues",  {} ,{selected: false,:class => "disabled"}) %>
 	</ul>
 </div>
 
