@@ -11,7 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130410174606) do
+ActiveRecord::Schema.define(:version => 20130411154608) do
+
+  create_table "consumer_contacts", :force => true do |t|
+    t.integer  "consumer_id"
+    t.integer  "contact_id"
+    t.string   "role"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.date     "deleted_at"
+    t.integer  "created_by"
+    t.integer  "updated_by"
+  end
+
+  add_index "consumer_contacts", ["consumer_id", "contact_id", "role"], :name => "index_consumer_contacts_on_consumer_id_and_contact_id_and_role", :unique => true
+  add_index "consumer_contacts", ["consumer_id"], :name => "index_consumer_contacts_on_consumer_id"
+  add_index "consumer_contacts", ["contact_id"], :name => "index_consumer_contacts_on_contact_id"
 
   create_table "consumers", :force => true do |t|
     t.string   "name",       :null => false

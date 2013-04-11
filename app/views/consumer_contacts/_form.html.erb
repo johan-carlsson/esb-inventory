@@ -1,0 +1,15 @@
+<% remote ||= false %>
+<% dom_id = if  @consumer_contact.new_record?
+  "new_service"
+  url=consumer_contacts_url(@consumer)
+else
+  dom_id(@consumer_contact)
+  url=consumer_contact_url(@consumer,@consumer_contact)
+end
+%>
+
+<%= redpill_tabular_form([@consumer,@consumer_contact],{:url => url, :object_name => 'consumer_contact'},{:remote => remote}) do |f| %> 
+  <%= f.text_field :contact_name, data: {autocomplete_source: Contact.order(:name).map(&:name)} %>
+  <%= f.select :role, ConsumerContact::ROLES %>
+	<%= f.submit_and_cancel_buttons %>
+<% end %>

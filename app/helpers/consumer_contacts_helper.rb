@@ -1,0 +1,2 @@
+module ConsumerContactsHelper
+end

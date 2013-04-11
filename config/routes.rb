@@ -9,6 +9,7 @@ EsbInventory::Application.routes.draw do
 
   resources :consumers do 
     resources :subscriptions, :controller => "consumer_subscriptions"
+    resources :contacts, :controller => "consumer_contacts"
   end
 
   resources :providers do

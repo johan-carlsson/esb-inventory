@@ -1,0 +1,16 @@
+<% consumer_contact||=@consumer_contact %>
+<% hide_toolbar||=false %>
+
+<%= div_for(consumer_contact,:class => 'show') do %>
+<table class="show" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <th><%= "Contact" %>:</th>
+		<td><%= link_to(consumer_contact.contact,contact_url(consumer_contact.contact)) %></td>
+	  <th><%= "Consumer" %>:</th>
+		<td><%= link_to(consumer_contact.consumer,consumer_url(consumer_contact.consumer)) %></td>
+	</tr>
+ </table>
+
+<%= render :partial => 'object_toolbar'  %>
+
+<% end %>

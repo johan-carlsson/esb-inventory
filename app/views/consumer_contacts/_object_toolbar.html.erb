@@ -1,0 +1,18 @@
+<div id="object_toolbar">
+
+	<%= redpill_toolbar do |toolbar| %>
+		<%= toolbar.image("sidebar/contacts.png") %>
+		<%= toolbar.text("Contact") %>
+
+		<%= toolbar.item({:class => :edit, :tooltip => "Edit subcription (#{shortcut_modifier}-e)" },
+		edit_consumer_contact_url(@consumer,@consumer_contact),
+		{:accesskey => "E"} ,@edit_button_disabled) %>
+
+		<%= toolbar.item({:class => :delete, :tooltip => "Delete subcription (#{shortcut_modifier}-d)" },
+		consumer_contact_url(@consumer,@consumer_contact),
+		{:confirm => 'Are you sure you wish to delete this consumer contact?',:accesskey => "D", :method => :delete} ,@edit_button_disabled) %>
+		
+		<%= toolbar.item({:class => :table,:tooltip  => "List consumer contact (#{shortcut_modifier}-l)"},
+		consumer_contacts_url(@consumer),{ :accesskey => "L"},@list_button_disabled) %>
+	<% end %>
+</div>
