@@ -4,14 +4,15 @@
 		<%= toolbar.image("sidebar/services.png") %>
 		<%= toolbar.text("Subscription") %>
 
-		<%= toolbar.item({:class => :edit, :tooltip => "Edit subcription (#{shortcut_modifier}-e)" },
-		edit_consumer_subscription_url(@consumer,@subscription),
-		{:accesskey => "E"} ,@edit_button_disabled) %>
+    <% if current_user %>  
+      <%= toolbar.item({:class => :edit, :tooltip => "Edit subcription (#{shortcut_modifier}-e)" },
+      edit_consumer_subscription_url(@consumer,@subscription),
+      {:accesskey => "E"} ,@edit_button_disabled) %>
 
-		<%= toolbar.item({:class => :delete, :tooltip => "Delete subcription (#{shortcut_modifier}-d)" },
-		consumer_subscription_url(@consumer,@subscription),
-		{:confirm => 'Are you sure you wish to delete this subscription?',:accesskey => "D", :method => :delete} ,@edit_button_disabled) %>
-		
+      <%= toolbar.item({:class => :delete, :tooltip => "Delete subcription (#{shortcut_modifier}-d)" },
+      consumer_subscription_url(@consumer,@subscription),
+      {:confirm => 'Are you sure you wish to delete this subscription?',:accesskey => "D", :method => :delete} ,@edit_button_disabled) %>
+    <% end %> 
 		<%= toolbar.item({:class => :table,:tooltip  => "List subscriptions (#{shortcut_modifier}-l)"},
 		consumer_subscriptions_url(@consumer),{ :accesskey => "L"},@list_button_disabled) %>
 	<% end %>

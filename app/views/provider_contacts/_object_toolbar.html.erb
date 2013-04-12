@@ -4,14 +4,16 @@
 		<%= toolbar.image("sidebar/provider_contacts.png") %>
 		<%= toolbar.text("Provider Contact") %>
 
-		<%= toolbar.item({:class => :edit, :tooltip => "Edit subcription (#{shortcut_modifier}-e)" },
-		edit_provider_contact_url(@provider,@provider_contact),
-		{:accesskey => "E"} ,@edit_button_disabled) %>
+    <% if current_user %>  
+      <%= toolbar.item({:class => :edit, :tooltip => "Edit subcription (#{shortcut_modifier}-e)" },
+      edit_provider_contact_url(@provider,@provider_contact),
+      {:accesskey => "E"} ,@edit_button_disabled) %>
 
-		<%= toolbar.item({:class => :delete, :tooltip => "Delete subcription (#{shortcut_modifier}-d)" },
-		provider_contact_url(@provider,@provider_contact),
-		{:confirm => 'Are you sure you wish to delete this provider contact?',:accesskey => "D", :method => :delete} ,@edit_button_disabled) %>
-		
+      <%= toolbar.item({:class => :delete, :tooltip => "Delete subcription (#{shortcut_modifier}-d)" },
+      provider_contact_url(@provider,@provider_contact),
+      {:confirm => 'Are you sure you wish to delete this provider contact?',:accesskey => "D", :method => :delete} ,@edit_button_disabled) %>
+    <% end %>
+
 		<%= toolbar.item({:class => :table,:tooltip  => "List provider contact (#{shortcut_modifier}-l)"},
 		provider_contacts_url(@provider),{ :accesskey => "L"},@list_button_disabled) %>
 	<% end %>
