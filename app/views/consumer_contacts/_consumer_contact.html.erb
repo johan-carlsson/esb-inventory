@@ -6,8 +6,14 @@
 	<tr>
 	  <th><%= "Contact" %>:</th>
 		<td><%= link_to(consumer_contact.contact,contact_url(consumer_contact.contact)) %></td>
-	  <th><%= "Consumer" %>:</th>
+    <th><%= "Consumer" %>:</th>
 		<td><%= link_to(consumer_contact.consumer,consumer_url(consumer_contact.consumer)) %></td>
+  </tr>
+  <tr> 
+	 	<th><%= "Role" %>:</th>
+		<td><%= consumer_contact.role %></td>
+    <th></th>
+    <td></td>
 	</tr>
  </table>
 
