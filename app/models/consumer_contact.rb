@@ -1,5 +1,5 @@
 class ConsumerContact < ActiveRecord::Base
-  ROLES=%w( Support Administrator Owner )
+  ROLES=%w( Administrator Arcitect Developer Maintainer Manager Support Owner )
   default_scope where(:deleted_at => nil)
   belongs_to :consumer
   belongs_to :contact
