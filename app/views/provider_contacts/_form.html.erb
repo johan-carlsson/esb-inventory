@@ -1,0 +1,15 @@
+<% remote ||= false %>
+<% dom_id = if  @provider_contact.new_record?
+  "new_service"
+  url=provider_contacts_url(@provider)
+else
+  dom_id(@provider_contact)
+  url=provider_contact_url(@provider,@provider_contact)
+end
+%>
+
+<%= redpill_tabular_form([@provider,@provider_contact],{:url => url, :object_name => 'provider_contact'},{:remote => remote}) do |f| %> 
+  <%= f.text_field :contact_name, data: {autocomplete_source: Contact.order(:name).map(&:name)} %>
+  <%= f.select :role, ProviderContact::ROLES %>
+	<%= f.submit_and_cancel_buttons %>
+<% end %>

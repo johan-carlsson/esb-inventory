@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411154608) do
+ActiveRecord::Schema.define(:version => 20130412181003) do
 
   create_table "consumer_contacts", :force => true do |t|
     t.integer  "consumer_id"
@@ -51,6 +51,21 @@ ActiveRecord::Schema.define(:version => 20130411154608) do
   end
 
   add_index "contacts", ["name"], :name => "index_contacts_on_name", :unique => true
+
+  create_table "provider_contacts", :force => true do |t|
+    t.integer  "provider_id"
+    t.integer  "contact_id"
+    t.string   "role"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.date     "deleted_at"
+    t.integer  "created_by"
+    t.integer  "updated_by"
+  end
+
+  add_index "provider_contacts", ["contact_id"], :name => "index_provider_contacts_on_contact_id"
+  add_index "provider_contacts", ["provider_id", "contact_id", "role"], :name => "index_provider_contacts_on_provider_id_and_contact_id_and_role", :unique => true
+  add_index "provider_contacts", ["provider_id"], :name => "index_provider_contacts_on_provider_id"
 
   create_table "providers", :force => true do |t|
     t.string   "name",       :null => false

@@ -1,0 +1,14 @@
+<% provider_contacts||=@provider_contacts%>
+
+<%# render :partial => "window_header" %>
+
+<%= render :partial => '/providers/provider' %>
+
+<%= render :partial => "providers/tabs", :locals => {:provider => @provider} %>
+
+<div id="result">
+  <%= render :partial => 'shared/table_toolbar', :locals => {:name => "provider contacts", :collection => provider_contacts} %>
+		<div id="table">
+      <%= render :partial => "table", :locals => {:provider_contacts => provider_contacts} %>
+		</div>
+</div>

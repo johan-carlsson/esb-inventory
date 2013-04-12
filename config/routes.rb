@@ -15,6 +15,7 @@ EsbInventory::Application.routes.draw do
   resources :providers do
     get "services"
     get "consumers"
+    resources :contacts, :controller => "provider_contacts"
   end
 
   resources :users
