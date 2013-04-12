@@ -3,7 +3,8 @@ class ConsumerContactsController < ApplicationController
   # GET /consumer/1/contacts
   # GET /consumer/1/contacts.json
   def index
-    @consumer_contacts = @consumer.consumer_contacts.page(params[:page])
+    params[:order] ||= 'consumer_contacts.role'
+    @consumer_contacts = @consumer.consumer_contacts.includes(:contact).order(params[:order]).page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

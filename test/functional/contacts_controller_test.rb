@@ -19,7 +19,7 @@ class ContactsControllerTest < ActionController::TestCase
 
   test "should create contact" do
     assert_difference('Contact.count') do
-      post :create, contact: { email: "test@test.se", name: "Test Testsson" }
+      post :create, contact: { email: "test@test.se", name: "Test Testsson" , phone: "054123", mobile: "0700000"}
     end
 
     assert_redirected_to contact_path(assigns(:contact))

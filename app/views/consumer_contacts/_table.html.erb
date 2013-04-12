@@ -2,7 +2,10 @@
 <% table_options||={} %>
 
 <%= redpill_table(consumer_contacts,table_options) do |table| 
-  table.add_column(:name => :name,:order => "contacts.name", :width => "50%") { |o| link_to(o.contact, consumer_contact_url(@consumer,o)) }
-  table.add_column(:name => :role, :width =>"50%") { |o| o.role}
+  table.add_column(:name => :role,) { |o| link_to(o.role, consumer_contact_url(@consumer,o)) }
+  table.add_column(:name => :name,:order => "contacts.name") { |o| o.contact.name}
+  table.add_column(:name => :email,:order => "contacts.email") { |o| o.contact.email}
+  table.add_column(:name => :phone,:order => "contacts.phone") { |o| o.contact.phone}
+  table.add_column(:name => :mobile,:order => "contacts.mobile") { |o| o.contact.mobile}
 	table.row_linker { |o|  consumer_contact_url(@consumer,o)}
 end %>

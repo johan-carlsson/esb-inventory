@@ -8,7 +8,10 @@ end
 
 <%= redpill_tabular_form(@contact,{:object_name => 'contact'},{:remote => remote}) do |f| %> 
 	<%= f.text_field :name %>	
- <%= f.text_field :email %>	 
+  <%= f.text_field :email %>	 
 	
+	<%= f.text_field :phone %>	
+  <%= f.text_field :mobile %>	 
+
 	<%= f.submit_and_cancel_buttons %>
 <% end %>
