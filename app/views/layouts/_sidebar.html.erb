@@ -18,7 +18,9 @@
   <%= sidebar.item("Consumers",consumers_path, :selected => select_consumers_sidebar_item? ) %>
   <%= sidebar.item("Contacts",contacts_path) %>
   <%# <%= sidebar.item("ReadMe",root_url,:image => "sidebar/case.png") %1> %>
-  <%= sidebar.item("Users",users_path) %>
+  <% if current_user %>
+    <%= sidebar.item("Users",users_path) %>
+  <% end %>
   <%# <%= sidebar.item("Trash","trash", :image => "sidebar/trashes.png") %1> %>
   <%= sidebar.item("Sign out",logout_path) if current_user%>
   <%= sidebar.item("Log in",login_path) if !current_user%>
