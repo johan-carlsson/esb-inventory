@@ -66,7 +66,7 @@ module SidebarHelper
 
       image = options[:image] || "sidebar/#{name.gsub(/\s/,'_').downcase}.png"
       selected = options[:selected] 
-      selected = base.current_controller?(url) unless options.include?(:selected)
+      selected = base.request.path.match(/^\/#{name}\/?/i) unless options.include?(:selected)
       expanded = options[:expanded]
 
       item=<<-EOS
