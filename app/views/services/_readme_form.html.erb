@@ -1,0 +1,13 @@
+
+<div id="edit_readme" class="edit">
+  <span>Use Asciidoc to format. <a href="http://asciidoctor.org/docs/asciidoc-writers-guide/" target="_blank">Learn how
+</a>
+  </span>
+<%= form_for(@readme,:url => service_update_readme_path(@service), :method => :put) do |f| %>
+  <%= f.text_area :text, :cols => 80, :rows => 50 %>
+    <div>
+      <%= f.submit "Save"  %>
+      <%= f.button "Cancel", :onclick => "window.location = \"#{service_readme_path(@service)}\";return false" %>
+    </div>
+<% end %>
+</div>

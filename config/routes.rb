@@ -22,6 +22,8 @@ EsbInventory::Application.routes.draw do
 
   resources :services do
     resources :subscriptions, :controller => "service_subscriptions"
+    get "readme", "edit_readme"
+    put "update_readme"
   end
   
   root :to => 'services#index'

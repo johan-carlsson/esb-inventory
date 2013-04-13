@@ -6,6 +6,7 @@ class Service < ActiveRecord::Base
 
   has_many :subscriptions, :dependent => :destroy
   belongs_to :provider
+  belongs_to :readme
 
   validates_presence_of :name
   validates_uniqueness_of :name, :scope => [:category]

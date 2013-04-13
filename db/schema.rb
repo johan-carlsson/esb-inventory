@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130412192336) do
+ActiveRecord::Schema.define(:version => 20130413115301) do
 
   create_table "consumer_contacts", :force => true do |t|
     t.integer  "consumer_id"
@@ -81,6 +81,15 @@ ActiveRecord::Schema.define(:version => 20130412192336) do
 
   add_index "providers", ["name"], :name => "index_providers_on_name", :unique => true
 
+  create_table "readmes", :force => true do |t|
+    t.text     "text"
+    t.date     "deleted_at"
+    t.integer  "created_by"
+    t.integer  "updated_by"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "services", :force => true do |t|
     t.string   "name",        :null => false
     t.string   "category"
@@ -90,6 +99,7 @@ ActiveRecord::Schema.define(:version => 20130412192336) do
     t.integer  "updated_by"
     t.integer  "created_by"
     t.datetime "deleted_at"
+    t.integer  "readme_id"
   end
 
   add_index "services", ["name", "category"], :name => "index_services_on_name_and_category", :unique => true

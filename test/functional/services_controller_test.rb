@@ -27,7 +27,7 @@ class ServicesControllerTest < ActionController::TestCase
 
   test "should show service" do
     get :show, id: @service
-    assert_redirected_to service_subscriptions_url(@service) 
+    assert_redirected_to service_readme_url(@service) 
   end
 
   test "should get edit" do
@@ -47,4 +47,20 @@ class ServicesControllerTest < ActionController::TestCase
 
     assert_redirected_to services_path
   end
+
+  test "should show readme" do
+    get :readme, service_id: @service
+    assert_response :success
+  end
+
+  test "should edit readme" do
+    get :edit_readme, service_id: @service
+    assert_response :success
+  end
+
+  test "should update readme" do
+    put :update_readme, service_id: @service, readme: { text: "Hello" }
+    assert_redirected_to service_readme_path(@service)
+  end
+
 end

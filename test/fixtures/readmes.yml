@@ -1,10 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 getFriends:
-  name: getFriends
-  readme: getFriends
+  text: Hello
 
 searchTweets:
-  name: searchTweets
-  readme: searchTweets
-  
+  text: Hello
+
