@@ -27,7 +27,7 @@ class ConsumersControllerTest < ActionController::TestCase
 
   test "should show consumer" do
     get :show, id: @consumer
-     assert_redirected_to consumer_subscriptions_path(assigns(:consumer))
+     assert_redirected_to consumer_readme_path(assigns(:consumer))
 
   end
 
@@ -38,7 +38,7 @@ class ConsumersControllerTest < ActionController::TestCase
 
   test "should update consumer" do
     put :update, id: @consumer, consumer: { name: @consumer.name }
-    assert_redirected_to consumer_subscriptions_path(assigns(:consumer))
+    assert_redirected_to consumer_readme_path(assigns(:consumer))
   end
 
   test "should destroy consumer" do
@@ -48,4 +48,21 @@ class ConsumersControllerTest < ActionController::TestCase
 
     assert_redirected_to consumers_path
   end
+
+  test "should show readme" do
+    get :readme, consumer_id: @consumer
+    assert_response :success
+  end
+
+  test "should edit readme" do
+    get :edit_readme, consumer_id: @consumer
+    assert_response :success
+  end
+
+  test "should update readme" do
+    put :update_readme, consumer_id: @consumer, readme: { text: "Hello" }
+    assert_redirected_to consumer_readme_path(@consumer)
+  end
+
+
 end

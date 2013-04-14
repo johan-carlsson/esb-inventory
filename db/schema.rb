@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130413115301) do
+ActiveRecord::Schema.define(:version => 20130414122506) do
 
   create_table "consumer_contacts", :force => true do |t|
     t.integer  "consumer_id"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20130413115301) do
     t.integer  "updated_by"
     t.integer  "created_by"
     t.datetime "deleted_at"
+    t.integer  "readme_id"
   end
 
   add_index "consumers", ["name"], :name => "index_consumers_on_name", :unique => true

@@ -19,7 +19,7 @@ class ConsumersController < ApplicationController
     @consumer = Consumer.find(params[:id])
 
     respond_to do |format|
-      format.html { redirect_to consumer_subscriptions_url(@consumer) }
+      format.html { redirect_to consumer_readme_url(@consumer) }
       format.json { render json: @consumer }
     end
   end
@@ -63,7 +63,7 @@ class ConsumersController < ApplicationController
 
     respond_to do |format|
       if @consumer.update_attributes(params[:consumer])
-        format.html { redirect_to consumer_subscriptions_url(@consumer), notice: 'Consumer was successfully updated.' }
+        format.html { redirect_to consumer_readme_url(@consumer), notice: 'Consumer was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -81,6 +81,42 @@ class ConsumersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to consumers_url }
       format.json { head :no_content }
+    end
+  end
+
+  # GET /consumers/1/readme
+  # GET /consumers/1/readme.json
+  def readme
+    @consumer = Consumer.find(params[:consumer_id])
+    @readme=@consumer.readme
+    respond_to do |format|
+      format.html
+      format.json { render json: @readme }
+    end
+  end
+
+
+  # GET /consumers/1/edit_readme
+  def edit_readme
+    @consumer = Consumer.find(params[:consumer_id])
+    @readme = @consumer.readme || Readme.create
+    @consumer.readme=@readme
+    @consumer.save!
+  end
+
+  # PUT /consumers/1/update_readme
+  # PUT /consumers/1/update_readme.json
+  def update_readme
+    @consumer = Consumer.find(params[:consumer_id])
+
+    respond_to do |format|
+      if @consumer.readme.update_attributes(params[:readme])
+        format.html { redirect_to consumer_readme_url(@consumer), notice: 'ReadMe was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit_readme" }
+        format.json { render json: @readme.errors, status: :unprocessable_entity }
+      end
     end
   end
 end

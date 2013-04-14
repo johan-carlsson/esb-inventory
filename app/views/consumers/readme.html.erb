@@ -1,0 +1,13 @@
+<%# render :partial => "window_header" %>
+
+<%= render :partial => '/consumers/consumer' %>
+
+<%= render :partial => "consumers/tabs" %>
+
+<div id="result">
+  <%= render :partial => 'readme_toolbar' %>
+  <div class="clr"></div>	
+	<div id="readme">
+    <%= Asciidoctor.render("#{@readme.text}").html_safe if @readme %>
+	</div>
+</div>

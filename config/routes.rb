@@ -10,6 +10,8 @@ EsbInventory::Application.routes.draw do
   resources :consumers do 
     resources :subscriptions, :controller => "consumer_subscriptions"
     resources :contacts, :controller => "consumer_contacts"
+    get "readme", "edit_readme"
+    put "update_readme"
   end
 
   resources :providers do

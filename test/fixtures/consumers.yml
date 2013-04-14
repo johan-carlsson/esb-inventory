@@ -2,6 +2,8 @@
 
 beatles:
   name: Beatles
+  readme: beatles
 
 redpill:
   name: Redpill
+  readme: redpill

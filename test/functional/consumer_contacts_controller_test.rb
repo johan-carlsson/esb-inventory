@@ -48,4 +48,5 @@ class ConsumerContactsControllerTest < ActionController::TestCase
 
     assert_redirected_to consumer_contacts_path(@consumer)
   end
+
 end

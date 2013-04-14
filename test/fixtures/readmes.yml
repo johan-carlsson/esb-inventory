@@ -6,3 +6,9 @@ getFriends:
 searchTweets:
   text: Hello
 
+beatles:
+  text: Hello
+
+redpill:
+  text: Hello
+
