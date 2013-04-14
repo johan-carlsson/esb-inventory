@@ -27,7 +27,7 @@ class ProvidersControllerTest < ActionController::TestCase
 
   test "should show provider" do
     get :show, id: @provider
-    assert_redirected_to provider_services_url(@provider) 
+    assert_redirected_to provider_readme_url(@provider) 
   end
 
   test "should get edit" do
@@ -37,7 +37,7 @@ class ProvidersControllerTest < ActionController::TestCase
 
   test "should update provider" do
     put :update, id: @provider, provider: { name: @provider.name }
-    assert_redirected_to provider_path(assigns(:provider))
+    assert_redirected_to provider_readme_path(assigns(:provider))
   end
 
   test "should destroy provider" do
@@ -47,4 +47,20 @@ class ProvidersControllerTest < ActionController::TestCase
 
     assert_redirected_to providers_path
   end
+
+  test "should show readme" do
+    get :readme, provider_id: @provider
+    assert_response :success
+  end
+
+  test "should edit readme" do
+    get :edit_readme, provider_id: @provider
+    assert_response :success
+  end
+
+  test "should update readme" do
+    put :update_readme, provider_id: @provider, readme: { text: "Hello" }
+    assert_redirected_to provider_readme_path(@provider)
+  end
+
 end

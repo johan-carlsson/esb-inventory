@@ -2,6 +2,8 @@
 
 twitter:
   name: Twitter
+  readme: twitter
 
 facebook:
   name: Facebook
+  readme: facebook

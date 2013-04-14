@@ -12,3 +12,8 @@ beatles:
 redpill:
   text: Hello
 
+twitter:
+  text: Hello
+
+facebook:
+  text: Hello

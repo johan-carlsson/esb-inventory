@@ -1,8 +1,8 @@
 <div id="provider_tab" class="tab">
 	<ul class="tabs">
-    <%= tab_for("ReadMe", {} ,{selected: false,:class => "disabled"}) %>
-		<%= tab_for("Services", provider_services_path) %>
-    <%= tab_for("Consumers", provider_consumers_path ) %>
+    <%= tab_for("ReadMe",provider_readme_url(@provider)) %>
+		<%= tab_for("Services", provider_services_url(@provider)) %>
+    <%= tab_for("Consumers", provider_consumers_url(@provider) ) %>
     <%= tab_for("Contacts", provider_contacts_url(@provider)) %>
     <%= tab_for("Statistics", {} ,{selected: false,:class => "disabled"}) %>
 	</ul>

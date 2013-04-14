@@ -17,7 +17,7 @@ class ProvidersController < ApplicationController
     @provider = Provider.find(params[:id])
 
     respond_to do |format|
-      format.html { redirect_to provider_services_url(@provider) } 
+      format.html { redirect_to provider_readme_url(@provider) } 
       format.json { render json: @provider }
     end
   end
@@ -61,7 +61,7 @@ class ProvidersController < ApplicationController
 
     respond_to do |format|
       if @provider.update_attributes(params[:provider])
-        format.html { redirect_to @provider, notice: 'Provider was successfully updated.' }
+        format.html { redirect_to provider_readme_url(@provider), notice: 'Provider was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -108,4 +108,41 @@ class ProvidersController < ApplicationController
       format.json { render json: @services }
     end 
   end
+
+  # GET /providers/1/readme
+  # GET /providers/1/readme.json
+  def readme
+    @provider = Provider.find(params[:provider_id])
+    @readme=@provider.readme
+    respond_to do |format|
+      format.html
+      format.json { render json: @readme }
+    end
+  end
+
+
+  # GET /providers/1/edit_readme
+  def edit_readme
+    @provider = Provider.find(params[:provider_id])
+    @readme = @provider.readme || Readme.create
+    @provider.readme=@readme
+    @provider.save!
+  end
+
+  # PUT /providers/1/update_readme
+  # PUT /providers/1/update_readme.json
+  def update_readme
+    @provider = Provider.find(params[:provider_id])
+
+    respond_to do |format|
+      if @provider.readme.update_attributes(params[:readme])
+        format.html { redirect_to provider_readme_url(@provider), notice: 'ReadMe was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit_readme" }
+        format.json { render json: @readme.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
 end
