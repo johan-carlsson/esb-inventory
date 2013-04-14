@@ -19,3 +19,15 @@
 jQuery(document).ready(function($) {
     $( ".datepicker" ).datepicker({ dateFormat: "yy-mm-dd" });
 });
+
+function show_additional_information() {
+	$('.show_additional_information_button').hide();
+	$('.hide_additional_information_button').show();
+	$(".additional_information").slideDown("slow");
+}
+
+function hide_additional_information() {
+	$('.hide_additional_information_button').hide();
+	$('.show_additional_information_button').show();
+	$(".additional_information").slideUp("slow");
+}

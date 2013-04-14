@@ -1,10 +1,13 @@
-<tr class="empty"><th>&nbsp;</th><td>&nbsp;</td><th>&nbsp;</th><td>&nbsp;</td></tr>
-
 <tr>
+	<th><%= "Created by" %>:</th>
+	<td><%=h record.creator %></td>
 	<th><%= "Created at" %>:</th>
 	<td><%=h record.created_at.to_s(:long) if record.created_at %></td>
 </tr>
 <tr>
+	<th><%= "Updated by" %>:</th>
+	<td><%=h record.updater %></td>
 	<th><%= "Updated at" %>:</th>
 	<td><%=h record.updated_at.to_s(:long) if record.updated_at %></td>
 </tr>
+

@@ -17,6 +17,18 @@
   </tr>
 </table>
 
+<div class="additional_information" style="display:none">
+	<table class="show" width="100%" border="0" cellspacing="0" cellpadding="0">
+
+		<%# <%= render :partial => "shared/tag_and_description", :locals => {:record => @membership} %1> %>
+
+		<%= render :partial => "shared/userstamp", :locals => {:record => @subscription} %>
+
+	</table>
+</div>
+
+<%= render :partial => 'shared/additional_information_buttons' %>
+
 <%= render :partial => 'object_toolbar'  %>
 
 <% end %>
