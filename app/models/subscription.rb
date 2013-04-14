@@ -1,15 +1,14 @@
 class Subscription < ActiveRecord::Base
   stampable
+  attr_accessible :service_name,:consumer_name,:starts_at,:ends_at
+
   default_scope where(:deleted_at => nil)
 
   belongs_to :service
   belongs_to :consumer
 
-
   validates_uniqueness_of :service_id, :scope => :consumer_id, :message => "already has a subscription for this consumer"
   validates_presence_of :consumer_id,:service_id
-
-  attr_accessible :service_name,:consumer_name,:starts_at,:ends_at
 
   def consumer_name
     self.consumer.try(:name)

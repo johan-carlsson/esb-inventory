@@ -1,9 +1,12 @@
 class ProviderContact < ActiveRecord::Base
   ROLES=%w( Administrator Arcitect Developer Maintainer Manager Support Owner )
+  attr_accessible :role,:contact_name
   default_scope where(:deleted_at => nil)
+
   belongs_to :provider
   belongs_to :contact
-  attr_accessible :role,:contact_name
+  belongs_to :created_by, :class_name => "User", :foreign_key => "created_by"
+  belongs_to :updated_by, :class_name => "User", :foreign_key => "updated_by"
 
   validates_uniqueness_of :provider_id, :scope => [:contact_id,:role], :message => "already has a contact with this role"
 

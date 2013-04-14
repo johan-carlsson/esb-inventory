@@ -10,7 +10,7 @@ class Provider < ActiveRecord::Base
   has_many :provider_contacts, :dependent => :destroy
   has_many :contacts, :through => :provider_contacts
   belongs_to :readme
-
+ 
   validates_presence_of :name
   validates_uniqueness_of :name
 
