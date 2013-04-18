@@ -8,6 +8,6 @@
   <%= render :partial => 'readme_toolbar' %>
   <div class="clr"></div>	
 	<div id="readme">
-    <%= Asciidoctor.render("#{@readme.text}").html_safe if @readme %>
+    <%= Asciidoctor.render("#{ERB.new(@readme.text).result}").html_safe if @readme %>
 	</div>
 </div>
