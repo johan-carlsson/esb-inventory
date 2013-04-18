@@ -5,7 +5,7 @@
 <%= render :partial => "providers/tabs" %>
 
 <div id="result">
-  <%= render :partial => 'shared/table_toolbar', :locals => {:name => "services",:show_new_button => false} %>
+  <%= render :partial => 'shared/table_toolbar', :locals => {:name => "services",:show_new_button => false,:show_csv_export_button => true} %>
 		<div id="table">
 			<%= render :partial => "services/table" %>
 		</div>

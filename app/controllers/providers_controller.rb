@@ -91,6 +91,7 @@ class ProvidersController < ApplicationController
     @services=@provider.services.order(params[:order])
     respond_to do |format|
       format.html # services.html.erb
+      format.csv # services.csv.erb
       format.json { render json: @services }
     end 
   end
@@ -104,8 +105,9 @@ class ProvidersController < ApplicationController
     @provider = Provider.find(params[:provider_id])
     @consumers=@provider.consumers.order(params[:order])
     respond_to do |format|
-      format.html # services.html.erb
-      format.json { render json: @services }
+      format.html # consumers.html.erb
+      format.csv # consumers.csv.erb
+      format.json { render json: @consumers }
     end 
   end
 

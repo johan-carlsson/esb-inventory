@@ -1,6 +1,6 @@
 <% name||=controller.controller_name %>
 <% show_new_button=true if show_new_button!=false %>
-<% show_csv_export_button=true if show_csv_export_button!=false %>
+<% show_csv_export_button=false if show_csv_export_button!=true %>
 <% name.downcase! %>
 <% image ||=  "sidebar/#{name.gsub(" ","_")}.png" %>
 <% if controller.action_name == "index" || @show_index_toolbar %>
@@ -14,7 +14,7 @@
                         {:accesskey => "N"} ,@new_button_disabled) %>
     <% end %>
                       
-    <% if @show_csv_export_button %>									
+    <% if show_csv_export_button %>									
     <%= toolbar.item({:class => :export, :tooltip => "Export %s csv" % name },
                     {:format => :csv},
                             {},

@@ -8,7 +8,7 @@ end %>
 <% end %>
 
 <div id="result">
-  <%= render :partial => 'shared/table_toolbar', :locals => {:collection => services} %>
+  <%= render :partial => 'shared/table_toolbar', :locals => {:collection => services, :show_csv_export_button => true} %>
 	<div id="table">
     <%= render :partial => "table", :locals => {:services => services} %>	
 	</div>
