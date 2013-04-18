@@ -29,7 +29,7 @@ gem 'will_paginate'
 gem 'userstamp', :git => "http://github.com/insphire/userstamp.git"
 gem 'permanent_records'
 gem 'asciidoctor'
-
+gem 'acts-as-taggable-on'
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 

@@ -11,5 +11,6 @@ end
   <%= f.empty_column %>
   <%= f.text_field :starts_at, :class => "datepicker" %>
   <%= f.text_field :ends_at, :class => "datepicker" %>	
+  <%= f.text_area :tag_list,{:title => "Use comma to separate tags", :cols => 27, :rows => 3} %>
 	<%= f.submit_and_cancel_buttons %>
 <% end %>

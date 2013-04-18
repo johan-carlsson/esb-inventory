@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414124855) do
+ActiveRecord::Schema.define(:version => 20130418162020) do
 
   create_table "consumer_contacts", :force => true do |t|
     t.integer  "consumer_id"
@@ -122,6 +122,23 @@ ActiveRecord::Schema.define(:version => 20130414124855) do
   add_index "subscriptions", ["consumer_id", "service_id"], :name => "index_subscriptions_on_consumer_id_and_service_id", :unique => true
   add_index "subscriptions", ["consumer_id"], :name => "index_subscriptions_on_consumer_id"
   add_index "subscriptions", ["service_id"], :name => "index_subscriptions_on_service_id"
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       :limit => 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
+
+  create_table "tags", :force => true do |t|
+    t.string "name"
+  end
 
   create_table "trashes", :force => true do |t|
     t.string   "trashable_name"

@@ -20,7 +20,7 @@ class ProviderContactsControllerTest < ActionController::TestCase
 
   test "should create provider_contact" do
     assert_difference('ProviderContact.count') do
-      post :create, :provider_id => @provider.id, provider_contact: { :role => "Administrator"}
+      post :create, :provider_id => @provider.id, provider_contact: { :role => "Administrator", :tag_list => "Hej, hello"}
     end
 
     assert_redirected_to provider_contact_path(@provider,assigns(:provider_contact))
@@ -37,7 +37,7 @@ class ProviderContactsControllerTest < ActionController::TestCase
   end
 
   test "should update provider_contact" do
-    put :update, id: @provider_contact, :provider_id => @provider.id, provider_contact: { :role => "Administrator" }
+    put :update, id: @provider_contact, :provider_id => @provider.id, provider_contact: { :role => "Administrator" , :tag_list => "Hej, hello"}
     assert_redirected_to provider_contact_path(@provider,assigns(:provider_contact))
   end
 

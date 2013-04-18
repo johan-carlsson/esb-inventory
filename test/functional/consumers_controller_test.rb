@@ -19,7 +19,7 @@ class ConsumersControllerTest < ActionController::TestCase
 
   test "should create consumer" do
     assert_difference('Consumer.count') do
-      post :create, consumer: { name: "Jim" }
+      post :create, consumer: { name: "Jim", :tag_list => "Hej, hello"}
     end
 
     assert_redirected_to consumer_path(assigns(:consumer))
@@ -37,7 +37,7 @@ class ConsumersControllerTest < ActionController::TestCase
   end
 
   test "should update consumer" do
-    put :update, id: @consumer, consumer: { name: @consumer.name }
+    put :update, id: @consumer, consumer: { name: @consumer.name, :tag_list => "Hej, hello"}
     assert_redirected_to consumer_readme_path(assigns(:consumer))
   end
 

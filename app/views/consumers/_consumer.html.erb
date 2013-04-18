@@ -11,17 +11,9 @@
 	</tr>
 </table>
 
-<div class="additional_information" style="display:none">
-	<table class="show" width="100%" border="0" cellspacing="0" cellpadding="0">
+<%= render :partial => 'shared/additional_information', :locals => {:record => @consumer} %>
 
-		<%# <%= render :partial => "shared/tag_and_description", :locals => {:record => @membership} %1> %>
 
-		<%= render :partial => "shared/userstamp", :locals => {:record => @consumer} %>
-
-	</table>
-</div>
-
-<%= render :partial => 'shared/additional_information_buttons' %>
 
 <%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => consumer.class.to_s.pluralize.downcase, :id => consumer.id} %>
 

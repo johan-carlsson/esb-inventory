@@ -13,5 +13,6 @@ end
 	<%= f.text_field :phone %>	
   <%= f.text_field :mobile %>	 
 
+  <%= f.text_area :tag_list,{:title => "Use comma to separate tags", :cols => 27, :rows => 3} %>
 	<%= f.submit_and_cancel_buttons %>
 <% end %>

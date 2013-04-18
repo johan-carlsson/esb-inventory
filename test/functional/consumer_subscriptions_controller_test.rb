@@ -20,7 +20,7 @@ class ConsumerSubscriptionsControllerTest < ActionController::TestCase
 
   test "should create subscription and a new service" do
     assert_difference('Subscription.count') do
-      post :create,  :consumer_id => @consumer.id, subscription: { service_name: "A new service" }
+      post :create,  :consumer_id => @consumer.id, subscription: { service_name: "A new service", :tag_list => "Hej, hello"}
     end
 
     assert_redirected_to consumer_subscription_path(@consumer,assigns(:subscription))
@@ -37,7 +37,7 @@ class ConsumerSubscriptionsControllerTest < ActionController::TestCase
   end
 
   test "should update subscription" do
-    put :update, id: @subscription, :consumer_id => @consumer.id, subscription: { consumer_name: @subscription.consumer.name }
+    put :update, id: @subscription, :consumer_id => @consumer.id, subscription: { consumer_name: @subscription.consumer.name, :tag_list => "Hej, hello"}
     assert_redirected_to consumer_subscription_path(@consumer,assigns(:subscription))
   end
 

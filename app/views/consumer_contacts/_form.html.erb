@@ -11,5 +11,6 @@ end
 <%= redpill_tabular_form([@consumer,@consumer_contact],{:url => url, :object_name => 'consumer_contact'},{:remote => remote}) do |f| %> 
   <%= f.text_field :contact_name, data: {autocomplete_source: Contact.order(:name).map(&:name)} %>
   <%= f.select :role, ConsumerContact::ROLES %>
+  <%= f.text_area :tag_list,{:title => "Use comma to separate tags", :cols => 27, :rows => 3} %>
 	<%= f.submit_and_cancel_buttons %>
 <% end %>

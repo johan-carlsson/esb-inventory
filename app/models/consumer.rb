@@ -1,6 +1,7 @@
 class Consumer < ActiveRecord::Base
   stampable
-  attr_accessible :name,:identifier
+  acts_as_ordered_taggable
+  attr_accessible :name,:identifier,:tag_list
 
   default_scope where(:deleted_at => nil)
 

@@ -1,6 +1,7 @@
 class ProviderContact < ActiveRecord::Base
   ROLES=%w( Administrator Arcitect Developer Maintainer Manager Support Owner )
-  attr_accessible :role,:contact_name
+  acts_as_ordered_taggable
+  attr_accessible :role,:contact_name,:tag_list
   default_scope where(:deleted_at => nil)
 
   belongs_to :provider

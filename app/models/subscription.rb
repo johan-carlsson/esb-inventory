@@ -1,6 +1,7 @@
 class Subscription < ActiveRecord::Base
   stampable
-  attr_accessible :service_name,:consumer_name,:starts_at,:ends_at
+  acts_as_ordered_taggable
+  attr_accessible :service_name,:consumer_name,:starts_at,:ends_at,:tag_list
 
   default_scope where(:deleted_at => nil)
 
