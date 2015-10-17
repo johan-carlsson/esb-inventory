@@ -12,6 +12,7 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+!/log/.keep
 /tmp
 
 /config/database.yml
@@ -21,3 +22,4 @@
 tags
 .ruby-gemset
 .ruby-version
+NERD_tree_*

@@ -1,19 +1,24 @@
-class Consumer < ActiveRecord::Base
-  stampable
-  acts_as_ordered_taggable
-  attr_accessible :name,:identifier,:tag_list
+class Consumer
+  include ActiveModel::Model
+  attr_accessor :id, :name
 
-  default_scope where(:deleted_at => nil)
+  def self.all
+    @cache ||= Backend.consumers
+  end
 
-  has_many :subscriptions, :dependent => :destroy
-  has_many :consumer_contacts, :dependent => :destroy
-  has_many :contacts, :through => :consumer_contacts
-  belongs_to :readme
+  def self.find_by_id(id)
+    all.find {|s| s.id=id}
+  end
 
-  validates_presence_of :name
-  validates_uniqueness_of :name
+  def subscriptions
+   Subscription.find_all_by_consumer_id(self.id) 
+  end
 
   def to_s
     name
+  end
+
+  def persisted?
+    true
   end
 end

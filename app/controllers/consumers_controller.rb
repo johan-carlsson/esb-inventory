@@ -4,7 +4,7 @@ class ConsumersController < ApplicationController
   def index
     @show_csv_export_button=true
     params[:order] ||= 'consumers.name'
-    @consumers = Consumer.order(params[:order]).page(params[:page])
+    @consumers = Consumer.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,107 +16,26 @@ class ConsumersController < ApplicationController
   # GET /consumers/1
   # GET /consumers/1.json
   def show
-    @consumer = Consumer.find(params[:id])
+    @consumer = Consumer.find_by_id(params[:id])
 
     respond_to do |format|
-      format.html { redirect_to consumer_readme_url(@consumer) }
+      format.html { redirect_to subscriptions_consumer_url(@consumer) }
       format.json { render json: @consumer }
     end
   end
 
-  # GET /consumers/new
-  # GET /consumers/new.json
-  def new
-    @consumer = Consumer.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @consumer }
-    end
-  end
 
-  # GET /consumers/1/edit
-  def edit
-    @consumer = Consumer.find(params[:id])
-  end
+  # GET /consumers/1/subscriptions
+  # GET /consumers/1/subscriptions.json
+  def subscriptions
+    @consumer = Consumer.find_by_id(params[:id])
+    @subscriptions= @consumer.subscriptions 
 
-  # POST /consumers
-  # POST /consumers.json
-  def create
-    @consumer = Consumer.new(params[:consumer])
-
-    respond_to do |format|
-      if @consumer.save
-        format.html { redirect_to @consumer, notice: 'Consumer was successfully created.' }
-        format.json { render json: @consumer, status: :created, location: @consumer }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @consumer.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /consumers/1
-  # PUT /consumers/1.json
-  def update
-    @consumer = Consumer.find(params[:id])
-
-    respond_to do |format|
-      if @consumer.update_attributes(params[:consumer])
-        format.html { redirect_to consumer_readme_url(@consumer), notice: 'Consumer was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @consumer.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /consumers/1
-  # DELETE /consumers/1.json
-  def destroy
-    @consumer = Consumer.find(params[:id])
-    @consumer.destroy
-
-    respond_to do |format|
-      format.html { redirect_to consumers_url }
-      format.json { head :no_content }
-    end
-  end
-
-  # GET /consumers/1/readme
-  # GET /consumers/1/readme.json
-  def readme
-    @consumer = Consumer.find(params[:consumer_id])
-    @readme=@consumer.readme
     respond_to do |format|
       format.html
-      format.json { render json: @readme }
+      format.json { render json: @subscriptions }
     end
   end
 
-
-  # GET /consumers/1/edit_readme
-  def edit_readme
-    @consumer = Consumer.find(params[:consumer_id])
-    @readme = @consumer.readme || Readme.create
-    @consumer.readme=@readme
-    @consumer.save!
-  end
-
-  # PUT /consumers/1/update_readme
-  # PUT /consumers/1/update_readme.json
-  def update_readme
-    @consumer = Consumer.find(params[:consumer_id])
-
-    respond_to do |format|
-      if @consumer.readme.update_attributes(params[:readme])
-        format.html { redirect_to consumer_readme_url(@consumer), notice: 'ReadMe was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit_readme" }
-        format.json { render json: @readme.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 end

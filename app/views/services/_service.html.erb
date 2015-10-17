@@ -6,16 +6,16 @@
 	<tr>
 	  <th><%= "Name" %>:</th>
 		<td><%= service.name %></td>
-	  <th><%= "Category" %>:</th>
-		<td><%= service.category %></td>
+	  <th><%= "Group" %>:</th>
+		<td><%= service.group %></td>
 	</tr>
-  <tr>
-    <th><%= "Provider" %></th> 
-    <td><%=  link_to(service.provider,provider_url(service.provider)) if service.provider %> </td>
-  </tr>
+	<tr>
+	  <th><%= "Id" %>:</th>
+		<td><%= service.id %></td>
+	  <th></th>
+    <td></td>
+	</tr>
 </table>
-
-<%= render :partial => 'shared/additional_information', :locals => {:record => @service} %>
 
 <%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => service.class.to_s.pluralize.downcase, :id => service.id} %>
 

@@ -1,9 +1,0 @@
-<% subscriptions||=@subscriptions %>
-<% table_options||={} %>
-
-<%= redpill_table(subscriptions,table_options) do |table| 
-  table.add_column(:name => :name,:order => "consumers.name", :width => "50%") { |o| link_to(o.consumer, service_subscriptions_table_row_url(@service,o)) }
-  table.add_column(:name => "id",:order => "consumers.identifier",:width =>"50%") { |o| o.consumer.identifier}
-	table.row_linker { |o|  service_subscriptions_table_row_url(@service,o)}
-end %>
-

@@ -7,14 +7,6 @@
     <%= render(:partial => 'shared/collection_toolbar',:locals => {:name => name,:show_new_button => show_new_button, :show_csv_export_button => show_csv_export_button}) %>		
 	</div>
 
-	<div id="filter_toolbar">
-	<%= render :partial => 'shared/filter'  %>
-	</div>
-	
-	<div id="paginator">
-    <%= render :partial => 'shared/paginator', :locals => {:collection => collection} %>
-	</div>
-	
 
 	<div class="clr"></div>	
 </div>

@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>EsbInventory</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -18,15 +18,10 @@
   	</noscript>
   	<div id="right-wrap">
   		<div id="right">
-				<div id="progress_indicator">
-				<%# 	<%= render :partial => 'shared/progress_indicator' %1> %>
-				</div>
-			  <%= render :partial => "layouts/search" %>
 			<%# <div id="info-logotype"></div> %>
 				<div id="notice">
 				<%= render :partial => 'layouts/notice' %>
 				</div>
-
 			<div id="window">
 				<div class="bottomRightCorner"><div class="bottomLeftCorner"><div class="topRightCorner"><div class="topLeftCorner">
 		  			<div id="content_box">
@@ -47,13 +42,7 @@
 
 
 			<%= render :partial => 'layouts/sidebar' %>
-			
 						
-  		<%# <% if DEBUG %1> %>
-				<%# <div id="debug"> %>
-					<%# <%= render :partial => 'layouts/debug' %1> %>
-				<%# </div> %>
-  		<%# <% end %1> %>
   	</div>
 
   </div>
@@ -67,7 +56,6 @@
 	 }
 	//]]>
 	</script>
- 
 
 
 </body>

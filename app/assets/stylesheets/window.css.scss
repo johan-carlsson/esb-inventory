@@ -8,8 +8,8 @@ div#window {
 
 /* Corners window */
 
-div.bottomLeftCorner { background: transparent image-url("window/bottomLeftCorner.gif") bottom left no-repeat; }
-div.bottomRightCorner { background: transparent image-url("window/bottomRightCorner.gif") bottom right no-repeat; }
+div.bottomLeftCorner { background: transparent image-url("window/bottomLeftCorner.gif") bottom left repeat-y; }
+div.bottomRightCorner { background: transparent image-url("window/bottomRightCorner.gif") bottom right repeat-y; }
 div.topLeftCorner { background: transparent image-url("window/topLeftCorner.gif") top left no-repeat; }
 div.topRightCorner { background: transparent image-url("window/topRightCorner.gif") top right no-repeat;}
 

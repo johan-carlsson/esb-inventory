@@ -7,13 +7,6 @@
 	<%= redpill_toolbar do |toolbar| %>
 	<%= toolbar.image(image) %>
 	<%= toolbar.text(name.titlecase) %>
-  <% if current_user %>  
-      <% if show_new_button %>
-    <%= toolbar.item(	{:class => :new, :tooltip => "Add" + ' ' + name.singularize + " (#{shortcut_modifier}-n)" },
-                      {:action => "new"},
-                        {:accesskey => "N"} ,@new_button_disabled) %>
-    <% end %>
-                      
     <% if show_csv_export_button %>									
     <%= toolbar.item({:class => :export, :tooltip => "Export %s csv" % name },
                     {:format => :csv},
@@ -22,11 +15,7 @@
     <% end %>
     
 
-
-    
     <% end %>
-	<% end %>
-
 <% else %>
 <%# CSS FIX %>
 <div id="collection_toolbar" style="height:32px; background: none"></div>

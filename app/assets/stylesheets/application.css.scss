@@ -3,127 +3,127 @@
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
  *
+ *= require_tree .
  *= require_self
- *= require jquery.ui.autocomplete
- *= require jquery.ui.datepicker
- *= require message
- *= require window
  *= require buttons
+ *= require show
+ *= require show
  *= require tabs
  *= require toolbar
- *= require show
- *= require edit
- *= require search
- *= require readme
- *= require_directory ./redpill_form_builders
- *= require_directory ./redpill_sidebar
+ *= require window
  *= require_directory ./redpill_table
  *= require_directory ./redpill_toolbar
+ *= require_directory ./redpill_sidebar
+ *= require_directory ./redpill_form_builders
  */
 
 @charset "utf-8";
 
 
 body {
-	background: transparent image-url("application/body_bg.gif") repeat-x top;
-	font-family: Arial,Helvetica,sans-serif;
-	font-size: 92%;
-	line-height: 160%;
-	margin: 0pt;
-	padding: 0pt;
-	min-width: 1020px;
-	width: 100%;
-	width: expression(document.body.clientWidth < 1020? "1020px": "auto");
+  background: transparent image-url("application/body_bg.gif") repeat-x top;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 92%;
+  line-height: 160%;
+  margin: 0pt;
+  padding: 0pt;
+  min-width: 1020px;
+  width: 100%;
+  width: expression(document.body.clientWidth < 1020? "1020px": "auto");
 }
 
 div#result {
-	margin: 0;
-	padding: 5px 14px 18px 14px;
-	font-size: 1.0em;
+  margin: 0;
+  padding: 5px 14px 18px 14px;
+  font-size: 1.0em;
 }
 
 div#wrapper {
-	margin: 0pt auto 0pt 0pt;
-	width: 99%;
+  margin: 0pt auto 0pt 0pt;
+  width: 99%;
 }
 
 div#logotype {
-	background: transparent image-url("application/esb_inventory.gif") no-repeat scroll 0%;
-	height: 80px;
-	margin: 0pt 0pt 0pt 10px;
-	width: 200px;
+  background: transparent image-url("application/esb_inventory.gif") no-repeat scroll 0%;
+  height: 80px;
+  margin: 0pt 0pt 0pt 10px;
+  width: 200px;
 }
 
 
 
 div#right-wrap {
-	float: right;
-	margin-left: -220px;
-	width: 100%;
+  float: right;
+  margin-left: -220px;
+  width: 100%;
 }
 
 div#right {
-	margin-left: 220px;
+  margin-left: 220px;
 }
 
 div#content_box {
-	margin-top: 85px;
+  margin-top: 85px;
 }
 
 div#left {
-	float: left;
-	width: 220px;
+  float: left;
+  width: 220px;
 }
 
 img { border:none; behavior: url(/javascripts/iepngfix.htc) }  /* IE hack for PNG transparency*/
 
 div#policy, div#group_pdf_report {
-	margin-left:45px;
+  margin-left:45px;
 }
 
 div#policy a:visited{
-	color:blue;
+  color:blue;
 }
 
 
 /* No javascript */
 
 div#noscript {
-	background: transparent image-url("message/notice.jpg") no-repeat;
-	width: 540px;
-	height: 80px;
-	color: #000;
-	position: absolute;
-	display: block;
-	left: 230px;
-	top: 0px;
-	text-align: center;
-	padding: 30px 30px 0 0;
-	line-height: 18px;
-	font-size: 1.3em;
-	text-decoration: blink;
+  background: transparent image-url("message/notice.jpg") no-repeat;
+  width: 540px;
+  height: 80px;
+  color: #000;
+  position: absolute;
+  display: block;
+  left: 230px;
+  top: 0px;
+  text-align: center;
+  padding: 30px 30px 0 0;
+  line-height: 18px;
+  font-size: 1.3em;
+  text-decoration: blink;
 }
 
 /* Debugging tool */
 
 div#debug {
-	border:1px solid #999999;
-	margin:5px;
-	position:absolute;
-	top:700px;
-	z-index:-1;
+  border:1px solid #999999;
+  margin:5px;
+  position:absolute;
+  top:700px;
+  z-index:-1;
 }
 
 
 /* Clear */
 
 div.clr {
-	clear: both;
+  clear: both;
 }
+
+
 
 

@@ -21,7 +21,7 @@ module TableHelper
       @base = actionview_base
       @collection = collection
       @options = options
-      @table_name = @collection[0].class.table_name if collection.size > 0
+      # @table_name = @collection[0].class.table_name if collection.size > 0
       @column_defs = []
       @column_renderers = []
       @row_linker = lambda { |x| } #Initialize to empty proc

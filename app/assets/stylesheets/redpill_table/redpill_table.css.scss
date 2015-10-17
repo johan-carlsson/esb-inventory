@@ -18,6 +18,10 @@
 	cursor:pointer;
 }
 
+#table tr.disabled {
+	cursor: default;
+}
+
 #table tr.unauthorized {
 	cursor: default;
 }

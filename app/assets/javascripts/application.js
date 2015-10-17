@@ -13,12 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//= require jquery.ui.autocomplete
-//= require jquery.ui.datepicker
 
-jQuery(document).ready(function($) {
-    $( ".datepicker" ).datepicker({ dateFormat: "yy-mm-dd" });
-});
 
 function show_additional_information() {
 	$('.show_additional_information_button').hide();

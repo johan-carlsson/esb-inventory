@@ -1,0 +1,9 @@
+<% subscriptions||=@subscriptions %>
+<% table_options||={} %>
+
+<%= redpill_table(subscriptions,table_options) do |table| 
+  table.add_column(:name => "service",:width =>"50%") { |o| o.service.name}
+  table.add_column(:name => "starts at",:width =>"50%") { |o| o.starts_at}
+  table.row_class{|r| "disabled"}
+end %>
+

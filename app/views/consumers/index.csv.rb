@@ -4,7 +4,7 @@ CSV.generate do |csv|
   @consumers.each do |consumer|
     csv << [
      consumer.name,
-     consumer.identifier,
+     consumer.id,
      consumer.subscriptions.count
     ]
   end

@@ -1,29 +1,29 @@
-class Subscription < ActiveRecord::Base
-  stampable
-  acts_as_ordered_taggable
-  attr_accessible :service_name,:consumer_name,:starts_at,:ends_at,:tag_list
+class Subscription 
+  include ActiveModel::Model
+  attr_accessor  :service_id,:consumer_id,:starts_at, :ends_at
 
-  default_scope where(:deleted_at => nil)
-
-  belongs_to :service
-  belongs_to :consumer
-
-  validates_uniqueness_of :service_id, :scope => :consumer_id, :message => "already has a subscription for this consumer"
-  validates_presence_of :consumer_id,:service_id
-
-  def consumer_name
-    self.consumer.try(:name)
+  def self.all
+    Backend.subscriptions
   end
 
-  def consumer_name=(name)
-   self.consumer=Consumer.find_or_create_by_name(name) 
+  def self.find_all_by_consumer_id(id)
+    all.find_all {|s| s.consumer_id == id}
   end
 
-  def service_name
-    self.service.try(:name)
+  def self.find_all_by_service_id(id)
+    all.find_all {|s| s.service_id == id}
   end
 
-  def service_name=(name)
-   self.service=Service.find_or_create_by_name(name) 
+  def consumer
+    Consumer.find_by_id(self.consumer_id)    
   end
+
+  def service
+    Service.find_by_id(self.service_id)    
+  end
+
+  def persisted?
+    true
+  end
+
 end

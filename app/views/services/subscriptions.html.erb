@@ -1,0 +1,9 @@
+<% subscriptions||=@subscriptions %>
+<%= render :partial => "service" %>
+
+<%= render :partial => "tabs" %>
+<div id="result">
+		<div id="table">
+      <%= render :partial => "subscriptions_table", :locals => {:subscriptions => subscriptions} %>
+		</div>
+</div>

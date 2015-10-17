@@ -1,0 +1,48 @@
+div.item_toolbar_wrapper {
+	float:right;
+}
+
+ul.item_toolbar {
+	float: left;
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.item_toolbar li {
+	float: left;
+	overflow: hidden;
+	height: 25px;
+}
+
+ul.item_toolbar li a {
+	float: left;
+	overflow: hidden;
+	padding: 12px 16px;
+}
+
+/*Icons*/
+ul.item_toolbar li.show a {
+	background: image-url("redpill_toolbar/item_toolbar/open.gif");
+}
+
+ul.item_toolbar li.edit a {
+	background: image-url("redpill_toolbar/item_toolbar/open.gif");
+}
+
+ul.item_toolbar li.download a {
+	background: image-url("redpill_toolbar/item_toolbar/download.gif");
+}
+
+ul.item_toolbar li.add a {
+	background: image-url("redpill_toolbar/item_toolbar/add.gif");
+}
+
+ul.item_toolbar li.delete a {
+	background: image-url("redpill_toolbar/item_toolbar/delete.gif");
+}
+
+ul.item_toolbar li.pdf a {
+	background: image-url("redpill_toolbar/item_toolbar/pdf.gif");
+}
