@@ -1,6 +1,6 @@
 class Consumer
   include ActiveModel::Model
-  attr_accessor :id, :name
+  attr_accessor  :identifier,:name
 
   def self.all
     @cache ||= Registry.consumers
@@ -16,6 +16,10 @@ class Consumer
 
   def to_s
     name
+  end
+
+  def id
+    self.identifier.gsub(/[^\w]/,"_") 
   end
 
   def persisted?

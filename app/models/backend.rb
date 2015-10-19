@@ -1,6 +1,6 @@
 class Service 
   include ActiveModel::Model
-  attr_accessor :id, :name, :provider
+  attr_accessor :identifier, :name, :provider
   attr_accessor :protocol, :format
 
   def self.all
@@ -13,6 +13,10 @@ class Service
 
   def to_s
     name
+  end
+
+  def id
+    self.identifier.gsub(/[^\w]/,"_") 
   end
 
   def persisted?
