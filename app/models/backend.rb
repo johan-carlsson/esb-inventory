@@ -1,18 +1,14 @@
 class Service 
   include ActiveModel::Model
-  attr_accessor :id, :name, :group
+  attr_accessor :id, :name, :provider
   attr_accessor :protocol, :format
 
   def self.all
-    @cache ||= Registry.services
+    @cache ||= Registry.backends
   end
 
   def self.find_by_id(service_id)
     all.find {|s| s.id==service_id}
-  end
-
-  def subscriptions
-   Subscription.find_all_by_service_id(self.id) 
   end
 
   def to_s

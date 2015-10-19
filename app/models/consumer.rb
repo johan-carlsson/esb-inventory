@@ -3,11 +3,11 @@ class Consumer
   attr_accessor :id, :name
 
   def self.all
-    @cache ||= Backend.consumers
+    @cache ||= Registry.consumers
   end
 
   def self.find_by_id(id)
-    all.find {|s| s.id=id}
+    all.find {|s| s.id==id}
   end
 
   def subscriptions

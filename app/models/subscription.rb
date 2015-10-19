@@ -3,7 +3,7 @@ class Subscription
   attr_accessor  :service_id,:consumer_id,:starts_at, :ends_at
 
   def self.all
-    Backend.subscriptions
+    Registry.subscriptions
   end
 
   def self.find_all_by_consumer_id(id)

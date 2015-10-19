@@ -1,7 +1,7 @@
-class Backend
+class Registry
   require 'nokogiri'
 
-  CACHE_DURATION=10.minutes
+  CACHE_DURATION=0.minutes
   
   def self.services
     Rails.cache.fetch("backend/services", expires_in: CACHE_DURATION) do
@@ -10,11 +10,18 @@ class Backend
       doc = File.open("./lib/services.xml") { |f| Nokogiri::XML(f) }
       doc.remove_namespaces!
 
-      doc.xpath("//service").each do |xml| 
+      doc.xpath("//service").each do |node| 
         s=Service.new
-        s.id=xml.xpath("serviceId").text
-        s.name=xml.xpath("name").text
-        s.group=xml.xpath("group").text
+        s.id=node.xpath("serviceId").text
+        s.name=node.xpath("name").text
+        s.protocol=node.xpath("protocol").text
+        if s.protocol == "http"
+          s.format="soap/xml"
+        end
+        if s.protocol== "mq"
+          s.format="xml"
+        end
+        s.group=node.xpath("group").text
         services << s
       end
       services
@@ -29,10 +36,10 @@ class Backend
       doc = File.open("./lib/services.xml") { |f| Nokogiri::XML(f) }
       doc.remove_namespaces!
 
-      doc.xpath("//consumer").each do |xml| 
+      doc.xpath("//consumer").each do |node| 
         c=Consumer.new
-        c.id=xml.xpath("systemId").text
-        c.name=xml.xpath("systemId").text
+        c.id=node.xpath("systemId").text
+        c.name=node.xpath("systemId").text
         consumers << c
       end
       consumers.uniq{|c| c.id}
@@ -47,11 +54,11 @@ class Backend
       doc.remove_namespaces!
 
       subscriptions=[]
-      doc.xpath(%Q(//consumer)).each do | xml |
+      doc.xpath(%Q(//consumer)).each do | node |
         sub=Subscription.new
-        sub.consumer_id=xml.xpath("systemId").text
-        sub.service_id=xml.xpath("../../serviceId").text
-        sub.starts_at=xml.xpath("debitStartDate").text
+        sub.consumer_id=node.xpath("systemId").text
+        sub.service_id=node.xpath("../../serviceId").text
+        sub.starts_at=node.xpath("debitStartDate").text
         subscriptions << sub
       end
       subscriptions
