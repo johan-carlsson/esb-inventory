@@ -15,6 +15,12 @@
 	  <th></th>
     <td></td>
 	</tr>
+	<tr>
+	  <th><%= "Protocol" %>:</th>
+		<td><%= service.protocol %></td>
+	  <th><%= "Format" %>:</th>
+		<td><%= service.format %></td>
+	</tr>
 </table>
 
 <%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => service.class.to_s.pluralize.downcase, :id => service.id} %>

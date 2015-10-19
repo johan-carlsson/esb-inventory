@@ -2,8 +2,8 @@
 <% table_options||={} %>
 
 <%= redpill_table(subscriptions,table_options) do |table| 
-  table.add_column(:name => "consumer id",:width =>"50%") { |o| o.consumer_id}
-  table.add_column(:name => "starts at",:width =>"50%") { |o| o.starts_at}
-  table.row_class{|r| "disabled"}
+  table.add_column(:name => "Consumer",:order => "consumer", :width =>"50%") { |o| o.consumer_id}
+  table.add_column(:name => "Consumer since",:order => "starts_at", :width =>"50%") { |o| o.starts_at}
+  table.row_linker { |o| consumer_url(o.consumer_id) }
 end %>
 

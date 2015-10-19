@@ -2,8 +2,8 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
-    params[:order]||='services.name'
-    @services = Service.all
+    params[:order]||='name'
+    @services = sort(Service.all,params[:order])
     @show_csv_export_button=true
     respond_to do |format|
       format.html # index.html.erb
@@ -26,8 +26,9 @@ class ServicesController < ApplicationController
   # GET /services/1/subscriptions
   # GET /services/1/subscriptions.json
   def subscriptions
+    params[:order]||='consumer'
     @service=Service.find_by_id(params[:id])
-    @subscriptions=@service.subscriptions
+    @subscriptions=sort(@service.subscriptions,params[:order])
 
     respond_to do |format|
       format.html 

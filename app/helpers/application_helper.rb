@@ -26,7 +26,9 @@ module ApplicationHelper
     ["services","service_subscriptions"].include?(controller.controller_name)
   end
 
-  def select_providers_sidebar_item?
-    ["providers","provider_subscriptions","provider_contacts"].include?(controller.controller_name)
+  def select_backends_sidebar_item?
+    ["backends"].include?(controller.controller_name)
   end
+
+
 end

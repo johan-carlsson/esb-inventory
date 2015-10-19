@@ -3,8 +3,8 @@ class ConsumersController < ApplicationController
   # GET /consumers.json
   def index
     @show_csv_export_button=true
-    params[:order] ||= 'consumers.name'
-    @consumers = Consumer.all
+    params[:order] ||= 'name'
+    @consumers = sort(Consumer.all,params[:order])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,13 +24,12 @@ class ConsumersController < ApplicationController
     end
   end
 
-
-
   # GET /consumers/1/subscriptions
   # GET /consumers/1/subscriptions.json
   def subscriptions
+    params[:order] ||= 'service'
     @consumer = Consumer.find_by_id(params[:id])
-    @subscriptions= @consumer.subscriptions 
+    @subscriptions= sort(@consumer.subscriptions,params[:order])
 
     respond_to do |format|
       format.html
