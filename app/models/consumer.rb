@@ -1,6 +1,7 @@
 class Consumer
   include ActiveModel::Model
   attr_accessor  :identifier,:name
+  attr_accessor :properties
 
   def self.all
     Registry.consumers
@@ -8,6 +9,10 @@ class Consumer
 
   def self.find_by_id(id)
     all.find {|s| s.id==id}
+  end
+
+  def initialize
+    @properties=[]
   end
 
   def subscriptions

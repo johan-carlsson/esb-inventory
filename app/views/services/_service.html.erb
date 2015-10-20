@@ -1,4 +1,5 @@
 <% service||=@service %>
+<% properties||=service.properties %>
 <% hide_toolbar||=false %>
 
 <%= div_for(service,:class => 'show') do %>
@@ -21,7 +22,10 @@
 	  <th><%= "Format" %>:</th>
 		<td><%= service.format %></td>
 	</tr>
+
 </table>
+
+<%= render :partial => 'shared/additional_information', :locals => {:properties => properties} %>
 
 <%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => service.class.to_s.pluralize.downcase, :id => service.id} %>
 

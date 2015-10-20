@@ -2,6 +2,7 @@ class Service
   include ActiveModel::Model
   attr_accessor :identifier, :name, :group
   attr_accessor :protocol, :format
+  attr_accessor :properties
 
   def self.all
     Registry.services
@@ -9,6 +10,10 @@ class Service
 
   def self.find_by_id(service_id)
     all.find {|s| s.id==service_id}
+  end
+
+  def initialize
+    @properties=[]
   end
 
   def subscriptions

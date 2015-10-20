@@ -1,4 +1,5 @@
 <% consumer||=@consumer %>
+<% properties||=consumer.properties %>
 <% hide_toolbar||=false %>
 
 <%= div_for(consumer,:class => 'show') do %>
@@ -11,6 +12,7 @@
 	</tr>
 </table>
 
+<%= render :partial => 'shared/additional_information', :locals => {:properties => properties} %>
 
 <%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => consumer.class.to_s.pluralize.downcase, :id => consumer.id} %>
 

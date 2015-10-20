@@ -12,7 +12,7 @@ class Registry
 
       doc.xpath("//service").each do |node| 
         s=Service.new
-        s.id=node.xpath("serviceId").text
+        s.identifier=node.xpath("serviceId").text
         s.name=node.xpath("name").text
         s.protocol=node.xpath("protocol").text
         if s.protocol == "http"
@@ -22,6 +22,10 @@ class Registry
           s.format="xml"
         end
         s.group=node.xpath("group").text
+
+        #Properties
+        p=Property.new("x","Y")
+        s.properties=[Property.new("Timeout",1000),Property.new("Owner","Nisse"),p]
         services << s
       end
       services
@@ -38,8 +42,13 @@ class Registry
 
       doc.xpath("//consumer").each do |node| 
         c=Consumer.new
-        c.id=node.xpath("systemId").text
+        c.identifier=node.xpath("systemId").text
         c.name=node.xpath("systemId").text
+
+        #Properties
+        p=Property.new("x","Y")
+        c.properties=[Property.new("Timeout",1000),Property.new("Owner","Nisse"),p]
+
         consumers << c
       end
       consumers.uniq{|c| c.id}
@@ -56,8 +65,15 @@ class Registry
       subscriptions=[]
       doc.xpath(%Q(//consumer)).each do | node |
         sub=Subscription.new
-        sub.consumer_id=node.xpath("systemId").text
-        sub.service_id=node.xpath("../../serviceId").text
+
+        s=Service.new
+        s.identifier=node.xpath("../../serviceId").text
+
+        c=Consumer.new
+        c.identifier=node.xpath("systemId").text
+
+        sub.consumer_id=c.id
+        sub.service_id=s.id
         sub.starts_at=node.xpath("debitStartDate").text
         subscriptions << sub
       end
