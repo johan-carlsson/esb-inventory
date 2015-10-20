@@ -1,2 +1,72 @@
 Use this README file to introduce your application and point to useful places in the API for learning more.
 Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+
+== API/Model ==
+Service:
+ - name
+ - id
+ - group
+ * properties
+
+Consumer: < System
+   - name
+   - id
+   - system_id
+   * properties
+
+ServiceConsumers:
+  - serviceId
+  - consumerId
+  - startDate
+  - endDate
+
+Backend: < System
+  - id
+  - name
+  - system_id
+  *properties
+
+ServiceBackends:
+  - service_id
+  - backend_id
+
+
+ServiceRelations: (Used by getPerson, Uses createDocument)
+ - service_id
+ - related_service_id
+ - RelationType, Uses/UsedBy
+
+#(NO, extrapolate this) All combinations should be returnd by backend/regitry. (All directions)
+
+
+System: 
+  - id
+  - name
+
+Statistics:
+  - Type (STI)
+  - id
+  * metrics
+
+Metrics:
+  - group/scope
+  - key
+  - value
+Ex group: Last day, key: responseTime, value: 100
+
+Documenation
+ - Type (STI)
+ - Id
+ * properties
+ * documents
+
+Document:
+  - Type(STI) (Asciidoc,Markdown,File,Link)
+  - Id
+  - DocumentationId
+  - Content
+
+
+== TODO(Later) ==
+* Implement an "active" cache. Call/try to call the API list methods every X(ex 1.hour)
+Or at least use the cached value if an cache update failes
