@@ -4,7 +4,7 @@ class Service
   attr_accessor :protocol, :format
 
   def self.all
-    @cache ||= Registry.services
+    Registry.services
   end
 
   def self.find_by_id(service_id)

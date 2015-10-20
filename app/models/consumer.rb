@@ -3,7 +3,7 @@ class Consumer
   attr_accessor  :identifier,:name
 
   def self.all
-    @cache ||= Registry.consumers
+    Registry.consumers
   end
 
   def self.find_by_id(id)
