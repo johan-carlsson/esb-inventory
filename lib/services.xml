@@ -14,6 +14,14 @@
                      <debitStartDate>2015-10-10</debitStartDate> 
                   </consumer> 
                </consumers> 
+               <relations>
+                 <using>
+                   <serviceId>account-and-fund/getFund-1.0</serviceId>
+                 </using>
+                 <usedBy>
+                   <serviceId>account-and-fund/getFundPortfolioList-1.0</serviceId>
+                 </usedBy>
+               </relations>
             </service> 
             <service> 
                <name>getFund</name> 
@@ -2354,6 +2362,11 @@
                      <debitStartDate>2015-10-10</debitStartDate> 
                   </consumer> 
                </consumers> 
+               <relations>
+                 <using>
+                   <serviceId>authenticateCategory/authenticate</serviceId>
+                 </using>
+               </relations>
             </service> 
             <service> 
                <name>authenticate</name> 

@@ -1,0 +1,9 @@
+<% relations||=@relations %>
+<%= render :partial => "service" %>
+
+<%= render :partial => "tabs" %>
+<div id="result">
+		<div id="table">
+      <%= render :partial => "relations_table", :locals => {:relations => relations} %>
+		</div>
+</div>

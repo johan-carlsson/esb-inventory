@@ -20,6 +20,10 @@ class Service
    Subscription.find_all_by_service_id(self.id) 
   end
 
+  def relations
+   ServiceRelation.find_all_by_service_id(self.id) 
+  end
+
   def to_s
     name
   end
