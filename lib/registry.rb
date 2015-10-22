@@ -22,6 +22,7 @@ class Registry
           s.format="xml"
         end
         s.group=node.xpath("group").text
+        s.provider="Folkbuss"
 
         #Properties
         p=Property.new("x","Y")

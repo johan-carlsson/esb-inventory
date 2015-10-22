@@ -1,6 +1,6 @@
 class Service 
   include ActiveModel::Model
-  attr_accessor :identifier, :name, :group
+  attr_accessor :identifier, :name, :group, :provider
   attr_accessor :protocol, :format
   attr_accessor :properties
 
