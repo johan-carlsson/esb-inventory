@@ -1,0 +1,9 @@
+<% provieds||=@provides %>
+<% table_options||={} %>
+
+<%= redpill_table(provides,table_options) do |table| 
+  table.add_column(:name => "Type",:order => "class", :width =>"50%") { |o| o.class}
+  table.add_column(:name => "Name",:order => "name", :width =>"50%") { |o| o.name}
+  table.row_linker { |o|  polymorphic_url(o) }
+end %>
+

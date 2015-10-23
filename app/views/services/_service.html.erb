@@ -14,7 +14,7 @@
 	  <th><%= "Id" %>:</th>
 		<td><%= service.identifier %></td>
 	  <th><%= "Provider" %>:</th>
-		<td><%= service.provider %></td>
+    <td><%= service.provider && link_to(service.provider,provider_path(service.provider))%></td>
 	</tr>
 
 </table>

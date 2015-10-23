@@ -1,0 +1,9 @@
+<% provides||=@provides %>
+<%= render :partial => "provider" %>
+
+<%= render :partial => "tabs" %>
+<div id="result">
+		<div id="table">
+      <%= render :partial => "provides_table", :locals => {:provides => provides} %>
+		</div>
+</div>

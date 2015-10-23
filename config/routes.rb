@@ -33,9 +33,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :systems, :constraints => { :id => /.*/ } do
+  resources :providers, :constraints => { :id => /.*/ } do
     member do
-      get 'services'
+      get 'provides'
     end
   end
 

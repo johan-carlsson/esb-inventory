@@ -10,6 +10,12 @@
 	  <th><%= "Id" %>:</th>
 		<td><%= consumer.identifier %></td>
 	</tr>
+	<tr>
+	  <th><%= "Provider" %>:</th>
+    <td><%= consumer.provider && link_to(consumer.provider,provider_path(consumer.provider))%></td>
+    <th></th>
+    <td></td>
+	</tr>
 </table>
 
 <%= render :partial => 'shared/additional_information', :locals => {:properties => properties} %>

@@ -10,6 +10,13 @@
 	  <th><%= "Id" %>:</th>
 		<td><%= backend.identifier %></td>
 	</tr>
+	<tr>
+	  <th><%= "Provider" %>:</th>
+    <td><%= backend.provider && link_to(backend.provider,provider_path(backend.provider))%></td>
+	  <th></th>
+		<td></td>
+	</tr>
+
 </table>
 
 <%= render :partial => 'shared/additional_information', :locals => {:properties => properties} %>

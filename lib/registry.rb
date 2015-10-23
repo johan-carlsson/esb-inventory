@@ -25,7 +25,7 @@ class Registry
            s.properties << Property.new("Format","xml")
         end
         s.group=node.xpath("group").text
-        s.provider="Folkbuss"
+        s.provider_id=Provider.new("I05").id
 
         #Properties
         s.properties << Property.new("Timeout",1000)
@@ -81,8 +81,8 @@ class Registry
 
       doc.xpath("//consumer").each do |node| 
         c=Consumer.new
-        c.identifier=node.xpath("systemId").text
-        c.name=node.xpath("systemId").text
+        c.identifier=node.xpath("providerId").text
+        c.name=node.xpath("providerId").text
 
         #Properties
         p=Property.new("x","Y")
@@ -108,7 +108,7 @@ class Registry
         s.identifier=node.xpath("../../serviceId").text
 
         c=Consumer.new
-        c.identifier=node.xpath("systemId").text
+        c.identifier=node.xpath("providerId").text
 
         sub.consumer_id=c.id
         sub.service_id=s.id
@@ -130,7 +130,7 @@ class Registry
         b=Backend.new
         b.identifier=node.xpath("id").text
         b.name=node.xpath("name").text
-        b.system_id=node.xpath("systemId").text
+        b.provider_id=node.xpath("providerId").text
 
         backends << b
       end
@@ -158,7 +158,29 @@ class Registry
       service_backends
     end
   end
+
+  def self.providers
+    Rails.cache.fetch("providers", expires_in: CACHE_DURATION) do
+      Rails.logger.debug "fetched providers"
+      providers=[]
+      doc = File.open("./lib/providers.xml") { |f| Nokogiri::XML(f) }
+      doc.remove_namespaces!
+
+      doc.xpath("//provider").each do |node| 
+        b=Provider.new(node.xpath("id").text)
+        b.name=node.xpath("name").text
+
+        providers << b
+      end
+      providers.uniq{|b| b.id}
+    end
+  end
+
+
 end
+
+
+
 
 # class Service
 #   attr_accessor :id,:name,:group
