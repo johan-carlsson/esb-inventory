@@ -24,12 +24,11 @@ Backend: < System
   - id
   - name
   - system_id
-  *properties
+  * properties
 
 ServiceBackends:
   - service_id
   - backend_id
-
 
 ServiceRelations: (Used by getPerson, Uses createDocument)
  - service_id
@@ -46,13 +45,13 @@ System:
 Statistics:
   - Type (STI)
   - id
-  * metrics
+  * metrics (or maybe just use *properties)
 
-Metrics:
+Metric:
   - group/scope
-  - key
+  - name
   - value
-Ex group: Last day, key: responseTime, value: 100
+Ex group: Last day, name: responseTime, value: 100
 
 Documenation
  - Type (STI)
