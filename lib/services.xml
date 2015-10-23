@@ -2367,6 +2367,13 @@
                    <serviceId>authenticateCategory/authenticate</serviceId>
                  </using>
                </relations>
+               <backends>
+                 <backend>
+                   <id>http://autehticate.backend.se/x</id>
+                   <name>IAM auth</name>
+                   <systemId>I04</systemId> 
+                 </backend>
+               </backends>
             </service> 
             <service> 
                <name>authenticate</name> 

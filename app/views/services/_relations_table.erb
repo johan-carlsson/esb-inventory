@@ -2,8 +2,8 @@
 <% table_options||={} %>
 
 <%= redpill_table(relations,table_options) do |table| 
-  table.add_column(:name => "Type",:order => "relation_type", :width =>"10%") { |o| o.relation_type}
-  table.add_column(:name => "Related service",:order => "related_service", :width =>"50%") { |o| o.related_service}
+  table.add_column(:name => "Realtion",:order => "relation_type", :width =>"10%") { |o| o.relation_type}
+  table.add_column(:name => "Service",:order => "related_service", :width =>"50%") { |o| o.related_service}
   table.row_linker { |o| service_url(o.related_service_id) }
 end %>
 

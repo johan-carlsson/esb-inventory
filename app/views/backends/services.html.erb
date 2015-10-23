@@ -1,0 +1,9 @@
+<% services||=@services %>
+<%= render :partial => "backend" %>
+
+<%= render :partial => "tabs" %>
+<div id="result">
+		<div id="table">
+      <%= render :partial => "services_table", :locals => {:services => services} %>
+		</div>
+</div>

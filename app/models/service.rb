@@ -20,9 +20,18 @@ class Service
    Subscription.find_all_by_service_id(self.id) 
   end
 
+  def consumer_count
+   subscriptions.count
+  end
+
   def relations
    ServiceRelation.find_all_by_service_id(self.id) 
   end
+
+  def backends
+   ServiceBackend.find_all_by_service_id(self.id).map {|s| s.backend}
+  end
+
 
   def to_s
     name

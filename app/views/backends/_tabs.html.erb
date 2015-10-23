@@ -1,0 +1,12 @@
+<div id="consumers_tab" class="tab">
+	<ul class="tabs">
+		<%= tab_for("Services", services_backend_url(@backend)) %>
+		<%# <%= tab_for("Services", consumer_subscriptions_url(@consumer)) %1> %>
+    <%# <%= tab_for("Contacts", consumer_contacts_url(@consumer)) %1> %>
+    <%= tab_for("Documentation", {} ,{selected: false,:class => "disabled"}) %>
+    <%= tab_for("Statistics", {} ,{selected: false,:class => "disabled"}) %>
+	</ul>
+</div>
+
+<div class="clr"></div>
+

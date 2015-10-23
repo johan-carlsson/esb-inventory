@@ -1,0 +1,19 @@
+<% backend||=@backend %>
+<% properties||=backend.properties %>
+<% hide_toolbar||=false %>
+
+<%= div_for(backend,:class => 'show') do %>
+<table class="show" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <th><%= "Name" %>:</th>
+		<td><%= backend.name %></td>
+	  <th><%= "Id" %>:</th>
+		<td><%= backend.identifier %></td>
+	</tr>
+</table>
+
+<%= render :partial => 'shared/additional_information', :locals => {:properties => properties} %>
+
+<%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => backend.class.to_s.pluralize.downcase, :id => backend.id} %>
+
+<% end %>

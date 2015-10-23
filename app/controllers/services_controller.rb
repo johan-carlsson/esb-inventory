@@ -50,4 +50,18 @@ class ServicesController < ApplicationController
   end
 
 
+  # GET /services/1/backends
+  # GET /services/1/backends.json
+  def backends
+    params[:order]||='name'
+    @service=Service.find_by_id(params[:id])
+    @backends=sort(@service.backends,params[:order])
+
+    respond_to do |format|
+      format.html 
+      format.json { render json: @backends }
+    end
+  end
+
+
 end

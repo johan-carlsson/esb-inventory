@@ -19,6 +19,10 @@ class Consumer
    Subscription.find_all_by_consumer_id(self.id) 
   end
 
+  def service_count
+    subscriptions.count
+  end
+
   def to_s
     name
   end

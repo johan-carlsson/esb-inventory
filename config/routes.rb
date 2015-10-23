@@ -27,11 +27,18 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :producers, :constraints => { :id => /.*/ } do
+  resources :backends, :constraints => { :id => /.*/ } do
     member do
       get 'services'
     end
   end
+
+  resources :systems, :constraints => { :id => /.*/ } do
+    member do
+      get 'services'
+    end
+  end
+
 
   # Example resource route with options:
   #   resources :products do

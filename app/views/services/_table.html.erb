@@ -2,7 +2,8 @@
 <% table_options||={} %>
 
 <%= redpill_table(services,table_options) do |table| 
-  table.add_column(:name => :name,:order => "name", :width => "50%") { |o| link_to(o.name, subscriptions_service_url(o)) }
-  table.add_column(:name => :group,:order => "group", :width => "50%",&:group)
+  table.add_column(:name => :name,:order => "name", :width => "40%") { |o| link_to(o.name, subscriptions_service_url(o)) }
+  table.add_column(:name => :group,:order => "group", :width => "30%",&:group)
+  table.add_column(:name => "Consumers",:order => "consumer_count", :width => "30%",&:consumer_count)
   table.row_linker { |o| subscriptions_service_url(o) }
 end %>

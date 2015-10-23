@@ -1,6 +1,7 @@
 <%= redpill_sidebar do |sidebar|  %>
-  <%= sidebar.item("Services",services_path,:selected => select_services_sidebar_item?) %>
-  <%= sidebar.item("Consumers",consumers_path, :selected => select_consumers_sidebar_item? ) %>
-  <%# <%= sidebar.item("Producers",producers_path, :selected => select_producers_sidebar_item? ) %1> %>
+  <%= sidebar.item("Services",services_path)%>
+  <%= sidebar.item("Consumers",consumers_path) %>
+  <%= sidebar.item("Backends",backends_path ) %>
+  <%= sidebar.item("Systems",systems_path ) %>
 <% end %>
 

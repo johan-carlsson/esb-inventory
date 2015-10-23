@@ -1,7 +1,7 @@
 class Registry
   require 'nokogiri'
 
-  CACHE_DURATION=0.minutes
+  CACHE_DURATION=10.minutes
   
   def self.services
     Rails.cache.fetch("backend/services", expires_in: CACHE_DURATION) do
@@ -17,16 +17,18 @@ class Registry
         s.protocol=node.xpath("protocol").text
         if s.protocol == "http"
           s.format="soap/xml"
+           s.properties << Property.new("Format","soap/xml")
+           s.properties << Property.new("Protocol","http")
         end
         if s.protocol== "mq"
-          s.format="xml"
+           s.properties << Property.new("Protocol","mq")
+           s.properties << Property.new("Format","xml")
         end
         s.group=node.xpath("group").text
         s.provider="Folkbuss"
 
         #Properties
-        p=Property.new("x","Y")
-        s.properties=[Property.new("Timeout",1000),Property.new("Owner","Nisse"),p]
+        s.properties << Property.new("Timeout",1000)
         services << s
       end
       services
@@ -92,7 +94,6 @@ class Registry
     end
   end
 
-
   def self.subscriptions
     Rails.cache.fetch("backend/subscriptions", expires_in: CACHE_DURATION) do
       Rails.logger.debug "Fetched subscriptions"
@@ -118,6 +119,45 @@ class Registry
     end
   end
 
+  def self.backends
+    Rails.cache.fetch("backends", expires_in: CACHE_DURATION) do
+      Rails.logger.debug "fetched backends"
+      backends=[]
+      doc = File.open("./lib/services.xml") { |f| Nokogiri::XML(f) }
+      doc.remove_namespaces!
+
+      doc.xpath("//backend").each do |node| 
+        b=Backend.new
+        b.identifier=node.xpath("id").text
+        b.name=node.xpath("name").text
+        b.system_id=node.xpath("systemId").text
+
+        backends << b
+      end
+      backends.uniq{|b| b.id}
+    end
+  end
+
+  def self.service_backends
+    Rails.cache.fetch("service_backends", expires_in: CACHE_DURATION) do
+      Rails.logger.debug "Fetched service backends"
+      service_backends=[]
+      doc = File.open("./lib/services.xml") { |f| Nokogiri::XML(f) }
+      doc.remove_namespaces!
+
+      doc.xpath("//backend").each do |node| 
+        s=Service.new
+        s.identifier=node.xpath("../../serviceId").text
+        b=Backend.new
+        b.identifier=node.xpath("id").text
+        sb=ServiceBackend.new
+        sb.service_id=s.id
+        sb.backend_id=b.id
+        service_backends << sb
+      end
+      service_backends
+    end
+  end
 end
 
 # class Service
