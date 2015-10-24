@@ -15,8 +15,9 @@ class Backend
     all.find_all {|s| s.system_id==system_id}
   end
 
-  def initialize
+  def initialize(identifier)
     @properties=[]
+    self.identifier=identifier
   end
 
   def services
@@ -29,6 +30,10 @@ class Backend
 
   def to_s
     name
+  end
+
+  def name
+    @name || (system && system.name) || identifier
   end
 
   def id
