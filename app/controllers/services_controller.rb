@@ -66,7 +66,7 @@ class ServicesController < ApplicationController
   # GET /services/1/contacts
   # GET /services/1/contacts.json
   def contacts
-    params[:order]||='name'
+    params[:order]||='contact'
     @service=Service.find_by_id(params[:id])
     @roles=sort(@service.contact_roles,params[:order])
 

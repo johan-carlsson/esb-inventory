@@ -40,7 +40,7 @@ class SystemsController < ApplicationController
   # GET /systems/1/contacts
   # GET /systems/1/contacts.json
   def contacts
-    params[:order]||='name'
+    params[:order]||='contact'
     @system=System.find_by_id(params[:id])
     @roles=sort(@system.contact_roles,params[:order])
 

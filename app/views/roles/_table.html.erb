@@ -2,7 +2,14 @@
 <% table_options||={} %>
 
 <%= redpill_table(roles,table_options) do |table| 
-  table.add_column(:name => :name,:order => "name", :width => "50%") { |o| link_to(o.contact, contact_url(o.contact)) }
-  table.add_column(:name => :role,:order => "role", :width => "50%") { |r| r.name} 
+  table.add_column(:name => :contact,:order => "contact", :width => "50%") { |o| link_to(o.contact, contact_url(o.contact)) }
+  table.add_column(:name => :role,:order => "name", :width => "50%") do |r|
+    if r.inherited?
+      "#{r.name} on #{r.on} system"
+    else
+      r.name
+    end
+  end
   table.row_linker { |o| contact_url(o.contact) }
+  table.row_class { |o| o.inherited? && "inherited"}
 end %>

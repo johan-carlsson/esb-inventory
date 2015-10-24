@@ -40,7 +40,7 @@ class BackendsController < ApplicationController
   # GET /backends/1/contacts
   # GET /backends/1/contacts.json
   def contacts
-    params[:order]||='name'
+    params[:order]||='contact'
     @backend=Backend.find_by_id(params[:id])
     @roles=sort(@backend.contact_roles,params[:order])
 
