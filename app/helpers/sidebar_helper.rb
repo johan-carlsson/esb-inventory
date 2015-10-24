@@ -47,7 +47,6 @@ module SidebarHelper
 
       selected = options[:selected] 
       selected = base.current_controller?(url) unless options.include?(:selected)
-      image = options[:image] || 'blank.gif'
 
       item=<<-EOS
         <li class="sub_item #{'selected' if selected}">
@@ -67,10 +66,9 @@ module SidebarHelper
       image = options[:image] || "sidebar/#{name.gsub(/\s/,'_').downcase}.png"
       selected = options[:selected] 
       selected = base.current_controller?(url) unless options.include?(:selected)
-      expanded = options[:expanded]
 
       item=<<-EOS
-        <li id="#{name.gsub(/\s/,'_').downcase}_sidebar_item" class=#{"selected" if selected}>
+        <li id="#{name.gsub(/\s/,'_').downcase}_sidebar_item" title="List #{name}" class="#{"selected" if selected}" onclick="location.href='#{url}';">
         <a href="#{url}">#{base.image_tag(image,:alt => '')}
         <span class="label">#{name}</span>
         </a>
