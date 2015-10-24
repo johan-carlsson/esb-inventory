@@ -127,8 +127,7 @@ class Registry
       doc.remove_namespaces!
 
       doc.xpath("//backend").each do |node| 
-        b=Backend.new
-        b.identifier=node.xpath("id").text
+        b=Backend.new(node.xpath("id").text)
         b.name=node.xpath("name").text
         b.system_id=node.xpath("systemId").text
 
@@ -148,8 +147,7 @@ class Registry
       doc.xpath("//backend").each do |node| 
         s=Service.new
         s.identifier=node.xpath("../../serviceId").text
-        b=Backend.new
-        b.identifier=node.xpath("id").text
+        b=Backend.new(node.xpath("id").text)
         sb=ServiceBackend.new
         sb.service_id=s.id
         sb.backend_id=b.id
