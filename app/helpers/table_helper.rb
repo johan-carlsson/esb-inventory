@@ -105,7 +105,7 @@ module TableHelper
         attrs = column_def.map { |key, value| %(#{key}="#{value}" ) }          
         if sortable && !options[:disable_sorting]
           headers += <<-HTML
-              <th #{attrs.join(' ').to_s}#{sort_class(order)}>
+              <th #{attrs.join(' ').to_s}#{sort_class(order)} title="Sort by #{column_name.humanize}" onclick="location.href='#{sort_url(order)}';">
                 #{sort_link(column_name.humanize, order)}
               </th>
           HTML
@@ -131,19 +131,22 @@ module TableHelper
 
     #Returns remote link to sort by column
     def sort_link(text, param)
-      key = param
-      key += " desc" if @base.params[:order] == param
       options = {
-        :url => {:params => @base.params.merge({:order => key, :page => nil})},
+        :url => sort_url(param),
         :method => :get
       }
       html_options = {
         :title => "Sort by %s" % text.downcase ,
-        :href => @base.url_for(:method => :get ,:params => @base.params.merge({:order => key, :page => nil}))
+        :href => sort_url(param)
       }
       return @base.link_to(text, options, html_options)+"<span class='sort'></span>".html_safe
     end
 
+    def sort_url(param)
+      key = param
+      key += " desc" if @base.params[:order] == param
+      @base.url_for(:method => :get ,:params => @base.params.merge({:order => key, :page => nil}))
+    end
   end 
 
 
