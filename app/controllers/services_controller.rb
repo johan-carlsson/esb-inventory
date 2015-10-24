@@ -26,7 +26,7 @@ class ServicesController < ApplicationController
   # GET /services/1/subscriptions
   # GET /services/1/subscriptions.json
   def subscriptions
-    params[:order]||='consumer'
+    params[:order]||='client'
     @service=Service.find_by_id(params[:id])
     @subscriptions=sort(@service.subscriptions,params[:order])
 

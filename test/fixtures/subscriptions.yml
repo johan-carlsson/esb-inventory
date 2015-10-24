@@ -2,8 +2,8 @@
 
 beatles_friends:
   service: getFriends 
-  consumer: beatles 
+  client: beatles 
 
 redpill_tweets:
   service: searchTweets 
-  consumer: redpill 
+  client: redpill 

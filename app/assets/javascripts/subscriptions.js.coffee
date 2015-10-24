@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  $('#subscription_consumer_name').autocomplete
-    source: $('#subscription_consumer_name').data('autocomplete-source')
+  $('#subscription_client_name').autocomplete
+    source: $('#subscription_client_name').data('autocomplete-source')
   $('#subscription_service_name').autocomplete
     source: $('#subscription_service_name').data('autocomplete-source')

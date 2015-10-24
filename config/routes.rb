@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :consumers, :constraints => { :id => /.*/ } do
+  resources :clients, :constraints => { :id => /.*/ } do
     member do
       get 'subscriptions'
     end

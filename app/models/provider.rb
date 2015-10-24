@@ -24,12 +24,12 @@ class Provider
    Backend.find_all_by_provider_id(self.id)
   end
 
-  def consumers
-   Consumer.find_all_by_provider_id(self.id)
+  def clients
+   Client.find_all_by_provider_id(self.id)
   end
 
   def provides
-   services + backends + consumers
+   services + backends + clients
   end
 
   def provide_count

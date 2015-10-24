@@ -72,15 +72,15 @@ class Registry
   end
 
 
-  def self.consumers
-    Rails.cache.fetch("backend/consumers", expires_in: CACHE_DURATION) do
-      Rails.logger.debug "fetched consumers"
-      consumers=[]
+  def self.clients
+    Rails.cache.fetch("backend/clients", expires_in: CACHE_DURATION) do
+      Rails.logger.debug "fetched clients"
+      clients=[]
       doc = File.open("./lib/services.xml") { |f| Nokogiri::XML(f) }
       doc.remove_namespaces!
 
-      doc.xpath("//consumer").each do |node| 
-        c=Consumer.new
+      doc.xpath("//client").each do |node| 
+        c=Client.new
         c.identifier=node.xpath("providerId").text
         c.name=node.xpath("providerId").text
 
@@ -88,9 +88,9 @@ class Registry
         p=Property.new("x","Y")
         c.properties=[Property.new("Timeout",1000),Property.new("Owner","Nisse"),p]
 
-        consumers << c
+        clients << c
       end
-      consumers.uniq{|c| c.id}
+      clients.uniq{|c| c.id}
     end
   end
 
@@ -101,16 +101,16 @@ class Registry
       doc.remove_namespaces!
 
       subscriptions=[]
-      doc.xpath(%Q(//consumer)).each do | node |
+      doc.xpath(%Q(//client)).each do | node |
         sub=Subscription.new
 
         s=Service.new
         s.identifier=node.xpath("../../serviceId").text
 
-        c=Consumer.new
+        c=Client.new
         c.identifier=node.xpath("providerId").text
 
-        sub.consumer_id=c.id
+        sub.client_id=c.id
         sub.service_id=s.id
         sub.starts_at=node.xpath("debitStartDate").text
         subscriptions << sub
@@ -185,22 +185,22 @@ end
 # class Service
 #   attr_accessor :id,:name,:group
 # end
-# class Consumer
+# class Client
 #   attr_accessor :id
 #   def to_s
 #     self.id
 #   end
 # end
 # class Subscription
-#   attr_accessor :service_id,:consumer_id, :starts_at
+#   attr_accessor :service_id,:client_id, :starts_at
 #   def to_s
-#     "s: #{self.service_id} c: #{self.consumer_id}, #{self.starts_at}"
+#     "s: #{self.service_id} c: #{self.client_id}, #{self.starts_at}"
 #   end
 # end
 
 
 if __FILE__ == $0
  # puts Backend.service("getPersonCategory/getPerson") 
- # puts Backend.consumers
- puts Backend.consumer_subscriptions("Y75")
+ # puts Backend.clients
+ puts Backend.client_subscriptions("Y75")
 end

@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 redpill_nisse:
-  consumer: redpill 
+  client: redpill 
   contact:  nisse
   role: "Support"
   created_at: 2013-04-11
@@ -10,7 +10,7 @@ redpill_nisse:
   updated_by: 1
 
 beatles_bob:
-  consumer: beatles
+  client: beatles
   contact: bob
   role: "Support"
   created_at: 2013-04-11

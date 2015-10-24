@@ -18,8 +18,8 @@ module ApplicationHelper
     request.env['HTTP_USER_AGENT']
   end
 
-  def select_consumers_sidebar_item?
-    ["consumers","consumer_subscriptions","consumer_contacts"].include?(controller.controller_name)
+  def select_clients_sidebar_item?
+    ["clients","client_subscriptions","client_contacts"].include?(controller.controller_name)
   end
 
   def select_services_sidebar_item?

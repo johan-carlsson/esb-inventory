@@ -8,15 +8,15 @@ Service:
  - group
  * properties
 
-Consumer: < Provider
+Client: < Provider
    - name
    - id
    - provider_id
    * properties
 
-ServiceConsumers:
+ServiceClients:
   - serviceId
-  - consumerId
+  - clientId
   - startDate
   - endDate
 

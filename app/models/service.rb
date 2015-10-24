@@ -24,7 +24,7 @@ class Service
    Subscription.find_all_by_service_id(self.id) 
   end
 
-  def consumer_count
+  def client_count
    subscriptions.count
   end
 

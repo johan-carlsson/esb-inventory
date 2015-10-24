@@ -1,10 +1,10 @@
-class Consumer
+class Client
   include ActiveModel::Model
   attr_accessor  :identifier,:name, :provider_id
   attr_accessor :properties
 
   def self.all
-    Registry.consumers
+    Registry.clients
   end
 
   def self.find_by_id(id)
@@ -24,7 +24,7 @@ class Consumer
   end
 
   def subscriptions
-   Subscription.find_all_by_consumer_id(self.id) 
+   Subscription.find_all_by_client_id(self.id) 
   end
 
   def service_count

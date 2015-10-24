@@ -18,9 +18,9 @@ class ServiceSubscriptionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create subscription and a new consumer" do
+  test "should create subscription and a new client" do
     assert_difference('Subscription.count') do
-      post :create,  :service_id => @service.id, subscription: { consumer_name: "A new consumer" , :tag_list => "Hej, hello"}
+      post :create,  :service_id => @service.id, subscription: { client_name: "A new client" , :tag_list => "Hej, hello"}
     end
 
     assert_redirected_to service_subscription_path(@service,assigns(:subscription))
@@ -37,7 +37,7 @@ class ServiceSubscriptionsControllerTest < ActionController::TestCase
   end
 
   test "should update subscription" do
-    put :update, id: @subscription, :service_id => @service.id, subscription: { consumer_name: @subscription.consumer.name , :tag_list => "Hej, hello"}
+    put :update, id: @subscription, :service_id => @service.id, subscription: { client_name: @subscription.client.name , :tag_list => "Hej, hello"}
     assert_redirected_to service_subscription_path(@service,assigns(:subscription))
   end
 

@@ -9,12 +9,12 @@
           <serviceId>account-and-fund/getAgentFromL12-1.0</serviceId>
           <group>account-and-fund</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-10-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
           <relations>
             <using>
               <serviceId>account-and-fund/getFund-1.0</serviceId>
@@ -29,196 +29,196 @@
           <serviceId>account-and-fund/getFund-1.0</serviceId>
           <group>account-and-fund</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getFundList</name>
           <serviceId>account-and-fund/getFundList-1.0</serviceId>
           <group>account-and-fund</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getFundPortfolioList</name>
           <serviceId>account-and-fund/getFundPortfolioList-1.0</serviceId>
           <group>account-and-fund</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getContractList</name>
           <serviceId>actor/getContractList-1.0</serviceId>
           <group>actor</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-16</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getCollectiveAgreementList</name>
           <serviceId>agreement/getCollectiveAgreementList-1.0</serviceId>
           <group>agreement</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KAHDS01</providerId>
               <debitStartDate>2014-09-06</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPAKFS09EmployeeHistoryListForKI2</name>
           <serviceId>agreement/getPAKFS09EmployeeHistoryListForKI2-1.0</serviceId>
           <group>agreement</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KI2</providerId>
               <debitStartDate>2015-04-18</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getCampaignList</name>
           <serviceId>getCampaignListCategory/getCampaignList</serviceId>
           <group>campaign</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createCalculationBasis</name>
           <serviceId>claim/createCalculationBasis-1.0</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createClaim</name>
           <serviceId>createClaimCategory/createClaim</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createClaimProperty</name>
           <serviceId>createClaimPropertyCategory/createClaimPropertyLmf</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I84DS02</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getClaim</name>
           <serviceId>claim/getClaim-1.0</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>K80</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>E51DS01</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getClaimInfo</name>
           <serviceId>getClaimInfoCategory/getClaimInfo</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E51DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getClaimList</name>
           <serviceId>getClaimListCategory/getClaimList</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getClaimListFromH50</name>
           <serviceId>claim/getClaimListFromH50-1.0</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getClaimListFromY75</name>
           <serviceId>claim/getClaimListFromY75-1.0</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y05</providerId>
               <debitStartDate>2015-09-12</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
           <backends>
             <backend>
               <id>http://getHaloClaims</id>
@@ -232,1340 +232,1340 @@
           <serviceId>claim/getClaimListMotorFromY75-1.0</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Q80</providerId>
               <debitStartDate>2015-09-12</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getGSRClaimList</name>
           <serviceId>claim/getGSRClaimList-1.0</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H84</providerId>
               <debitStartDate>2015-02-16</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>publishClaim</name>
           <serviceId>claim/publishClaim-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y70</providerId>
               <debitStartDate>2014-06-17</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>searchClaim</name>
           <serviceId>claim/searchClaim-1.0</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E51DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>sendClaimInquiry</name>
           <serviceId>claim/sendClaimInquiry-1.0</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>sendEstateClaim</name>
           <serviceId>claim/sendEstateClaim-1.0</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H84</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateClaim</name>
           <serviceId>updateClaimCategory/updateClaim</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateEstateClaim</name>
           <serviceId>claim/updateEstateClaim-1.0</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateGSRClaim</name>
           <serviceId>claim/updateGSRClaim-1.0</serviceId>
           <group>claim</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H84</providerId>
               <debitStartDate>2015-02-16</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>handleCorrespondence</name>
           <serviceId>correspondence/handleCorrespondence</serviceId>
           <group>correspondence</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E51DS02</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>E30</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I84DS02</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>publishCorrespondenceSAP</name>
           <serviceId>publishCorrespondenceCategory/publishCorrespondenceSAP</serviceId>
           <group>correspondence</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>publishCorrespondence</name>
           <serviceId>publishCorrespondenceCategory/publishCorrespondence</serviceId>
           <group>correspondence</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E30</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>E51DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>rejectCorrespondence</name>
           <serviceId>rejectCorrespondenceCategory/rejectCorrespondence</serviceId>
           <group>correspondence</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getCurrencyList</name>
           <serviceId>getCurrencyListCategory/getCurrencyList</serviceId>
           <group>currency</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H80</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>H82</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>H84</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createDocuments-2.0</name>
           <serviceId>document/createDocuments-2.0</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>J11</providerId>
               <debitStartDate>2014-06-17</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I84DS03</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createDocuments-3.0</name>
           <serviceId>document/createDocuments-3.0</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E51DS02</providerId>
               <debitStartDate>2014-12-08</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createDocuments</name>
           <serviceId>createDocumentsCategory/createDocuments</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E51DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I21</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I82DS51</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createEditableDocument</name>
           <serviceId>document/createEditableDocument-1.0</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L85</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createSignatures</name>
           <serviceId>document/createSignatures-1.0</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I63DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getContent</name>
           <serviceId>getContent-1.0/front</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I63DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>J11</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>KPP</providerId>
               <debitStartDate>2014-09-06</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I88DS01</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>L87</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y70</providerId>
               <debitStartDate>2015-02-16</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getDocument</name>
           <serviceId>getDocumentCategory/getDocument</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E30</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>E51DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I21</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getDocumentList</name>
           <serviceId>getDocumentListCategory/getDocumentList</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I21</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getDocumentTypeList</name>
           <serviceId>getDocumentTypeListCategory/getDocumentTypeList</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E51DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I21</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getSignatures</name>
           <serviceId>document/getSignatures-1.0</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y40</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I63DS01</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>L82</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>SearchDocument-2.0</name>
           <serviceId>document/searchDocument-2.0</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L12</providerId>
               <debitStartDate>2014-06-17</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I88DS01</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>searchDocument</name>
           <serviceId>searchDocumentCategory/searchDocument</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>J11</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>splitDocument-2.0</name>
           <serviceId>document/splitDocument-2.0</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>splitDocument</name>
           <serviceId>document/splitDocument-1.0</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>updateBusinessObjectConnection</name>
           <serviceId>updateBusinessObjectConnectionCategory/updateBusinessObjectConnection</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E30</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateDocument</name>
           <serviceId>updateDocumentCategory/updateDocument</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E51DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I21</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateMetadata</name>
           <serviceId>document/updateMetadata-1.0</serviceId>
           <group>document</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-10-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getEconomicTransactionList</name>
           <serviceId>economic-transaction/getEconomicTransactionList-1.0</serviceId>
           <group>economic-transaction</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KIZ</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createEmployee</name>
           <serviceId>createEmployeeCategory/createEmployee</serviceId>
           <group>employee</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>P50</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getBenefitList</name>
           <serviceId>employee/getBenefitList-1.0</serviceId>
           <group>employee</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KIZ</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getEmployeeList</name>
           <serviceId>getEmployeeListCategory/getEmployeeList</serviceId>
           <group>employee</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>P50</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getEmployeeListLogica</name>
           <serviceId>getEmployeeListCategory/getEmployeeListLogica</serviceId>
           <group>employee</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>IT109</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>IT109</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getEmployeeListByManager</name>
           <serviceId>employee/getEmployeeListByManager-1.0</serviceId>
           <group>employee</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H40DS01</providerId>
               <debitStartDate>2014-06-17</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getEmploymentList</name>
           <serviceId>employee/getEmploymentList-1.0</serviceId>
           <group>employee</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KIZ</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getScheduledTimeList</name>
           <serviceId>getScheduledTimeListCategory/getScheduledTimeList</serviceId>
           <group>employee</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>P50</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>sendTravellerProfile</name>
           <serviceId>sendTravellerProfileCategory/sendTravellerProfile</serviceId>
           <group>employee</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E30</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>deleteTravellerProfile</name>
           <serviceId>sendTravellerProfileCategory/deleteTravellerProfile</serviceId>
           <group>employee</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E30</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateEmployee</name>
           <serviceId>updateEmployeeCategory/updateEmployee</serviceId>
           <group>employee</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>P50</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getEstate</name>
           <serviceId>getEstateCategory/getEstate</serviceId>
           <group>estate</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>getTaxAssessmentUnitList-2.0</name>
           <serviceId>estate/getTaxAssessmentUnitList-2.0</serviceId>
           <group>estate</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H84</providerId>
               <debitStartDate>2014-06-17</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>searchEstate</name>
           <serviceId>searchEstateCategory/searchEstate</serviceId>
           <group>estate</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H82</providerId>
               <debitStartDate>2014-06-17</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>H84</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>S70</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getCountryList</name>
           <serviceId>geography/getCountryList-1.0</serviceId>
           <group>geography</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KAHDS01</providerId>
               <debitStartDate>2014-09-06</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y02</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPostCodeArea</name>
           <serviceId>getPostCodeArea-1.0/getPostCodeArea-1.0</serviceId>
           <group>geography</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>S70</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getproviderList</name>
           <serviceId>infrastructure/getproviderList-1.0</serviceId>
           <group>infrastructure</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>IT109</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>D85</providerId>
               <debitStartDate>2015-05-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>sendEstimateResponse</name>
           <serviceId>insurance-case/sendEstimateResponse-1.0</serviceId>
           <group>insurance-case</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-16</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPensionPaymentList</name>
           <serviceId>economic-transaction/getPensionPaymentList-1.0</serviceId>
           <group>kpa/economic-transaction</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KIZ</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getCustomer</name>
           <serviceId>person/getCustomer-1.0</serviceId>
           <group>kpa/person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KAHDS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>KIZ</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getCustomerList</name>
           <serviceId>person/getCustomerList-1.0</serviceId>
           <group>kpa/person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KGZ</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>sendSMS</name>
           <serviceId>messaging/sendSMS-1.0</serviceId>
           <group>messaging</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>KAHDS01</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getServiceList</name>
           <serviceId>meta/getServiceList-1.0</serviceId>
           <group>meta</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>getAgent</name>
           <serviceId>getAgent-1.0/getAgent-1.0</serviceId>
           <group>organisation</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y45</providerId>
               <debitStartDate>2014-06-17</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getCostCenterList</name>
           <serviceId>getCostCenterListCategory/getCostCenterList</serviceId>
           <group>organisation</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>P50</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getFieldOffice</name>
           <serviceId>getFieldOffice-1.0/getFieldOffice-1.0</serviceId>
           <group>organisation</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getOrganisationStructure</name>
           <serviceId>getOrganisationStructureCategory/getOrganisationStructure</serviceId>
           <group>organisation</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>P50</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createAccount</name>
           <serviceId>payment/createAccount-1.0</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>createAccountY75</name>
           <serviceId>payment/createAccountY75-1.0</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createPayment</name>
           <serviceId>createPaymentCategory/createPayment</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createPaymentDemandInCD</name>
           <serviceId>payment/createPaymentDemandInCD-1.0</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createPaymentInCD</name>
           <serviceId>payment/createPaymentInCD-1.0</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getAccountList</name>
           <serviceId>payment/getAccountList-1.0</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getDirectDebitStatus</name>
           <serviceId>getDirectDebitStatus-1.0/wsfront</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>getDirectDebitStatusForL00</name>
           <serviceId>getDirectDebitStatus-1.0/L00-mqfront</serviceId>
           <group>payment</group>
           <protocol>mq</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>getLogRecordListFromCD</name>
           <serviceId>payment/getLogRecordListFromCD-1.0</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getLogRecordListFromERP</name>
           <serviceId>payment/getLogRecordListFromERP-1.0</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPaymentList</name>
           <serviceId>payment/getPaymentList-1.0</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y35</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y30</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>registerInvoice</name>
           <serviceId>registerInvoiceCategory/registerInvoice</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>stopPaymentDemandInCD</name>
           <serviceId>payment/stopPaymentDemandInCD-1.0</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>stopPaymentInCD</name>
           <serviceId>payment/stopPaymentInCD-1.0</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updatePayment</name>
           <serviceId>updatePaymentCategory/updatePayment</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>validateAccountNumber</name>
           <serviceId>validateAccountNumberCategory/validateAccountNumber</serviceId>
           <group>payment</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I82DS51</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>cancelNote</name>
           <serviceId>cancelNoteCategory/cancelNote</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>cancelTelephone</name>
           <serviceId>person/cancelTelephone-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>connectPersonToCompany</name>
           <serviceId>person/connectPersonToCompany-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L12</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>KPP</providerId>
               <debitStartDate>2014-09-06</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createAddress</name>
           <serviceId>person/createAddress-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createFakePerson</name>
           <serviceId>person/createFakePerson-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createNote</name>
           <serviceId>createNoteCategory/createNote</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createPerson</name>
           <serviceId>createPersonCategory/createPerson</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I82DS05E</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I82DS06E</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I82DS08</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>L00</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>KPP</providerId>
               <debitStartDate>2014-09-06</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>H82</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createResidencyForTaxPurpose</name>
           <serviceId>person/createResidencyForTaxPurpose-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-10-24</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createTelephone</name>
           <serviceId>person/createTelephone-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getAdditionalCustomerProfile</name>
           <serviceId>getAdditionalCustomerProfile-1.0/getAdditionalCustomerProfile-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getAddressList</name>
           <serviceId>person/getAddressList-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>O36</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y40</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getContactInfo</name>
           <serviceId>person/getContactInfo-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y02</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getCreditRating</name>
           <serviceId>getCreditRatingCategory/getCreditRatingWS</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H82</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>H84</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getCustomerPreferenceHistoryList</name>
           <serviceId>person/getCustomerPreferenceHistoryList-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y30</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getCustomerPreferenceHistoryListForO24-MQ</name>
           <serviceId>person/getCustomerPreferenceHistoryListForO24-MQ-1.0</serviceId>
           <group>person</group>
           <protocol>mq</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>O24</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getCustomerPreferenceList</name>
           <serviceId>person/getCustomerPreferenceList-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>O24</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y30</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>J80</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getFolksamEmployee</name>
           <serviceId>person/getFolksamEmployee-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I21DS01</providerId>
               <debitStartDate>2015-10-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getHousehold</name>
           <serviceId>getHouseholdCategory/getHousehold</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>person/getNoteList</name>
           <serviceId>getNoteListCategory/getNoteList</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>person/getNoteListH20</name>
           <serviceId>getNoteListCategory/getNoteListH20</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H20</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getOrCreatePersonInca</name>
           <serviceId>getOrCreatePersonInca-1.0/front</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L12</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPerson-2.0</name>
           <serviceId>person/getPerson-2.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPerson</name>
           <serviceId>getPersonCategory/getPerson</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I63DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>P50</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y45</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
           <backends>
             <backend>
               <id>KIS/getKIS_INFO</id>
@@ -1579,804 +1579,804 @@
           <serviceId>person/getPersonComposite-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-09-12</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPersonShort-2.0</name>
           <serviceId>getPersonShortCategory/getPersonShort-2.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KAHDS01</providerId>
               <debitStartDate>2014-09-06</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>KPP</providerId>
               <debitStartDate>2014-09-06</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPersonShortH20-2.0</name>
           <serviceId>getPersonShortCategory/getPersonShortH20-2.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>getPersonShort</name>
           <serviceId>getPersonShortCategory/getPersonShort</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>J11</providerId>
               <debitStartDate>2014-06-17</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>E30</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I82DS05E</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I82DS06E</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I82DS08</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>KPAGEM</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>L00DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>O36</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>H82</providerId>
               <debitStartDate>2014-09-30</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>KIZ</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>L85DS02</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>O05</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Q00DS02</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>KAHDS01</providerId>
               <debitStartDate>2014-12-12</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>KPP</providerId>
               <debitStartDate>2014-12-12</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPersonShortH20</name>
           <serviceId>getPersonShortCategory/getPersonShortH20</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H20</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getResidencyForTaxPurposeList</name>
           <serviceId>person/getResidencyForTaxPurposeList-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-10-24</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getTelephoneList</name>
           <serviceId>person/getTelephoneList-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>getViewlog</name>
           <serviceId>person/getViewlog-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>publishPerson</name>
           <serviceId>publishPerson-1.0/publisher</serviceId>
           <group>person</group>
           <protocol>mq</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L12</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>KPP</providerId>
               <debitStartDate>2014-09-06</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>rerouteCustomer</name>
           <serviceId>rerouteCustomer-1.0/rerouteCustomer-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>searchPerson</name>
           <serviceId>searchPersonCategory/searchPerson</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y32</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>searchPersonH20</name>
           <serviceId>searchPersonCategory/searchPersonH20</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H20</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>setCustomerPreference</name>
           <serviceId>person/setCustomerPreference-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y30</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y06</providerId>
               <debitStartDate>2015-02-25</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>setCustomerPreferenceForO24-MQ</name>
           <serviceId>person/setCustomerPreferenceForO24-MQ-1.0</serviceId>
           <group>person</group>
           <protocol>mq</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>O24</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateAddress</name>
           <serviceId>person/updateAddress-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y40</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateContactInfo</name>
           <serviceId>person/updateContactInfo-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y02</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I82</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I84</providerId>
               <debitStartDate>2015-05-20</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y05</providerId>
               <debitStartDate>2015-02-25</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateContactInfoRestricted</name>
           <serviceId>person/updateContactInfoRestricted-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>updateNote</name>
           <serviceId>updateNoteCategory/updateNote</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateResidencyForTaxPurpose</name>
           <serviceId>person/updateResidencyForTaxPurpose-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-10-24</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateproviderConnection</name>
           <serviceId>person/updateproviderConnection-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L12</providerId>
               <debitStartDate>2014-06-17</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-16</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateTelephone</name>
           <serviceId>person/updateTelephone-1.0</serviceId>
           <group>person</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>approveDirectDebitConsent</name>
           <serviceId>policy/approveDirectDebitConsent-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I82DS51</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createDirectDebitConsent</name>
           <serviceId>policy/createDirectDebitConsent-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I82DS51</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createLifeInsurancePolicyPrivate</name>
           <serviceId>policy/createLifeInsurancePolicyPrivate-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-10-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>createPolicyId</name>
           <serviceId>policy/createPolicyId-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L12</providerId>
               <debitStartDate>2015-08-24</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getBrokerWarrantList</name>
           <serviceId>getBrokerWarrantList-1.0/getBrokerWarrantList-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getContractFromL12</name>
           <serviceId>policy/getContractFromL12-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-10-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getEventsFromL12</name>
           <serviceId>policy/getEventsFromL12-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-10-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getInsurancePolicyForJ80</name>
           <serviceId>policy/getInsurancePolicyForJ80-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>J80</providerId>
               <debitStartDate>2014-11-26</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getInsurancePolicyListForAlarmCenter</name>
           <serviceId>policy/getInsurancePolicyListForAlarmCenter-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-06-23</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getKPAPolicyList</name>
           <serviceId>getKPAPolicyListCategory/getKPAPolicyListAFA</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KPAGEM</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getLifeInsurancePolicy</name>
           <serviceId>policy/getLifeInsurancePolicy-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KIZ</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getLifeInsurancePolicyList</name>
           <serviceId>policy/getLifeInsurancePolicyList-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KIZ</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getLifeInsurancePolicyListForY04</name>
           <serviceId>getLifeInsurancePolicyListForY04-1.0/mqfront</serviceId>
           <group>policy</group>
           <protocol>mq</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>getLifeInsurancePolicyListFromL97-2.0</name>
           <serviceId>policy/getLifeInsurancePolicyListFromL97-2.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>getLifeInsurancePolicyListFromL97</name>
           <serviceId>policy/getLifeInsurancePolicyListFromL97-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Q00DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getLifeInsurancePrognosis</name>
           <serviceId>policy/getLifeInsurancePrognosis-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KIZ</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getLifeInsuranceSavings</name>
           <serviceId>policy/getLifeInsuranceSavings-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KIZ</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>policy/getNoteList</name>
           <serviceId>policy/getNoteList</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>policy/getNoteListH20</name>
           <serviceId>policy/getNoteListH20</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>getPolicy</name>
           <serviceId>getPolicyCategory/getPolicy</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>E51DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>E51DS03</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>A1280</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPolicyList</name>
           <serviceId>getPolicyListCategory/getPolicyList</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>G73</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPolicyListCivil</name>
           <serviceId>getPolicyListCivilCategory/getPolicyListCivil</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPolicyProperty</name>
           <serviceId>getPolicyPropertyCategory/getPolicyProperty</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>getPolicyPropertyH20</name>
           <serviceId>getPolicyPropertyCategory/getPolicyPropertyH20</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H20</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getPolicyPropertyList</name>
           <serviceId>getPolicyPropertyListCategory/getPolicyPropertyList</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>getPolicyPropertyListH20</name>
           <serviceId>getPolicyPropertyListCategory/getPolicyPropertyListH20</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H20</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>searchPolicyProperty</name>
           <serviceId>searchPolicyPropertyCategory/searchPolicyProperty</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>searchPolicyPropertyH20</name>
           <serviceId>searchPolicyPropertyCategory/searchPolicyPropertyH20</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>H20</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateDirectDebitConsent</name>
           <serviceId>policy/updateDirectDebitConsent-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I82DS51</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>updateLifeInsurancePolicy</name>
           <serviceId>policy/updateLifeInsurancePolicy-1.0</serviceId>
           <group>policy</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KIZ</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>generatePDF</name>
           <serviceId>generatePdfCategory/generatePdf</serviceId>
           <group>print</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I82DS09</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>L85</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getAppendixList</name>
           <serviceId>getAppendixListCategory/getAppendixList</serviceId>
           <group>print</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getTemplateList</name>
           <serviceId>getTemplateListCategory/getTemplateList</serviceId>
           <group>print</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>printFile</name>
           <serviceId>printFileCategory/printFile</serviceId>
           <group>print</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I82DS10</providerId>
               <debitStartDate>2014-06-17</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I82DS09</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>removePrintFile</name>
           <serviceId>print/removePrintFile-1.0</serviceId>
           <group>print</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>sendEmail-2.0</name>
           <serviceId>print/sendEmail-2.0</serviceId>
           <group>print</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>sendEmail</name>
           <serviceId>sendEmailCategory/sendEmail</serviceId>
           <group>print</group>
           <protocol>http</protocol>
-          <consumers/>
+          <clients/>
         </service>
         <service>
           <name>getAvailableGroupInsuranceProductList</name>
           <serviceId>product/getAvailableGroupInsuranceProductList-1.0</serviceId>
           <group>product</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>O05</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getInsuranceProductAccountingData</name>
           <serviceId>product/getInsuranceProductAccountingData-1.0</serviceId>
           <group>product</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-20</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>abortSigning</name>
           <serviceId>security/abortSigning-1.0</serviceId>
           <group>security</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-10-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
           <relations>
             <using>
               <serviceId>authenticateCategory/authenticate</serviceId>
@@ -2395,104 +2395,104 @@
           <serviceId>authenticateCategory/authenticate</serviceId>
           <group>security</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>changePassword</name>
           <serviceId>changePasswordCategory/changePassword</serviceId>
           <group>security</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getUser</name>
           <serviceId>security/getUser-1.0</serviceId>
           <group>security</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2014-11-10</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-10-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>seal</name>
           <serviceId>sealCategory/seal</serviceId>
           <group>security</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I63DS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-            <consumer>
+            </client>
+            <client>
               <providerId>I82DS51</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>sendSigningStatus</name>
           <serviceId>security/sendSigningStatus-1.0</serviceId>
           <group>security</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>I67</providerId>
               <debitStartDate>2015-10-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>sign</name>
           <serviceId>security/sign-1.0</serviceId>
           <group>security</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>L93</providerId>
               <debitStartDate>2015-10-10</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>calculateBankDate</name>
           <serviceId>util/calculateBankDate-1.0</serviceId>
           <group>util</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>KAHDS01</providerId>
               <debitStartDate>2014-08-01</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
         <service>
           <name>getVehicle</name>
           <serviceId>vehicle/getVehicle-1.0</serviceId>
           <group>vehicle</group>
           <protocol>http</protocol>
-          <consumers>
-            <consumer>
+          <clients>
+            <client>
               <providerId>Y75</providerId>
               <debitStartDate>2015-02-16</debitStartDate>
-            </consumer>
-          </consumers>
+            </client>
+          </clients>
         </service>
       </services>
     </getServiceListResponse>
