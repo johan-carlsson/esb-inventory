@@ -32,7 +32,11 @@ class Client
   end
 
   def to_s
-    name
+    name || identifier
+  end
+
+  def name
+    @name || (system && system.name) || identifier
   end
 
   def id

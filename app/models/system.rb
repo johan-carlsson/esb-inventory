@@ -40,6 +40,10 @@ class System
     name
   end
 
+  def name
+    @name || @identifier
+  end
+
   def id
     self.identifier.gsub(/[^\w]/,"_") 
   end
