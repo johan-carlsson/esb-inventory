@@ -15,14 +15,14 @@
 //= require_tree .
 
 
-function show_additional_information() {
-	$('.show_additional_information_button').hide();
-	$('.hide_additional_information_button').show();
-	$(".additional_information").slideDown("slow");
+function show_more() {
+	$('.show_more_button').hide();
+	$('.hide_more_button').show();
+	$(".more").slideDown("slow");
 }
 
-function hide_additional_information() {
-	$('.hide_additional_information_button').hide();
-	$('.show_additional_information_button').show();
-	$(".additional_information").slideUp("slow");
+function hide_more() {
+	$('.hide_more_button').hide();
+	$('.show_more_button').show();
+	$(".more").slideUp("slow");
 }

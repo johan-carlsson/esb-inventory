@@ -1,13 +1,15 @@
-<tr class="empty">
-	<th>&nbsp;</th>
-	<td>&nbsp;</td>
-	<th>&nbsp;</th>
-	<td>&nbsp;</td>
-</tr>
+<% if record.tags || record.description %>
+  <tr class="empty">
+    <th>&nbsp;</th>
+    <td>&nbsp;</td>
+    <th>&nbsp;</th>
+    <td>&nbsp;</td>
+  </tr>
 
-<tr>
-	<th><%= "Tags".t %>:</th>
-	<td><%= h record.tag_list %></td>
-	<th><%= "Description".t %>:</th>
-	<td><%=simple_format(h(record.description)) %></td>
-</tr>
+  <tr>
+    <th><%= "Description" %>:</th>
+    <td><%=simple_format(h(record.description)) %></td>
+    <th><%= "Tags" %>:</th>
+    <td><%= h record.tags %></td>
+  </tr>
+<% end %>

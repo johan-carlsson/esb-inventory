@@ -3,6 +3,7 @@ class Service
   attr_accessor :identifier, :name, :group, :system_id
   attr_accessor :protocol, :format
   attr_accessor :properties
+  attr_accessor :description,:tags
 
   def self.all
     Registry.services

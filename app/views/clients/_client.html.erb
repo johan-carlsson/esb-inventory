@@ -1,5 +1,5 @@
 <% client||=@client %>
-<% properties||=client.properties %>
+<% record||=client %>
 <% hide_toolbar||=false %>
 
 <%= div_for(client,:class => 'show') do %>
@@ -18,7 +18,7 @@
 	</tr>
 </table>
 
-<%= render :partial => 'shared/additional_information', :locals => {:properties => properties} %>
+<%= render :partial => 'shared/more', :locals => {:record => record} %>
 
 <%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => client.class.to_s.pluralize.downcase, :id => client.id} %>
 

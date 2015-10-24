@@ -1,5 +1,5 @@
 <% system||=@system %>
-<% properties||=system.properties %>
+<% record||=system %>
 <% hide_toolbar||=false %>
 
 <%= div_for(system,:class => 'show') do %>
@@ -12,7 +12,7 @@
 	</tr>
 </table>
 
-<%= render :partial => 'shared/additional_information', :locals => {:properties => properties} %>
+<%= render :partial => 'shared/more', :locals => {:record => record} %>
 
 <%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => system.class.to_s.pluralize.downcase, :id => system.id} %>
 

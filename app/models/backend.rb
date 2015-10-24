@@ -2,6 +2,7 @@ class Backend
   include ActiveModel::Model
   attr_accessor :identifier, :name, :system,:system_id
   attr_accessor :properties
+  attr_accessor :description,:tags
 
   def self.all
     Registry.backends

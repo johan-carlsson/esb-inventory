@@ -1,0 +1,29 @@
+<% record||=@record %>
+<% properties||=record.properties %>
+
+<% if !properties.empty? || record.description || record.tags %>
+  <div class="more" style="display:none">
+    <table class="show" width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <% properties && properties.each_slice(2) do |p1,p2| %>
+        <tr>
+          <th><%= h p1.name %>:</th>
+          <td><%= h p1.value %></td>
+          <% if p2 %>
+            <th><%= h p2.name %>:</th>
+            <td><%= h p2.value %></td>
+          <%else %>
+            <th></th>
+          <% end %>
+        </tr>
+      <% end %>
+      <tr class="empty">
+        <th></th>
+      </tr>
+
+      <%= render :partial => "shared/tag_and_description", :locals => {:record => record} %>
+
+    </table>
+  </div>
+  <%= render :partial => 'shared/more_buttons' %>
+<% end %> 
