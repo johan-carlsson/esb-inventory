@@ -24,6 +24,10 @@ class Backend
    ServiceBackend.find_all_by_backend_id(self.id).map{|s| s.service}
   end
 
+  def service_count
+    services.count
+  end
+
   def system
     System.find_by_id(system_id)
   end
