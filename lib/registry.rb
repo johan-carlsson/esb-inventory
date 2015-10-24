@@ -1,7 +1,7 @@
 class Registry
   require 'nokogiri'
 
-  CACHE_DURATION=10.minutes
+  CACHE_DURATION=1.minutes
   
   def self.services
     Rails.cache.fetch("backend/services", expires_in: CACHE_DURATION) do
@@ -163,7 +163,7 @@ class Registry
     Rails.cache.fetch("systems", expires_in: CACHE_DURATION) do
       Rails.logger.debug "fetched systems"
       systems=[]
-      doc = File.open("./lib/services.xml") { |f| Nokogiri::XML(f) }
+      doc = File.open("./lib/systems.xml") { |f| Nokogiri::XML(f) }
       doc.remove_namespaces!
 
       doc.xpath("//system").each do |node| 
