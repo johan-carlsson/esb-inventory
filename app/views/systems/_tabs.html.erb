@@ -2,6 +2,7 @@
 	<ul class="tabs">
 		<%= tab_for("Provides", provides_system_url(@system)) %>
     <%= tab_for("Contacts", contacts_system_url(@system)) %>
+    <%= tab_for("Stakeholders", {} ,{selected: false,:class => "disabled"}) %>
     <%= tab_for("Documentation", {} ,{selected: false,:class => "disabled"}) %>
     <%= tab_for("Statistics", {} ,{selected: false,:class => "disabled"}) %>
 	</ul>

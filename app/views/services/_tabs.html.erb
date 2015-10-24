@@ -1,9 +1,10 @@
 <div id="service_tab" class="tab">
 	<ul class="tabs">
 		<%= tab_for("Clients", subscriptions_service_url(@service)) %>
-		<%= tab_for("Backends", backends_service_url(@service)) %>
-		<%= tab_for("Service Relations", relations_service_url(@service)) %>
 		<%= tab_for("Contacts", contacts_service_url(@service)) %>
+		<%= tab_for("Backends", backends_service_url(@service)) %>
+		<%= tab_for("Relations", relations_service_url(@service)) %>
+    <%= tab_for("Stakeholders", {} ,{selected: false,:class => "disabled"}) %>
     <%= tab_for("Documetation", {} ,{selected: false,:class => "disabled"}) %>
     <%= tab_for("Statistics", {} ,{selected: false,:class => "disabled"}) %>
 		<%# tab_for("Issues",  {} ,{selected: false,:class => "disabled"}) %>
