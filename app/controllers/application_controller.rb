@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  VALID_SORT_KEYS=["id","identifier","name","client_id","service_id","starts_at","group","service","client","class","system"]
+  VALID_SORT_KEYS=["id","identifier","name","client_id","service_id","starts_at","group","service","client","class","system","on_name"]
   VALID_NUMERIC_SORT_KEYS=["service_count","client_count","provide_count"]
 
   def sort(collection,order)

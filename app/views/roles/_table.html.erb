@@ -1,0 +1,8 @@
+<% roles||=@roles %>
+<% table_options||={} %>
+
+<%= redpill_table(roles,table_options) do |table| 
+  table.add_column(:name => :name,:order => "name", :width => "50%") { |o| link_to(o.contact, contact_url(o.contact)) }
+  table.add_column(:name => :role,:order => "role", :width => "50%") { |r| r.name} 
+  table.row_linker { |o| contact_url(o.contact) }
+end %>

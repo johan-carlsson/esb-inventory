@@ -1,0 +1,8 @@
+<% roles||=@roles %>
+<% table_options||={} %>
+
+<%= redpill_table(roles,table_options) do |table| 
+  table.add_column(:name => :role,:order => "name", :width => "50%") { |o| link_to(o.name, roles_contact_url(o)) }
+  table.add_column(:name => :name,:order => "on_name", :width => "50%",&:on_name) 
+  table.row_linker { |o| polymorphic_url(o.on) }
+end %>

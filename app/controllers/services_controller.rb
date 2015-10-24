@@ -63,5 +63,18 @@ class ServicesController < ApplicationController
     end
   end
 
+  # GET /services/1/contacts
+  # GET /services/1/contacts.json
+  def contacts
+    params[:order]||='name'
+    @service=Service.find_by_id(params[:id])
+    @roles=sort(@service.contact_roles,params[:order])
+
+    respond_to do |format|
+      format.html 
+      format.json { render json: @roles }
+    end
+  end
+
 
 end

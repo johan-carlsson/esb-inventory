@@ -1,0 +1,9 @@
+<% roles||=@roles %>
+<%= render :partial => "contact" %>
+
+<%= render :partial => "tabs" %>
+<div id="result">
+		<div id="table">
+      <%= render :partial => "roles_table", :locals => {:roles => roles} %>
+		</div>
+</div>

@@ -37,4 +37,17 @@ class SystemsController < ApplicationController
     end
   end
 
+  # GET /systems/1/contacts
+  # GET /systems/1/contacts.json
+  def contacts
+    params[:order]||='name'
+    @system=System.find_by_id(params[:id])
+    @roles=sort(@system.contact_roles,params[:order])
+
+    respond_to do |format|
+      format.html 
+      format.json { render json: @roles }
+    end
+  end
+
 end

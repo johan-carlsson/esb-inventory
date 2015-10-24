@@ -37,6 +37,10 @@ class Service
    ServiceBackend.find_all_by_service_id(self.id).map {|s| s.backend}
   end
 
+  def contact_roles
+    Role.find_all_by_service_id(self.id)
+  end
+
   def system
     System.find_by_id(system_id)
   end

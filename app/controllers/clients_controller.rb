@@ -37,4 +37,17 @@ class ClientsController < ApplicationController
     end
   end
 
+  # GET /clients/1/contacts
+  # GET /clients/1/contacts.json
+  def contacts
+    params[:order]||='name'
+    @client=Client.find_by_id(params[:id])
+    @roles=sort(@client.contact_roles,params[:order])
+
+    respond_to do |format|
+      format.html 
+      format.json { render json: @roles }
+    end
+  end
+
 end

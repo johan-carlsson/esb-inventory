@@ -16,7 +16,8 @@ class Client
     all.find_all {|s| s.id==system_id}
   end
 
-  def initialize
+  def initialize(identifier)
+    self.identifier=identifier
     @properties=[]
   end
 
@@ -31,6 +32,11 @@ class Client
   def service_count
     subscriptions.count
   end
+
+  def contact_roles
+    Role.find_all_by_client_id(self.id)
+  end
+
 
   def to_s
     name || identifier

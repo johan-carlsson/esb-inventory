@@ -18,24 +18,34 @@ Rails.application.routes.draw do
       get 'subscriptions'
       get 'relations'
       get 'backends'
+      get 'contacts'
     end
   end
 
   resources :clients, :constraints => { :id => /.*/ } do
     member do
       get 'subscriptions'
+      get 'contacts'
     end
   end
 
   resources :backends, :constraints => { :id => /.*/ } do
     member do
       get 'services'
+      get 'contacts'
     end
   end
 
   resources :systems, :constraints => { :id => /.*/ } do
     member do
       get 'provides'
+      get 'contacts'
+    end
+  end
+
+  resources :contacts, :constraints => { :id => /.*/ } do
+    member do
+      get 'roles'
     end
   end
 

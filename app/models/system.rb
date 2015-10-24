@@ -37,6 +37,10 @@ class System
    provides.length
   end
 
+  def contact_roles
+    Role.find_all_by_system_id(self.id)
+  end
+
   def to_s
     name
   end

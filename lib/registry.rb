@@ -2,7 +2,7 @@ class Registry
   require 'nokogiri'
 
   CACHE_DURATION=1.minutes
-  
+
   def self.services
     Rails.cache.fetch("backend/services", expires_in: CACHE_DURATION) do
       Rails.logger.debug "Fetched services"
@@ -17,12 +17,12 @@ class Registry
         s.protocol=node.xpath("protocol").text
         if s.protocol == "http"
           s.format="soap/xml"
-           s.properties << Property.new("Format","soap/xml")
-           s.properties << Property.new("Protocol","http")
+          s.properties << Property.new("Format","soap/xml")
+          s.properties << Property.new("Protocol","http")
         end
         if s.protocol== "mq"
-           s.properties << Property.new("Protocol","mq")
-           s.properties << Property.new("Format","xml")
+          s.properties << Property.new("Protocol","mq")
+          s.properties << Property.new("Format","xml")
         end
         s.group=node.xpath("group").text
         s.system_id=System.new("I05").id
@@ -46,7 +46,7 @@ class Registry
       doc.xpath("//relations").each do |node| 
         s=Service.new
         s.identifier=node.xpath("../serviceId").text
-        
+
         node.xpath("using").each do |using_node|
           u=Service.new
           u.identifier=using_node.xpath("serviceId").text
@@ -80,8 +80,7 @@ class Registry
       doc.remove_namespaces!
 
       doc.xpath("//client").each do |node| 
-        c=Client.new
-        c.identifier=node.xpath("systemId").text
+        c=Client.new(node.xpath("systemId").text)
         c.name=node.xpath("systemId").text
 
         #Properties
@@ -107,8 +106,7 @@ class Registry
         s=Service.new
         s.identifier=node.xpath("../../serviceId").text
 
-        c=Client.new
-        c.identifier=node.xpath("systemId").text
+        c=Client.new(node.xpath("systemId").text)
 
         sub.client_id=c.id
         sub.service_id=s.id
@@ -174,6 +172,51 @@ class Registry
     end
   end
 
+  def self.contacts
+    xml = File.open("./lib/contacts.xml") { |f| Nokogiri::XML(f) }
+    contacts=[]
+    xml.xpath("/contacts/contact").each do |node|
+     c=Contact.new(node.xpath("name").text)
+     node.xpath("on").each do | role_node|
+       role_node.xpath("system").each do |system_node|
+         s=System.new(system_node.xpath("id").text)
+         r=Role.new(c,"system",s.id,system_node.xpath("role").text)
+         c.roles << r
+       end
+       role_node.xpath("service").each do |service_node|
+         # s=Service.new(system_node.xpath("id").text)
+         s=Service.new
+         s.identifier=service_node.xpath("id").text
+         r=Role.new(c,"service",s.id,service_node.xpath("role").text)
+         c.roles << r
+       end
+       role_node.xpath("backend").each do |backend_node|
+         b=Backend.new(backend_node.xpath("id").text)
+         r=Role.new(c,"system",b.id,backend_node.xpath("role").text)
+         c.roles << r
+       end
+       role_node.xpath("client").each do |client_node|
+         client=Client.new(client_node.xpath("id").text)
+         r=Role.new(c,"client",client.id,client_node.xpath("role").text)
+         c.roles << r
+       end
+     end
+     contacts << c
+    end
+
+    #Make uniq
+    contacts.inject({}) do |uniq,c| 
+     if uniq[c.id]
+       old=uniq[c.id]
+       old.roles.push(*c.roles)
+       uniq[c.id]=old
+     else
+       uniq[c.id]=c
+     end
+     uniq
+    end.map {|k,v| v}
+  end
+
 
 end
 
@@ -198,7 +241,7 @@ end
 
 
 if __FILE__ == $0
- # puts Backend.service("getPersonCategory/getPerson") 
- # puts Backend.clients
- puts Backend.client_subscriptions("Y75")
+  # puts Backend.service("getPersonCategory/getPerson") 
+  # puts Backend.clients
+  puts Backend.client_subscriptions("Y75")
 end

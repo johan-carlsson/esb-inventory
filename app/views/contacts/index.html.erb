@@ -1,0 +1,15 @@
+<% contacts||=@contacts%>
+<% content_for :window_header do %>
+<%= if controller.action_name == "index"
+	"contacts"
+	else
+		controller.action_name.titleize
+end %>
+<% end %>
+
+<div id="result">
+  <%= render :partial => 'shared/table_toolbar', :locals => {:collection => contacts, :show_csv_export_button => true} %>
+	<div id="table">
+    <%= render :partial => "table", :locals => {:contacts => contacts} %>	
+	</div>
+</div>

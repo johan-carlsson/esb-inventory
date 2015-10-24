@@ -33,6 +33,10 @@ class Backend
     System.find_by_id(system_id)
   end
 
+  def contact_roles
+    Role.find_all_by_backend_id(self.id)
+  end
+
   def to_s
     name
   end

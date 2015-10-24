@@ -1,0 +1,55 @@
+<contacts>
+  <contact>
+    <name>Johan Carlsson</name>
+    <on>
+      <system>
+        <id>I05</id>
+        <role>Develop</role>
+      </system>
+      <system>
+        <id>I05</id>
+        <role>Architect</role>
+      </system>
+      <service>
+        <id>security/abortSigning-1.0</id> 
+        <role>Develop</role>
+      </service>
+    </on>
+  </contact>
+  <contact>
+    <name>Maja</name>
+    <on>
+      <system>
+        <id>I05</id>
+        <role>ResponsibleIT</role>
+      </system> 
+    </on>
+  </contact>
+  <contact>
+    <name>Micke</name>
+    <on>
+      <backend>
+        <id>Y05</id>
+        <role>Developer</role>
+      </system> 
+    </on>
+  </contact>
+  <contact>
+    <name>KIS Grp</name>
+    <on>
+      <backend>
+        <id>Y05</id>
+        <role>Support</role>
+      </system> 
+    </on>
+  </contact>
+  <contact>
+    <name>Micke</name>
+    <on>
+      <client>
+        <id>Y05</id>
+        <role>Developer</role>
+      </client> 
+    </on>
+  </contact>
+</contacts>
