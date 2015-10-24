@@ -1,0 +1,15 @@
+<% systems||=@systems%>
+<% content_for :window_header do %>
+<%= if controller.action_name == "index"
+	"systems"
+	else
+		controller.action_name.titleize
+end %>
+<% end %>
+
+<div id="result">
+  <%= render :partial => 'shared/table_toolbar', :locals => {:collection => systems, :show_csv_export_button => true} %>
+	<div id="table">
+    <%= render :partial => "table", :locals => {:systems => systems} %>	
+	</div>
+</div>

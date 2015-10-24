@@ -1,14 +1,14 @@
-<providers>
-  <provider>
+<systems>
+  <system>
     <id>I05</id>
     <name>Folkbuss</name>
-  </provider>
-  <provider>
+  </system>
+  <system>
     <id>Y75</id>
     <name>Halo</name>
-  <provider>
+  <system>
     <id>Y05</id>
     <name>KIS</name>
-  </provider>
-  </provider>
-</providers>
+  </system>
+  </system>
+</systems>

@@ -3,5 +3,5 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  $('#service_provider_name').autocomplete
-    source: $('#service_provider_name').data('autocomplete-source')
+  $('#service_system_name').autocomplete
+    source: $('#service_system_name').data('autocomplete-source')

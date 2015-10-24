@@ -8,10 +8,10 @@ Service:
  - group
  * properties
 
-Client: < Provider
+Client: < System
    - name
    - id
-   - provider_id
+   - system_id
    * properties
 
 ServiceClients:
@@ -20,10 +20,10 @@ ServiceClients:
   - startDate
   - endDate
 
-Backend: < Provider
+Backend: < System
   - id
   - name
-  - provider_id
+  - system_id
   * properties
 
 ServiceBackends:
@@ -38,7 +38,7 @@ ServiceRelations: (Used by getPerson, Uses createDocument)
 #(NO, extrapolate this) All combinations should be returnd by backend/regitry. (All directions)
 
 
-Provider: 
+System: 
   - id
   - name
 

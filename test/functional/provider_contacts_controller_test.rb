@@ -1,51 +1,51 @@
 require 'test_helper'
 
-class ProviderContactsControllerTest < ActionController::TestCase
+class SystemContactsControllerTest < ActionController::TestCase
   setup do
     login_as(:admin)
-    @provider_contact = provider_contacts(:twitter_nisse)
-    @provider = providers(:twitter)
+    @system_contact = system_contacts(:twitter_nisse)
+    @system = systems(:twitter)
   end
 
   test "should get index" do
-    get :index, :provider_id => @provider.id
+    get :index, :system_id => @system.id
     assert_response :success
-    assert_not_nil assigns(:provider_contacts)
+    assert_not_nil assigns(:system_contacts)
   end
 
   test "should get new" do
-    get :new, :provider_id => @provider.id
+    get :new, :system_id => @system.id
     assert_response :success
   end
 
-  test "should create provider_contact" do
-    assert_difference('ProviderContact.count') do
-      post :create, :provider_id => @provider.id, provider_contact: { :role => "Administrator", :tag_list => "Hej, hello"}
+  test "should create system_contact" do
+    assert_difference('SystemContact.count') do
+      post :create, :system_id => @system.id, system_contact: { :role => "Administrator", :tag_list => "Hej, hello"}
     end
 
-    assert_redirected_to provider_contact_path(@provider,assigns(:provider_contact))
+    assert_redirected_to system_contact_path(@system,assigns(:system_contact))
   end
 
-  test "should show provider_contact" do
-    get :show, id: @provider_contact, :provider_id => @provider.id
+  test "should show system_contact" do
+    get :show, id: @system_contact, :system_id => @system.id
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @provider_contact, :provider_id => @provider.id
+    get :edit, id: @system_contact, :system_id => @system.id
     assert_response :success
   end
 
-  test "should update provider_contact" do
-    put :update, id: @provider_contact, :provider_id => @provider.id, provider_contact: { :role => "Administrator" , :tag_list => "Hej, hello"}
-    assert_redirected_to provider_contact_path(@provider,assigns(:provider_contact))
+  test "should update system_contact" do
+    put :update, id: @system_contact, :system_id => @system.id, system_contact: { :role => "Administrator" , :tag_list => "Hej, hello"}
+    assert_redirected_to system_contact_path(@system,assigns(:system_contact))
   end
 
-  test "should destroy provider_contact" do
-    assert_difference('ProviderContact.count', -1) do
-      delete :destroy, id: @provider_contact, :provider_id => @provider.id
+  test "should destroy system_contact" do
+    assert_difference('SystemContact.count', -1) do
+      delete :destroy, id: @system_contact, :system_id => @system.id
     end
 
-    assert_redirected_to provider_contacts_path(@provider)
+    assert_redirected_to system_contacts_path(@system)
   end
 end

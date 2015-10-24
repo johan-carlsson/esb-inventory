@@ -1,6 +1,6 @@
 class Service 
   include ActiveModel::Model
-  attr_accessor :identifier, :name, :group, :provider_id
+  attr_accessor :identifier, :name, :group, :system_id
   attr_accessor :protocol, :format
   attr_accessor :properties
 
@@ -12,8 +12,8 @@ class Service
     all.find {|s| s.id==id}
   end
 
-  def self.find_all_by_provider_id(provider_id)
-    all.find_all {|s| s.provider_id==provider_id}
+  def self.find_all_by_system_id(system_id)
+    all.find_all {|s| s.system_id==system_id}
   end
 
   def initialize
@@ -36,8 +36,8 @@ class Service
    ServiceBackend.find_all_by_service_id(self.id).map {|s| s.backend}
   end
 
-  def provider
-    Provider.find_by_id(provider_id)
+  def system
+    System.find_by_id(system_id)
   end
 
 

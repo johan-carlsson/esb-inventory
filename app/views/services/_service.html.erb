@@ -13,8 +13,8 @@
 	<tr>
 	  <th><%= "Id" %>:</th>
 		<td><%= service.identifier %></td>
-	  <th><%= "Provider" %>:</th>
-    <td><%= service.provider && link_to(service.provider,provider_path(service.provider))%></td>
+	  <th><%= "System" %>:</th>
+    <td><%= service.system && link_to(service.system,system_path(service.system))%></td>
 	</tr>
 
 </table>

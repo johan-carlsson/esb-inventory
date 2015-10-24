@@ -33,7 +33,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :providers, :constraints => { :id => /.*/ } do
+  resources :systems, :constraints => { :id => /.*/ } do
     member do
       get 'provides'
     end

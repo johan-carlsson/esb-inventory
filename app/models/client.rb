@@ -1,6 +1,6 @@
 class Client
   include ActiveModel::Model
-  attr_accessor  :identifier,:name, :provider_id
+  attr_accessor  :identifier,:name, :system_id
   attr_accessor :properties
 
   def self.all
@@ -11,16 +11,16 @@ class Client
     all.find {|s| s.id==id}
   end
 
-  def self.find_all_by_provider_id(provider_id)
-    all.find_all {|s| s.id==provider_id}
+  def self.find_all_by_system_id(system_id)
+    all.find_all {|s| s.id==system_id}
   end
 
   def initialize
     @properties=[]
   end
 
-  def provider
-    Provider.find_by_id(provider_id)
+  def system
+    System.find_by_id(system_id)
   end
 
   def subscriptions

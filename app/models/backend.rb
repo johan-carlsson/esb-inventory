@@ -1,6 +1,6 @@
 class Backend 
   include ActiveModel::Model
-  attr_accessor :identifier, :name, :provider,:provider_id
+  attr_accessor :identifier, :name, :system,:system_id
   attr_accessor :properties
 
   def self.all
@@ -11,8 +11,8 @@ class Backend
     all.find {|s| s.id==id}
   end
 
-  def self.find_all_by_provider_id(provider_id)
-    all.find_all {|s| s.provider_id==provider_id}
+  def self.find_all_by_system_id(system_id)
+    all.find_all {|s| s.system_id==system_id}
   end
 
   def initialize
@@ -23,8 +23,8 @@ class Backend
    ServiceBackend.find_all_by_backend_id(self.id).map{|s| s.service}
   end
 
-  def provider
-    Provider.find_by_id(provider_id)
+  def system
+    System.find_by_id(system_id)
   end
 
   def to_s

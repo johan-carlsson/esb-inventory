@@ -4,6 +4,6 @@
 <%= redpill_table(backends,table_options) do |table| 
   table.add_column(:name => "name",:order => "name",:width => "40%") { |o| link_to(o.name, services_backend_url(o)) }
   table.add_column(:name => :id,:order => "identifier", :width => "30%") {|o| o.identifier }
-  table.add_column(:name => :provider,:order => "provider", :width => "30%") {|o| o.provider }
+  table.add_column(:name => :system,:order => "system", :width => "30%") {|o| o.system }
 	table.row_linker { |o| services_backend_url(o) }
 end %>

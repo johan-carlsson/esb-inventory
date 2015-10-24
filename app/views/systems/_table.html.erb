@@ -1,0 +1,9 @@
+<% systems||=@systems %>
+<% table_options||={} %>
+
+<%= redpill_table(systems,table_options) do |table| 
+  table.add_column(:name => "name",:order => "name",:width => "40%") { |o| link_to(o.name, provides_system_url(o)) }
+  table.add_column(:name => :id,:order => "identifier", :width => "30%") {|o| o.identifier }
+  table.add_column(:name => :provides,:order => "provide_count", :width => "30%") {|o| o.provide_count }
+  table.row_linker { |o| provides_system_url(o) }
+end %>

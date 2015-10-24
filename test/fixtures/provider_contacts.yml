@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 twitter_nisse:
-  provider: twitter
+  system: twitter
   contact: nisse
   role: Support
   created_by: 1

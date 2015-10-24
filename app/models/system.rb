@@ -1,10 +1,10 @@
-class Provider 
+class System 
   include ActiveModel::Model
   attr_accessor :identifier, :name
   attr_accessor :properties
 
   def self.all
-    Registry.providers
+    Registry.systems
   end
 
   def self.find_by_id(id)
@@ -17,15 +17,15 @@ class Provider
   end
 
   def services
-   Service.find_all_by_provider_id(self.id)
+   Service.find_all_by_system_id(self.id)
   end
 
   def backends
-   Backend.find_all_by_provider_id(self.id)
+   Backend.find_all_by_system_id(self.id)
   end
 
   def clients
-   Client.find_all_by_provider_id(self.id)
+   Client.find_all_by_system_id(self.id)
   end
 
   def provides

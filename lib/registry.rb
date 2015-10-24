@@ -25,7 +25,7 @@ class Registry
            s.properties << Property.new("Format","xml")
         end
         s.group=node.xpath("group").text
-        s.provider_id=Provider.new("I05").id
+        s.system_id=System.new("I05").id
 
         #Properties
         s.properties << Property.new("Timeout",1000)
@@ -81,8 +81,8 @@ class Registry
 
       doc.xpath("//client").each do |node| 
         c=Client.new
-        c.identifier=node.xpath("providerId").text
-        c.name=node.xpath("providerId").text
+        c.identifier=node.xpath("systemId").text
+        c.name=node.xpath("systemId").text
 
         #Properties
         p=Property.new("x","Y")
@@ -108,7 +108,7 @@ class Registry
         s.identifier=node.xpath("../../serviceId").text
 
         c=Client.new
-        c.identifier=node.xpath("providerId").text
+        c.identifier=node.xpath("systemId").text
 
         sub.client_id=c.id
         sub.service_id=s.id
@@ -130,7 +130,7 @@ class Registry
         b=Backend.new
         b.identifier=node.xpath("id").text
         b.name=node.xpath("name").text
-        b.provider_id=node.xpath("providerId").text
+        b.system_id=node.xpath("systemId").text
 
         backends << b
       end
@@ -159,20 +159,20 @@ class Registry
     end
   end
 
-  def self.providers
-    Rails.cache.fetch("providers", expires_in: CACHE_DURATION) do
-      Rails.logger.debug "fetched providers"
-      providers=[]
-      doc = File.open("./lib/providers.xml") { |f| Nokogiri::XML(f) }
+  def self.systems
+    Rails.cache.fetch("systems", expires_in: CACHE_DURATION) do
+      Rails.logger.debug "fetched systems"
+      systems=[]
+      doc = File.open("./lib/services.xml") { |f| Nokogiri::XML(f) }
       doc.remove_namespaces!
 
-      doc.xpath("//provider").each do |node| 
-        b=Provider.new(node.xpath("id").text)
+      doc.xpath("//system").each do |node| 
+        b=System.new(node.xpath("id").text)
         b.name=node.xpath("name").text
 
-        providers << b
+        systems << b
       end
-      providers.uniq{|b| b.id}
+      systems.uniq{|b| b.id}
     end
   end
 
