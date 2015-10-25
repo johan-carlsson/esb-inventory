@@ -1,12 +1,18 @@
 <% controller_name ||= controller.controller_name %>
 <% id ||= params[:id] %>
+<% object ||= @object %>
 <% name||=controller_name %>
 
 <div id="object_toolbar">
 
-	<%= redpill_toolbar do |toolbar| %>
-		<%= toolbar.image("sidebar/#{name}.png") %>
-		<%= toolbar.text(name.singularize.titlecase) %>
+  <%= redpill_toolbar do |toolbar| %>
+    <%= toolbar.image("sidebar/#{name}.png") %>
+    <%= toolbar.text(name.singularize.titlecase) %>
+    <% if object.respond_to?(:email) && object.email %>
+      <%= toolbar.item({:class => :email, :tooltip => "Email %s " % name.singularize.titlecase },
+                       {},
+                       {:href=> "mailto:#{object.email}"}) %>
+    <% end %>
   <% end %>
 
 </div>

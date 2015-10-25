@@ -21,6 +21,6 @@
 
 <%= render :partial => 'shared/more', :locals => {:record => record} %>
 
-<%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => contact.class.to_s.pluralize.downcase, :id => contact.id} %>
+<%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => contact.class.to_s.pluralize.downcase, :id => contact.id, :object => contact} %>
 
 <% end %>

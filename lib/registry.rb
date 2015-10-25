@@ -177,6 +177,10 @@ class Registry
     contacts=[]
     xml.xpath("/contacts/contact").each do |node|
      c=Contact.new(node.xpath("name").text)
+     email=node.xpath("email").text
+     if !email.blank?
+       c.email=email
+     end
      node.xpath("on").each do | role_node|
        role_node.xpath("system").each do |system_node|
          s=System.new(system_node.xpath("id").text)
