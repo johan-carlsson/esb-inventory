@@ -2,6 +2,9 @@
   <contact>
     <name>Johan Carlsson</name>
     <email>johan.carlsson@konsult.folksam.se</email>
+    <phone>999-99-99</phone>
+    <description>Bor i Karlstad</description>
+    <tags>Ruby,Java,Jboss</tags>
     <on>
       <system>
         <id>I05</id>

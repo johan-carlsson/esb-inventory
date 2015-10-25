@@ -10,5 +10,9 @@
     <id>Y05</id>
     <name>KIS</name>
   </system>
+  <system>
+    <id>R61</id>
+    <name>Gemensam modul</name>
+  </system>
   </system>
 </systems>

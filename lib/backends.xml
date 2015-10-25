@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<backends>
+  <backend>
+    <id>Y05</id>
+    <name>KIS</name>
+    <systemId>Y05</systemId>
+  </backend>
+  <backend>
+    <id>Y75</id>
+    <name>Halo</name>
+    <systemId>Y75</systemId>
+  </backend>
+  <backend>
+    <id>R61 Auth</id>
+    <name>Gemensam modul</name>
+    <systemId>R61</systemId>
+  </backend>
+</backends>

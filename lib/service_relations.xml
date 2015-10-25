@@ -1,0 +1,24 @@
+<services>
+  <service>
+    <id>account-and-fund/getAgentFromL12-1.0</id>
+    <relations>
+      <using>
+        <serviceId>account-and-fund/getFund-1.0</serviceId>
+      </using>
+      <usedBy>
+        <serviceId>account-and-fund/getFundPortfolioList-1.0</serviceId>
+      </usedBy>
+    </relations>
+  </service>
+  <service>
+    <id>security/abortSigning-1.0</id>
+    <relations>
+      <using>
+        <serviceId>authenticateCategory/authenticate</serviceId>
+      </using>
+      <usedBy>
+        <serviceId>account-and-fund/getFundPortfolioList-1.0</serviceId>
+      </usedBy>
+    </relations>
+  </service>
+</services>
