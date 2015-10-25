@@ -17,7 +17,8 @@ class Service
     all.find_all {|s| s.system_id==system_id}
   end
 
-  def initialize
+  def initialize(identifier)
+    self.identifier=identifier
     @properties=[]
   end
 
