@@ -22,7 +22,7 @@ class ServiceRelation
   end
 
   def flip
-     if relation_type == "Using"
+     if relation_type == "Use"
        t=service_id
        self.service_id=related_service_id
        self.related_service_id=t
@@ -31,7 +31,7 @@ class ServiceRelation
        t=service_id
        self.service_id=related_service_id
        self.related_service_id=t
-       self.relation_type="Using"
+       self.relation_type="Use"
      end
      self
   end

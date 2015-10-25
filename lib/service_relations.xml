@@ -2,9 +2,9 @@
   <service>
     <id>account-and-fund/getAgentFromL12-1.0</id>
     <relations>
-      <using>
+      <use>
         <serviceId>account-and-fund/getFund-1.0</serviceId>
-      </using>
+      </use>
       <usedBy>
         <serviceId>account-and-fund/getFundPortfolioList-1.0</serviceId>
       </usedBy>
@@ -13,9 +13,9 @@
   <service>
     <id>security/abortSigning-1.0</id>
     <relations>
-      <using>
+      <use>
         <serviceId>authenticateCategory/authenticate</serviceId>
-      </using>
+      </use>
       <usedBy>
         <serviceId>account-and-fund/getFundPortfolioList-1.0</serviceId>
       </usedBy>

@@ -45,17 +45,17 @@ class Registry
       doc.xpath("//relations").each do |node| 
         s=Service.new(node.xpath("../id").text)
 
-        node.xpath("using").each do |using_node|
-          u=Service.new(using_node.xpath("serviceId").text)
+        node.xpath("use").each do |use_node|
+          u=Service.new(use_node.xpath("serviceId").text)
           sr=ServiceRelation.new
-          sr.relation_type="Using"
+          sr.relation_type="Use"
           sr.service_id=s.id
           sr.related_service_id=u.id
           service_relations << sr
         end
 
-        node.xpath("usedBy").each do |using_node|
-          u=Service.new(using_node.xpath("serviceId").text)
+        node.xpath("usedBy").each do |used_by_node|
+          u=Service.new(used_by_node.xpath("serviceId").text)
           sr=ServiceRelation.new
           sr.relation_type="UsedBy"
           sr.service_id=s.id
