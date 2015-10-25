@@ -14,6 +14,11 @@ class ServiceBackend
    all.find_all {|s| s.service_id == id}
   end
 
+  def initialize(service_id,backend_id)
+    self.service_id=service_id
+    self.backend_id=backend_id
+  end
+
   def service
     Service.find_by_id(self.service_id)    
   end
