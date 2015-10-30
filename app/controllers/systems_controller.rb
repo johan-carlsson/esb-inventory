@@ -2,9 +2,9 @@ class SystemsController < ApplicationController
   # GET /systems
   # GET /systems.json
   def index
-    @show_csv_export_button=true
     params[:order] ||= 'name'
-    @systems = sort(System.all,params[:order])
+    keys=["name","identifier","provide_count"]
+    @systems = filter_and_sort(System.all,keys,params)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -28,8 +28,9 @@ class SystemsController < ApplicationController
   # GET /systems/1/provides.json
   def provides
     params[:order] ||= 'class'
+    keys=["class","name"]
     @system = System.find_by_id(params[:id])
-    @provides= sort(@system.provides,params[:order])
+    @provides = filter_and_sort(@system.provides,keys,params)
 
     respond_to do |format|
       format.html
@@ -41,8 +42,9 @@ class SystemsController < ApplicationController
   # GET /systems/1/contacts.json
   def contacts
     params[:order]||='contact'
-    @system=System.find_by_id(params[:id])
-    @roles=sort(@system.contact_roles,params[:order])
+    keys=["contact","name"]
+    @system = System.find_by_id(params[:id])
+    @roles = filter_and_sort(@system.contact_roles,keys,params)
 
     respond_to do |format|
       format.html 

@@ -4,6 +4,7 @@
 <%= render :partial => "tabs" %>
 <div id="result">
 		<div id="table">
+      <%= render :partial => "shared/table_toolbar", :locals => {:name => "services"} %>
       <%= render :partial => "subscriptions_table", :locals => {:subscriptions => subscriptions} %>
 		</div>
 </div>

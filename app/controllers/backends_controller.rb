@@ -2,9 +2,9 @@ class BackendsController < ApplicationController
   # GET /backends
   # GET /backends.json
   def index
-    @show_csv_export_button=true
     params[:order] ||= 'name'
-    @backends = sort(Backend.all,params[:order])
+    keys=["name","identifier","service_count"]
+    @backends = filter_and_sort(Backend.all,keys,params)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -28,8 +28,9 @@ class BackendsController < ApplicationController
   # GET /backends/1/services.json
   def services
     params[:order] ||= 'name'
+    keys=["name","group"]
     @backend = Backend.find_by_id(params[:id])
-    @services= sort(@backend.services,params[:order])
+    @services = filter_and_sort(@backend.services,keys,params)
 
     respond_to do |format|
       format.html
@@ -41,8 +42,9 @@ class BackendsController < ApplicationController
   # GET /backends/1/contacts.json
   def contacts
     params[:order]||='contact'
-    @backend=Backend.find_by_id(params[:id])
-    @roles=sort(@backend.contact_roles,params[:order])
+    keys=["contact","name"]
+    @backend = Backend.find_by_id(params[:id])
+    @roles = filter_and_sort(@backend.contact_roles,keys,params)
 
     respond_to do |format|
       format.html 

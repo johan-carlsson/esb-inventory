@@ -1,12 +1,14 @@
 <% collection||=[] %>
 <% name||=controller.controller_name %>
-<% show_new_button=true if show_new_button!=false %>
-<% show_csv_export_button=false if show_csv_export_button!=true %>
+<% show_csv_export_button=@show_csv_export_button %>
 <div id="table_toolbar_panel">
 	<div id="collection_toolbar">			
-    <%= render(:partial => 'shared/collection_toolbar',:locals => {:name => name,:show_new_button => show_new_button, :show_csv_export_button => show_csv_export_button}) %>		
+    <%= render(:partial => 'shared/collection_toolbar',:locals => {:name => name, :show_csv_export_button => show_csv_export_button}) %>		
 	</div>
 
+	<div id="filter_toolbar">
+	<%= render :partial => 'shared/filter'  %>
+	</div>
 
 	<div class="clr"></div>	
 </div>

@@ -2,9 +2,9 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @show_csv_export_button=true
     params[:order] ||= 'name'
-    @contacts = sort(Contact.all,params[:order])
+    keys=["name","email","phone"]
+    @contacts = filter_and_sort(Contact.all,keys,params)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -28,8 +28,9 @@ class ContactsController < ApplicationController
   # GET /contacts/1/roles.json
   def roles
     params[:order] ||= 'name'
+    keys=["name","on_name"]
     @contact = Contact.find_by_id(params[:id])
-    @roles= sort(@contact.roles,params[:order])
+    @roles = filter_and_sort(@contact.roles,keys,params)
 
     respond_to do |format|
       format.html

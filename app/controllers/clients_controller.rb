@@ -4,7 +4,8 @@ class ClientsController < ApplicationController
   def index
     @show_csv_export_button=true
     params[:order] ||= 'name'
-    @clients = sort(Client.all,params[:order])
+    keys=["name","identifier","service_count"]
+    @clients = filter_and_sort(Client.all,keys,params)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -28,8 +29,9 @@ class ClientsController < ApplicationController
   # GET /clients/1/subscriptions.json
   def subscriptions
     params[:order] ||= 'service'
+    keys=["service","starts_at"]
     @client = Client.find_by_id(params[:id])
-    @subscriptions= sort(@client.subscriptions,params[:order])
+    @subscriptions = filter_and_sort(@client.subscriptions,keys,params)
 
     respond_to do |format|
       format.html
@@ -41,8 +43,9 @@ class ClientsController < ApplicationController
   # GET /clients/1/contacts.json
   def contacts
     params[:order]||='contact'
-    @client=Client.find_by_id(params[:id])
-    @roles=sort(@client.contact_roles,params[:order])
+    keys=["contact","name"]
+    @client = Client.find_by_id(params[:id])
+    @roles = filter_and_sort(@client.contact_roles,keys,params)
 
     respond_to do |format|
       format.html 

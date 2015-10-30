@@ -2,9 +2,11 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
-    params[:order]||='name'
-    @services = sort(Service.all,params[:order])
     @show_csv_export_button=true
+    params[:order]||='name'
+    keys=["name","group","client_count"]
+    @services = filter_and_sort(Service.all,keys,params)
+
     respond_to do |format|
       format.html # index.html.erb
       format.csv # index.csv.rb
@@ -27,8 +29,9 @@ class ServicesController < ApplicationController
   # GET /services/1/subscriptions.json
   def subscriptions
     params[:order]||='client'
+    keys=["client","starts_at"]
     @service=Service.find_by_id(params[:id])
-    @subscriptions=sort(@service.subscriptions,params[:order])
+    @subscriptions = filter_and_sort(@service.subscriptions,keys,params)
 
     respond_to do |format|
       format.html 
@@ -40,8 +43,9 @@ class ServicesController < ApplicationController
   # GET /services/1/relations.json
   def relations
     params[:order]||='relation_type'
+    keys=["relation_type","related_service"]
     @service=Service.find_by_id(params[:id])
-    @relations=sort(@service.relations,params[:order])
+    @relations = filter_and_sort(@service.relations,keys,params)
 
     respond_to do |format|
       format.html 
@@ -54,8 +58,9 @@ class ServicesController < ApplicationController
   # GET /services/1/backends.json
   def backends
     params[:order]||='name'
+    keys=["id","name","service_count"]
     @service=Service.find_by_id(params[:id])
-    @backends=sort(@service.backends,params[:order])
+    @backends = filter_and_sort(@service.backends,keys,params)
 
     respond_to do |format|
       format.html 
@@ -67,8 +72,9 @@ class ServicesController < ApplicationController
   # GET /services/1/contacts.json
   def contacts
     params[:order]||='contact'
+    keys=["contact","name"]
     @service=Service.find_by_id(params[:id])
-    @roles=sort(@service.contact_roles,params[:order])
+    @roles = filter_and_sort(@service.contact_roles,keys,params)
 
     respond_to do |format|
       format.html 

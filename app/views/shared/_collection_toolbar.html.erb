@@ -1,24 +1,19 @@
-<% name||=controller.controller_name %>
-<% show_new_button=true if show_new_button!=false %>
-<% show_csv_export_button=false if show_csv_export_button!=true %>
+<% name||=controller.action_name %>
+<% show_csv_export_button=@show_csv_export_button %>
+
 <% name.downcase! %>
 <% image ||=  "sidebar/#{name.gsub(" ","_")}.png" %>
-<% if controller.action_name == "index" || @show_index_toolbar %>
-	<%= redpill_toolbar do |toolbar| %>
-	<%= toolbar.image(image) %>
-	<%= toolbar.text(name.titlecase) %>
-    <% if show_csv_export_button %>									
+<%= redpill_toolbar do |toolbar| %>
+  <%= toolbar.image(image) %>
+  <%= toolbar.text(name.titlecase) %>
+  <% if show_csv_export_button %>									
     <%= toolbar.item({:class => :export, :tooltip => "Export %s csv" % name },
-                    {:format => :csv},
-                            {},
-                            @csv_export_button_disabled) %>
-    <% end %>
-    
+                     {:format => :csv},
+                     {},
+                     @csv_export_button_disabled) %>
+ <% end %>
 
-    <% end %>
-<% else %>
-<%# CSS FIX %>
-<div id="collection_toolbar" style="height:32px; background: none"></div>
 <% end %>
+
 
 

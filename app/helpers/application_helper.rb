@@ -30,6 +30,16 @@ module ApplicationHelper
     ["backends"].include?(controller.controller_name)
   end
 
+  def filter_tooltip
+    <<-TEXT
+Search terms are separated by space
+Filter text by regex
+Filter numerics by operators
+Example "thin.* >2"
+Key #{shortcut_modifier}-f
+TEXT
+    
+  end
 
 
   def link_to_function(name, function, html_options={})

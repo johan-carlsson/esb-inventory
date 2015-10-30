@@ -2,7 +2,7 @@
 	<form name="filter_form" action="" style="display:inline;" >
 		<%= text_field_tag("search_for", params[:search_for],
 		:placeholder => "Filter",:tabindex=> auto_index  , :accesskey => 'F', 
-		:disabled=> true,:title  => "#{shortcut_modifier}-f",:autocomplete=>"off") %>
+    :title  => "#{filter_tooltip}",:autocomplete=>"off") %>
 	</form>
 </div>
 <%= render :partial => 'shared/filter_field_observer'%>		
