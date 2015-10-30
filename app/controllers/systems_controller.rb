@@ -41,8 +41,9 @@ class SystemsController < ApplicationController
   # GET /systems/1/contacts
   # GET /systems/1/contacts.json
   def contacts
+    @show_email_button=true
     params[:order]||='contact'
-    keys=["contact","name"]
+    keys=["contact","name","email"]
     @system = System.find_by_id(params[:id])
     @roles = filter_and_sort(@system.contact_roles,keys,params)
 

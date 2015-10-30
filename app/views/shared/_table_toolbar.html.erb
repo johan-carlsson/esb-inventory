@@ -3,7 +3,7 @@
 <% show_csv_export_button=@show_csv_export_button %>
 <div id="table_toolbar_panel">
 	<div id="collection_toolbar">			
-    <%= render(:partial => 'shared/collection_toolbar',:locals => {:name => name, :show_csv_export_button => show_csv_export_button}) %>		
+    <%= render(:partial => 'shared/collection_toolbar',:locals => {:name => name, :collection => collection, :show_csv_export_button => show_csv_export_button}) %>		
 	</div>
 
 	<div id="filter_toolbar">

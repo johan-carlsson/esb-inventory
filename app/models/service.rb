@@ -46,7 +46,6 @@ class Service
     System.find_by_id(system_id)
   end
 
-
   def to_s
     name
   end

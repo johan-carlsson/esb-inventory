@@ -1,5 +1,7 @@
 <% name||=controller.action_name %>
+<% collection||=@collection %>
 <% show_csv_export_button=@show_csv_export_button %>
+<% hide_email_button=@hide_email_button %>
 
 <% name.downcase! %>
 <% image ||=  "sidebar/#{name.gsub(" ","_")}.png" %>
@@ -11,6 +13,11 @@
                      {:format => :csv},
                      {},
                      @csv_export_button_disabled) %>
+  <% end %>
+  <% if collection.first.respond_to?(:email) && collection.any?(&:email) && !hide_email_button %>
+    <%= toolbar.item({:class => :email, :tooltip => "Email %s " % name.titlecase },
+                     {},
+                     {:href=> "mailto:#{collection.map(&:email).uniq.join(",")}"}) %>
  <% end %>
 
 <% end %>

@@ -43,7 +43,7 @@ class ClientsController < ApplicationController
   # GET /clients/1/contacts.json
   def contacts
     params[:order]||='contact'
-    keys=["contact","name"]
+    keys=["contact","name","email"]
     @client = Client.find_by_id(params[:id])
     @roles = filter_and_sort(@client.contact_roles,keys,params)
 

@@ -27,6 +27,7 @@ class ContactsController < ApplicationController
   # GET /contacts/1/roles
   # GET /contacts/1/roles.json
   def roles
+    @hide_email_button=true
     params[:order] ||= 'name'
     keys=["name","on_name"]
     @contact = Contact.find_by_id(params[:id])

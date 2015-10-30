@@ -85,6 +85,10 @@ class Role
     "#{on.class} #{on.to_s}"
   end
 
+  def email
+    contact.email
+  end
+
   def inherited?
     @inherited
   end

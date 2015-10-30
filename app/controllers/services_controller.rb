@@ -71,8 +71,9 @@ class ServicesController < ApplicationController
   # GET /services/1/contacts
   # GET /services/1/contacts.json
   def contacts
+    @show_email_button=true
     params[:order]||='contact'
-    keys=["contact","name"]
+    keys=["contact","name","email"]
     @service=Service.find_by_id(params[:id])
     @roles = filter_and_sort(@service.contact_roles,keys,params)
 
