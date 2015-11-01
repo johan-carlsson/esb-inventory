@@ -3,7 +3,7 @@ class BackendsController < ApplicationController
   # GET /backends.json
   def index
     params[:order] ||= 'name'
-    keys=["name","identifier","service_count"]
+    keys=["name","identifier","integration_count"]
     @backends = filter_and_sort(Backend.all,keys,params)
 
     respond_to do |format|
@@ -19,22 +19,22 @@ class BackendsController < ApplicationController
     @backend = Backend.find_by_id(params[:id])
 
     respond_to do |format|
-      format.html { redirect_to services_backend_url(@backend) }
+      format.html { redirect_to integrations_backend_url(@backend) }
       format.json { render json: @backend }
     end
   end
 
-  # GET /backends/1/services
-  # GET /backends/1/services.json
-  def services
+  # GET /backends/1/integrations
+  # GET /backends/1/integrations.json
+  def integrations
     params[:order] ||= 'name'
     keys=["name","group"]
     @backend = Backend.find_by_id(params[:id])
-    @services = filter_and_sort(@backend.services,keys,params)
+    @integrations = filter_and_sort(@backend.integrations,keys,params)
 
     respond_to do |format|
       format.html
-      format.json { render json: @services }
+      format.json { render json: @integrations }
     end
   end
 

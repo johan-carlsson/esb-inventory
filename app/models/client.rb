@@ -29,7 +29,7 @@ class Client
    Subscription.find_all_by_client_id(self.id) 
   end
 
-  def service_count
+  def integration_count
     subscriptions.count
   end
 

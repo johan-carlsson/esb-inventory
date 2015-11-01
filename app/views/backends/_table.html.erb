@@ -2,8 +2,8 @@
 <% table_options||={} %>
 
 <%= redpill_table(backends,table_options) do |table| 
-  table.add_column(:name => "name",:order => "name",:width => "40%") { |o| link_to(o.name, services_backend_url(o)) }
+  table.add_column(:name => "name",:order => "name",:width => "40%") { |o| link_to(o.name, integrations_backend_url(o)) }
   table.add_column(:name => :id,:order => "identifier", :width => "30%") {|o| o.identifier }
-  table.add_column(:name => :services,:order => "service_count", :width => "30%") {|o| o.service_count }
-	table.row_linker { |o| services_backend_url(o) }
+  table.add_column(:name => :integrations,:order => "integration_count", :width => "30%") {|o| o.integration_count }
+	table.row_linker { |o| integrations_backend_url(o) }
 end %>

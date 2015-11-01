@@ -1,7 +1,7 @@
-<% subscriptions||=@subscriptions %>
+<% integrations||=@integrations %>
 <% table_options||={} %>
 
-<%= redpill_table(subscriptions,table_options) do |table| 
+<%= redpill_table(integrations,table_options) do |table| 
   table.add_column(:name => "Integration",:order => "integration", :width =>"50%") { |o| o.integration.name}
   table.add_column(:name => "Client since",:order => "starts_at",:width =>"50%") { |o| o.starts_at}
   table.row_linker { |o| integration_url(o.integration_id) }

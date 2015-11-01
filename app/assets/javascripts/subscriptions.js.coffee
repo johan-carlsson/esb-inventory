@@ -5,5 +5,5 @@
 jQuery ->
   $('#subscription_client_name').autocomplete
     source: $('#subscription_client_name').data('autocomplete-source')
-  $('#subscription_service_name').autocomplete
-    source: $('#subscription_service_name').data('autocomplete-source')
+  $('#subscription_integration_name').autocomplete
+    source: $('#subscription_integration_name').data('autocomplete-source')

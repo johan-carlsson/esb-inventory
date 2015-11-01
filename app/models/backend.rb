@@ -21,12 +21,12 @@ class Backend
     self.identifier=identifier
   end
 
-  def services
-   ServiceBackend.find_all_by_backend_id(self.id).map{|s| s.service}
+  def integrations
+   IntegrationBackend.find_all_by_backend_id(self.id).map{|s| s.integration}
   end
 
-  def service_count
-    services.count
+  def integration_count
+    integrations.count
   end
 
   def system

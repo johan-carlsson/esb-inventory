@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'services#index'
+  root 'integrations#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :services, :constraints => { :id => /.*/ } do
+  resources :integrations, :constraints => { :id => /.*/ } do
     member do
       get 'subscriptions'
       get 'relations'
@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 
   resources :backends, :constraints => { :id => /.*/ } do
     member do
-      get 'services'
+      get 'integrations'
       get 'contacts'
     end
   end

@@ -1,0 +1,26 @@
+<% integration||=@integration %>
+<% record||=integration %>
+<% hide_toolbar||=false %>
+
+<%= div_for(integration,:class => 'show') do %>
+<table class="show" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <th><%= "Name" %>:</th>
+		<td><%= integration.name %></td>
+	  <th><%= "Group" %>:</th>
+		<td><%= integration.group %></td>
+	</tr>
+	<tr>
+	  <th><%= "Id" %>:</th>
+		<td><%= integration.identifier %></td>
+	  <th><%= "System" %>:</th>
+    <td><%= integration.system && link_to(integration.system,system_path(integration.system))%></td>
+	</tr>
+
+</table>
+
+<%= render :partial => 'shared/more', :locals => {:record => record} %>
+
+<%= render :partial => 'shared/object_toolbar' , :locals => {:controller_name => integration.class.to_s.pluralize.downcase, :id => integration.id} %>
+
+<% end %>

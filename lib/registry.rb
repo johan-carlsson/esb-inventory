@@ -3,67 +3,69 @@ class Registry
 
   CACHE_DURATION=1.minutes
 
-  def self.services
-    Rails.cache.fetch("services", expires_in: CACHE_DURATION) do
-      Rails.logger.debug "Fetched services"
-      services=[]
-      doc = File.open("./lib/services.xml") { |f| Nokogiri::XML(f) }
+  def self.integrations
+    Rails.cache.fetch("integrations", expires_in: CACHE_DURATION) do
+      Rails.logger.debug "Fetched integrations"
+      integrations=[]
+      doc = File.open("./lib/integrations.xml") { |f| Nokogiri::XML(f) }
       doc.remove_namespaces!
 
-      doc.xpath("//service").each do |node| 
-        s=Service.new(node.xpath("serviceId").text)
+      doc.xpath("//integration").each do |node| 
+        s=Integration.new(node.xpath("integrationId").text)
         set_text_value("name",s,node)
         s.protocol=node.xpath("protocol").text
         if s.protocol == "http"
           s.format="soap/xml"
           s.properties << Property.new("Format","soap/xml")
           s.properties << Property.new("Protocol","http")
+          s.type="service"
         end
         if s.protocol== "mq"
           s.properties << Property.new("Protocol","mq")
           s.properties << Property.new("Format","xml")
+          s.type="pub/sub"
         end
         s.group=node.xpath("group").text
         s.system_id=System.new("I05").id
 
         #Properties
         s.properties << Property.new("Timeout",1000)
-        services << s
+        integrations << s
       end
-      services
+      integrations
     end
   end
 
 
-  def self.service_relations
-    Rails.cache.fetch("service_relations", expires_in: CACHE_DURATION) do
-      Rails.logger.debug "Fetched service relations"
-      service_relations=[]
-      doc = File.open("./lib/service_relations.xml") { |f| Nokogiri::XML(f) }
+  def self.integration_relations
+    Rails.cache.fetch("integration_relations", expires_in: CACHE_DURATION) do
+      Rails.logger.debug "Fetched integration relations"
+      integration_relations=[]
+      doc = File.open("./lib/integration_relations.xml") { |f| Nokogiri::XML(f) }
       doc.remove_namespaces!
 
       doc.xpath("//relations").each do |node| 
-        s=Service.new(node.xpath("../id").text)
+        s=Integration.new(node.xpath("../id").text)
 
         node.xpath("use").each do |use_node|
-          u=Service.new(use_node.xpath("serviceId").text)
-          sr=ServiceRelation.new
+          u=Integration.new(use_node.xpath("integrationId").text)
+          sr=IntegrationRelation.new
           sr.relation_type="Use"
-          sr.service_id=s.id
-          sr.related_service_id=u.id
-          service_relations << sr
+          sr.integration_id=s.id
+          sr.related_integration_id=u.id
+          integration_relations << sr
         end
 
         node.xpath("usedBy").each do |used_by_node|
-          u=Service.new(used_by_node.xpath("serviceId").text)
-          sr=ServiceRelation.new
+          u=Integration.new(used_by_node.xpath("integrationId").text)
+          sr=IntegrationRelation.new
           sr.relation_type="UsedBy"
-          sr.service_id=s.id
-          sr.related_service_id=u.id
-          service_relations << sr
+          sr.integration_id=s.id
+          sr.related_integration_id=u.id
+          integration_relations << sr
         end
       end
-      service_relations
+      integration_relations
     end
   end
 
@@ -72,7 +74,7 @@ class Registry
     Rails.cache.fetch("clients", expires_in: CACHE_DURATION) do
       Rails.logger.debug "fetched clients"
       clients=[]
-      doc = File.open("./lib/services.xml") { |f| Nokogiri::XML(f) }
+      doc = File.open("./lib/integrations.xml") { |f| Nokogiri::XML(f) }
       doc.remove_namespaces!
 
       doc.xpath("//client").each do |node| 
@@ -91,19 +93,19 @@ class Registry
   def self.subscriptions
     Rails.cache.fetch("subscriptions", expires_in: CACHE_DURATION) do
       Rails.logger.debug "Fetched subscriptions"
-      doc = File.open("./lib/services.xml") { |f| Nokogiri::XML(f) }
+      doc = File.open("./lib/integrations.xml") { |f| Nokogiri::XML(f) }
       doc.remove_namespaces!
 
       subscriptions=[]
       doc.xpath(%Q(//client)).each do | node |
         sub=Subscription.new
 
-        s=Service.new(node.xpath("../../serviceId").text)
+        s=Integration.new(node.xpath("../../integrationId").text)
 
         c=Client.new(node.xpath("systemId").text)
 
         sub.client_id=c.id
-        sub.service_id=s.id
+        sub.integration_id=s.id
         sub.starts_at=node.xpath("debitStartDate").text
         subscriptions << sub
       end
@@ -129,23 +131,23 @@ class Registry
     end
   end
 
-  def self.service_backends
-    Rails.cache.fetch("service_backends", expires_in: CACHE_DURATION) do
-      Rails.logger.debug "Fetched service backends"
-      service_backends=[]
-      doc = File.open("./lib/service_backends.xml") { |f| Nokogiri::XML(f) }
+  def self.integration_backends
+    Rails.cache.fetch("integration_backends", expires_in: CACHE_DURATION) do
+      Rails.logger.debug "Fetched integration backends"
+      integration_backends=[]
+      doc = File.open("./lib/integration_backends.xml") { |f| Nokogiri::XML(f) }
       doc.remove_namespaces!
 
-      doc.xpath("//service").each do |node| 
-        s=Service.new(node.xpath("id").text)
+      doc.xpath("//integration").each do |node| 
+        s=Integration.new(node.xpath("id").text)
         
         node.xpath("backendId").each do | backendId_node|
           b=Backend.new(backendId_node.text)
-          sb=ServiceBackend.new(s.id,b.id)
-          service_backends << sb
+          sb=IntegrationBackend.new(s.id,b.id)
+          integration_backends << sb
         end
       end
-      service_backends
+      integration_backends
     end
   end
 
@@ -181,9 +183,9 @@ class Registry
          r=Role.new(c,"system",s.id,system_node.xpath("role").text)
          c.roles << r
        end
-       role_node.xpath("service").each do |service_node|
-         s=Service.new(service_node.xpath("id").text)
-         r=Role.new(c,"service",s.id,service_node.xpath("role").text)
+       role_node.xpath("integration").each do |integration_node|
+         s=Integration.new(integration_node.xpath("id").text)
+         r=Role.new(c,"integration",s.id,integration_node.xpath("role").text)
          c.roles << r
        end
        role_node.xpath("backend").each do |backend_node|
@@ -225,7 +227,7 @@ end
 
 
 
-# class Service
+# class Integration
 #   attr_accessor :id,:name,:group
 # end
 # class Client
@@ -235,15 +237,15 @@ end
 #   end
 # end
 # class Subscription
-#   attr_accessor :service_id,:client_id, :starts_at
+#   attr_accessor :integration_id,:client_id, :starts_at
 #   def to_s
-#     "s: #{self.service_id} c: #{self.client_id}, #{self.starts_at}"
+#     "s: #{self.integration_id} c: #{self.client_id}, #{self.starts_at}"
 #   end
 # end
 
 
 if __FILE__ == $0
-  # puts Backend.service("getPersonCategory/getPerson") 
+  # puts Backend.integration("getPersonCategory/getPerson") 
   # puts Backend.clients
   puts Backend.client_subscriptions("Y75")
 end

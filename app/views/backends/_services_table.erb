@@ -1,9 +1,0 @@
-<% services||=@services %>
-<% table_options||={} %>
-
-<%= redpill_table(services,table_options) do |table| 
-  table.add_column(:name => "Service",:order => "service", :width =>"50%") { |o| o.service.name}
-  table.add_column(:name => "Client since",:order => "starts_at",:width =>"50%") { |o| o.starts_at}
-  table.row_linker { |o| service_url(o.service_id) }
-end %>
-

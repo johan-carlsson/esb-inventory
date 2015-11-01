@@ -2,11 +2,11 @@
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
   <SOAP-ENV:Header/>
   <SOAP-ENV:Body>
-    <getServiceListResponse xmlns="http://folksam.se/interfaces/meta/getServiceListResponse/1.0" xmlns:services="http://folksam.se/fik/objects/services/1.0">
-      <services>
-        <service>
+    <getServiceListResponse xmlns="http://folksam.se/interfaces/meta/getServiceListResponse/1.0" xmlns:integrations="http://folksam.se/fik/objects/service/1.0">
+      <integrations>
+        <integration>
           <name>getAgentFromL12</name>
-          <serviceId>account-and-fund/getAgentFromL12-1.0</serviceId>
+          <integrationId>account-and-fund/getAgentFromL12-1.0</integrationId>
           <group>account-and-fund</group>
           <protocol>http</protocol>
           <clients>
@@ -17,16 +17,16 @@
           </clients>
           <relations>
             <using>
-              <serviceId>account-and-fund/getFund-1.0</serviceId>
+              <integrationId>account-and-fund/getFund-1.0</integrationId>
             </using>
             <usedBy>
-              <serviceId>account-and-fund/getFundPortfolioList-1.0</serviceId>
+              <integrationId>account-and-fund/getFundPortfolioList-1.0</integrationId>
             </usedBy>
           </relations>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getFund</name>
-          <serviceId>account-and-fund/getFund-1.0</serviceId>
+          <integrationId>account-and-fund/getFund-1.0</integrationId>
           <group>account-and-fund</group>
           <protocol>http</protocol>
           <clients>
@@ -35,10 +35,10 @@
               <debitStartDate>2015-05-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getFundList</name>
-          <serviceId>account-and-fund/getFundList-1.0</serviceId>
+          <integrationId>account-and-fund/getFundList-1.0</integrationId>
           <group>account-and-fund</group>
           <protocol>http</protocol>
           <clients>
@@ -47,10 +47,10 @@
               <debitStartDate>2015-05-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getFundPortfolioList</name>
-          <serviceId>account-and-fund/getFundPortfolioList-1.0</serviceId>
+          <integrationId>account-and-fund/getFundPortfolioList-1.0</integrationId>
           <group>account-and-fund</group>
           <protocol>http</protocol>
           <clients>
@@ -59,10 +59,10 @@
               <debitStartDate>2015-05-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getContractList</name>
-          <serviceId>actor/getContractList-1.0</serviceId>
+          <integrationId>actor/getContractList-1.0</integrationId>
           <group>actor</group>
           <protocol>http</protocol>
           <clients>
@@ -71,10 +71,10 @@
               <debitStartDate>2015-02-16</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getCollectiveAgreementList</name>
-          <serviceId>agreement/getCollectiveAgreementList-1.0</serviceId>
+          <integrationId>agreement/getCollectiveAgreementList-1.0</integrationId>
           <group>agreement</group>
           <protocol>http</protocol>
           <clients>
@@ -83,10 +83,10 @@
               <debitStartDate>2014-09-06</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPAKFS09EmployeeHistoryListForKI2</name>
-          <serviceId>agreement/getPAKFS09EmployeeHistoryListForKI2-1.0</serviceId>
+          <integrationId>agreement/getPAKFS09EmployeeHistoryListForKI2-1.0</integrationId>
           <group>agreement</group>
           <protocol>http</protocol>
           <clients>
@@ -95,10 +95,10 @@
               <debitStartDate>2015-04-18</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getCampaignList</name>
-          <serviceId>getCampaignListCategory/getCampaignList</serviceId>
+          <integrationId>getCampaignListCategory/getCampaignList</integrationId>
           <group>campaign</group>
           <protocol>http</protocol>
           <clients>
@@ -111,10 +111,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createCalculationBasis</name>
-          <serviceId>claim/createCalculationBasis-1.0</serviceId>
+          <integrationId>claim/createCalculationBasis-1.0</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -123,10 +123,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createClaim</name>
-          <serviceId>createClaimCategory/createClaim</serviceId>
+          <integrationId>createClaimCategory/createClaim</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -135,10 +135,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createClaimProperty</name>
-          <serviceId>createClaimPropertyCategory/createClaimPropertyLmf</serviceId>
+          <integrationId>createClaimPropertyCategory/createClaimPropertyLmf</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -147,10 +147,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getClaim</name>
-          <serviceId>claim/getClaim-1.0</serviceId>
+          <integrationId>claim/getClaim-1.0</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -167,10 +167,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getClaimInfo</name>
-          <serviceId>getClaimInfoCategory/getClaimInfo</serviceId>
+          <integrationId>getClaimInfoCategory/getClaimInfo</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -183,10 +183,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getClaimList</name>
-          <serviceId>getClaimListCategory/getClaimList</serviceId>
+          <integrationId>getClaimListCategory/getClaimList</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -195,10 +195,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getClaimListFromH50</name>
-          <serviceId>claim/getClaimListFromH50-1.0</serviceId>
+          <integrationId>claim/getClaimListFromH50-1.0</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -207,10 +207,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getClaimListFromY75</name>
-          <serviceId>claim/getClaimListFromY75-1.0</serviceId>
+          <integrationId>claim/getClaimListFromY75-1.0</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -226,10 +226,10 @@
               <systemId>Y75</systemId>
             </backend>
           </backends>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getClaimListMotorFromY75</name>
-          <serviceId>claim/getClaimListMotorFromY75-1.0</serviceId>
+          <integrationId>claim/getClaimListMotorFromY75-1.0</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -238,10 +238,10 @@
               <debitStartDate>2015-09-12</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getGSRClaimList</name>
-          <serviceId>claim/getGSRClaimList-1.0</serviceId>
+          <integrationId>claim/getGSRClaimList-1.0</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -250,10 +250,10 @@
               <debitStartDate>2015-02-16</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>publishClaim</name>
-          <serviceId>claim/publishClaim-1.0</serviceId>
+          <integrationId>claim/publishClaim-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -266,10 +266,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>searchClaim</name>
-          <serviceId>claim/searchClaim-1.0</serviceId>
+          <integrationId>claim/searchClaim-1.0</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -278,10 +278,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>sendClaimInquiry</name>
-          <serviceId>claim/sendClaimInquiry-1.0</serviceId>
+          <integrationId>claim/sendClaimInquiry-1.0</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -290,10 +290,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>sendEstateClaim</name>
-          <serviceId>claim/sendEstateClaim-1.0</serviceId>
+          <integrationId>claim/sendEstateClaim-1.0</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -306,10 +306,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateClaim</name>
-          <serviceId>updateClaimCategory/updateClaim</serviceId>
+          <integrationId>updateClaimCategory/updateClaim</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -318,10 +318,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateEstateClaim</name>
-          <serviceId>claim/updateEstateClaim-1.0</serviceId>
+          <integrationId>claim/updateEstateClaim-1.0</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -330,10 +330,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateGSRClaim</name>
-          <serviceId>claim/updateGSRClaim-1.0</serviceId>
+          <integrationId>claim/updateGSRClaim-1.0</integrationId>
           <group>claim</group>
           <protocol>http</protocol>
           <clients>
@@ -342,10 +342,10 @@
               <debitStartDate>2015-02-16</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>handleCorrespondence</name>
-          <serviceId>correspondence/handleCorrespondence</serviceId>
+          <integrationId>correspondence/handleCorrespondence</integrationId>
           <group>correspondence</group>
           <protocol>http</protocol>
           <clients>
@@ -362,17 +362,17 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>publishCorrespondenceSAP</name>
-          <serviceId>publishCorrespondenceCategory/publishCorrespondenceSAP</serviceId>
+          <integrationId>publishCorrespondenceCategory/publishCorrespondenceSAP</integrationId>
           <group>correspondence</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>publishCorrespondence</name>
-          <serviceId>publishCorrespondenceCategory/publishCorrespondence</serviceId>
+          <integrationId>publishCorrespondenceCategory/publishCorrespondence</integrationId>
           <group>correspondence</group>
           <protocol>http</protocol>
           <clients>
@@ -385,10 +385,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>rejectCorrespondence</name>
-          <serviceId>rejectCorrespondenceCategory/rejectCorrespondence</serviceId>
+          <integrationId>rejectCorrespondenceCategory/rejectCorrespondence</integrationId>
           <group>correspondence</group>
           <protocol>http</protocol>
           <clients>
@@ -397,10 +397,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getCurrencyList</name>
-          <serviceId>getCurrencyListCategory/getCurrencyList</serviceId>
+          <integrationId>getCurrencyListCategory/getCurrencyList</integrationId>
           <group>currency</group>
           <protocol>http</protocol>
           <clients>
@@ -421,10 +421,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createDocuments-2.0</name>
-          <serviceId>document/createDocuments-2.0</serviceId>
+          <integrationId>document/createDocuments-2.0</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -437,10 +437,10 @@
               <debitStartDate>2015-05-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createDocuments-3.0</name>
-          <serviceId>document/createDocuments-3.0</serviceId>
+          <integrationId>document/createDocuments-3.0</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -449,10 +449,10 @@
               <debitStartDate>2014-12-08</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createDocuments</name>
-          <serviceId>createDocumentsCategory/createDocuments</serviceId>
+          <integrationId>createDocumentsCategory/createDocuments</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -469,10 +469,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createEditableDocument</name>
-          <serviceId>document/createEditableDocument-1.0</serviceId>
+          <integrationId>document/createEditableDocument-1.0</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -481,10 +481,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createSignatures</name>
-          <serviceId>document/createSignatures-1.0</serviceId>
+          <integrationId>document/createSignatures-1.0</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -493,10 +493,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getContent</name>
-          <serviceId>getContent-1.0/front</serviceId>
+          <integrationId>getContent-1.0/front</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -525,10 +525,10 @@
               <debitStartDate>2015-02-16</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getDocument</name>
-          <serviceId>getDocumentCategory/getDocument</serviceId>
+          <integrationId>getDocumentCategory/getDocument</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -549,10 +549,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getDocumentList</name>
-          <serviceId>getDocumentListCategory/getDocumentList</serviceId>
+          <integrationId>getDocumentListCategory/getDocumentList</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -565,10 +565,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getDocumentTypeList</name>
-          <serviceId>getDocumentTypeListCategory/getDocumentTypeList</serviceId>
+          <integrationId>getDocumentTypeListCategory/getDocumentTypeList</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -585,10 +585,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getSignatures</name>
-          <serviceId>document/getSignatures-1.0</serviceId>
+          <integrationId>document/getSignatures-1.0</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -605,10 +605,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>SearchDocument-2.0</name>
-          <serviceId>document/searchDocument-2.0</serviceId>
+          <integrationId>document/searchDocument-2.0</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -621,10 +621,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>searchDocument</name>
-          <serviceId>searchDocumentCategory/searchDocument</serviceId>
+          <integrationId>searchDocumentCategory/searchDocument</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -633,10 +633,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>splitDocument-2.0</name>
-          <serviceId>document/splitDocument-2.0</serviceId>
+          <integrationId>document/splitDocument-2.0</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -645,17 +645,17 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>splitDocument</name>
-          <serviceId>document/splitDocument-1.0</serviceId>
+          <integrationId>document/splitDocument-1.0</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateBusinessObjectConnection</name>
-          <serviceId>updateBusinessObjectConnectionCategory/updateBusinessObjectConnection</serviceId>
+          <integrationId>updateBusinessObjectConnectionCategory/updateBusinessObjectConnection</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -668,10 +668,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateDocument</name>
-          <serviceId>updateDocumentCategory/updateDocument</serviceId>
+          <integrationId>updateDocumentCategory/updateDocument</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -688,10 +688,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateMetadata</name>
-          <serviceId>document/updateMetadata-1.0</serviceId>
+          <integrationId>document/updateMetadata-1.0</integrationId>
           <group>document</group>
           <protocol>http</protocol>
           <clients>
@@ -700,10 +700,10 @@
               <debitStartDate>2015-10-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getEconomicTransactionList</name>
-          <serviceId>economic-transaction/getEconomicTransactionList-1.0</serviceId>
+          <integrationId>economic-transaction/getEconomicTransactionList-1.0</integrationId>
           <group>economic-transaction</group>
           <protocol>http</protocol>
           <clients>
@@ -712,10 +712,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createEmployee</name>
-          <serviceId>createEmployeeCategory/createEmployee</serviceId>
+          <integrationId>createEmployeeCategory/createEmployee</integrationId>
           <group>employee</group>
           <protocol>http</protocol>
           <clients>
@@ -724,10 +724,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getBenefitList</name>
-          <serviceId>employee/getBenefitList-1.0</serviceId>
+          <integrationId>employee/getBenefitList-1.0</integrationId>
           <group>employee</group>
           <protocol>http</protocol>
           <clients>
@@ -736,10 +736,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getEmployeeList</name>
-          <serviceId>getEmployeeListCategory/getEmployeeList</serviceId>
+          <integrationId>getEmployeeListCategory/getEmployeeList</integrationId>
           <group>employee</group>
           <protocol>http</protocol>
           <clients>
@@ -748,10 +748,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getEmployeeListLogica</name>
-          <serviceId>getEmployeeListCategory/getEmployeeListLogica</serviceId>
+          <integrationId>getEmployeeListCategory/getEmployeeListLogica</integrationId>
           <group>employee</group>
           <protocol>http</protocol>
           <clients>
@@ -764,10 +764,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getEmployeeListByManager</name>
-          <serviceId>employee/getEmployeeListByManager-1.0</serviceId>
+          <integrationId>employee/getEmployeeListByManager-1.0</integrationId>
           <group>employee</group>
           <protocol>http</protocol>
           <clients>
@@ -776,10 +776,10 @@
               <debitStartDate>2014-06-17</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getEmploymentList</name>
-          <serviceId>employee/getEmploymentList-1.0</serviceId>
+          <integrationId>employee/getEmploymentList-1.0</integrationId>
           <group>employee</group>
           <protocol>http</protocol>
           <clients>
@@ -788,10 +788,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getScheduledTimeList</name>
-          <serviceId>getScheduledTimeListCategory/getScheduledTimeList</serviceId>
+          <integrationId>getScheduledTimeListCategory/getScheduledTimeList</integrationId>
           <group>employee</group>
           <protocol>http</protocol>
           <clients>
@@ -800,10 +800,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>sendTravellerProfile</name>
-          <serviceId>sendTravellerProfileCategory/sendTravellerProfile</serviceId>
+          <integrationId>sendTravellerProfileCategory/sendTravellerProfile</integrationId>
           <group>employee</group>
           <protocol>http</protocol>
           <clients>
@@ -812,10 +812,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>deleteTravellerProfile</name>
-          <serviceId>sendTravellerProfileCategory/deleteTravellerProfile</serviceId>
+          <integrationId>sendTravellerProfileCategory/deleteTravellerProfile</integrationId>
           <group>employee</group>
           <protocol>http</protocol>
           <clients>
@@ -824,10 +824,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateEmployee</name>
-          <serviceId>updateEmployeeCategory/updateEmployee</serviceId>
+          <integrationId>updateEmployeeCategory/updateEmployee</integrationId>
           <group>employee</group>
           <protocol>http</protocol>
           <clients>
@@ -836,17 +836,17 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getEstate</name>
-          <serviceId>getEstateCategory/getEstate</serviceId>
+          <integrationId>getEstateCategory/getEstate</integrationId>
           <group>estate</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getTaxAssessmentUnitList-2.0</name>
-          <serviceId>estate/getTaxAssessmentUnitList-2.0</serviceId>
+          <integrationId>estate/getTaxAssessmentUnitList-2.0</integrationId>
           <group>estate</group>
           <protocol>http</protocol>
           <clients>
@@ -855,10 +855,10 @@
               <debitStartDate>2014-06-17</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>searchEstate</name>
-          <serviceId>searchEstateCategory/searchEstate</serviceId>
+          <integrationId>searchEstateCategory/searchEstate</integrationId>
           <group>estate</group>
           <protocol>http</protocol>
           <clients>
@@ -875,10 +875,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getCountryList</name>
-          <serviceId>geography/getCountryList-1.0</serviceId>
+          <integrationId>geography/getCountryList-1.0</integrationId>
           <group>geography</group>
           <protocol>http</protocol>
           <clients>
@@ -895,10 +895,10 @@
               <debitStartDate>2015-05-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPostCodeArea</name>
-          <serviceId>getPostCodeArea-1.0/getPostCodeArea-1.0</serviceId>
+          <integrationId>getPostCodeArea-1.0/getPostCodeArea-1.0</integrationId>
           <group>geography</group>
           <protocol>http</protocol>
           <clients>
@@ -911,10 +911,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getsystemList</name>
-          <serviceId>infrastructure/getsystemList-1.0</serviceId>
+          <integrationId>infrastructure/getsystemList-1.0</integrationId>
           <group>infrastructure</group>
           <protocol>http</protocol>
           <clients>
@@ -927,10 +927,10 @@
               <debitStartDate>2015-05-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>sendEstimateResponse</name>
-          <serviceId>insurance-case/sendEstimateResponse-1.0</serviceId>
+          <integrationId>insurance-case/sendEstimateResponse-1.0</integrationId>
           <group>insurance-case</group>
           <protocol>http</protocol>
           <clients>
@@ -939,10 +939,10 @@
               <debitStartDate>2015-02-16</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPensionPaymentList</name>
-          <serviceId>economic-transaction/getPensionPaymentList-1.0</serviceId>
+          <integrationId>economic-transaction/getPensionPaymentList-1.0</integrationId>
           <group>kpa/economic-transaction</group>
           <protocol>http</protocol>
           <clients>
@@ -951,10 +951,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getCustomer</name>
-          <serviceId>person/getCustomer-1.0</serviceId>
+          <integrationId>person/getCustomer-1.0</integrationId>
           <group>kpa/person</group>
           <protocol>http</protocol>
           <clients>
@@ -967,10 +967,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getCustomerList</name>
-          <serviceId>person/getCustomerList-1.0</serviceId>
+          <integrationId>person/getCustomerList-1.0</integrationId>
           <group>kpa/person</group>
           <protocol>http</protocol>
           <clients>
@@ -979,10 +979,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>sendSMS</name>
-          <serviceId>messaging/sendSMS-1.0</serviceId>
+          <integrationId>messaging/sendSMS-1.0</integrationId>
           <group>messaging</group>
           <protocol>http</protocol>
           <clients>
@@ -995,17 +995,17 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
-          <name>getServiceList</name>
-          <serviceId>meta/getServiceList-1.0</serviceId>
+        </integration>
+        <integration>
+          <name>getintegrationList</name>
+          <integrationId>meta/getintegrationList-1.0</integrationId>
           <group>meta</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getAgent</name>
-          <serviceId>getAgent-1.0/getAgent-1.0</serviceId>
+          <integrationId>getAgent-1.0/getAgent-1.0</integrationId>
           <group>organisation</group>
           <protocol>http</protocol>
           <clients>
@@ -1018,10 +1018,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getCostCenterList</name>
-          <serviceId>getCostCenterListCategory/getCostCenterList</serviceId>
+          <integrationId>getCostCenterListCategory/getCostCenterList</integrationId>
           <group>organisation</group>
           <protocol>http</protocol>
           <clients>
@@ -1030,10 +1030,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getFieldOffice</name>
-          <serviceId>getFieldOffice-1.0/getFieldOffice-1.0</serviceId>
+          <integrationId>getFieldOffice-1.0/getFieldOffice-1.0</integrationId>
           <group>organisation</group>
           <protocol>http</protocol>
           <clients>
@@ -1042,10 +1042,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getOrganisationStructure</name>
-          <serviceId>getOrganisationStructureCategory/getOrganisationStructure</serviceId>
+          <integrationId>getOrganisationStructureCategory/getOrganisationStructure</integrationId>
           <group>organisation</group>
           <protocol>http</protocol>
           <clients>
@@ -1054,17 +1054,17 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createAccount</name>
-          <serviceId>payment/createAccount-1.0</serviceId>
+          <integrationId>payment/createAccount-1.0</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createAccountY75</name>
-          <serviceId>payment/createAccountY75-1.0</serviceId>
+          <integrationId>payment/createAccountY75-1.0</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1073,10 +1073,10 @@
               <debitStartDate>2015-02-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createPayment</name>
-          <serviceId>createPaymentCategory/createPayment</serviceId>
+          <integrationId>createPaymentCategory/createPayment</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1085,10 +1085,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createPaymentDemandInCD</name>
-          <serviceId>payment/createPaymentDemandInCD-1.0</serviceId>
+          <integrationId>payment/createPaymentDemandInCD-1.0</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1097,10 +1097,10 @@
               <debitStartDate>2015-02-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createPaymentInCD</name>
-          <serviceId>payment/createPaymentInCD-1.0</serviceId>
+          <integrationId>payment/createPaymentInCD-1.0</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1109,10 +1109,10 @@
               <debitStartDate>2015-02-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getAccountList</name>
-          <serviceId>payment/getAccountList-1.0</serviceId>
+          <integrationId>payment/getAccountList-1.0</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1121,24 +1121,24 @@
               <debitStartDate>2015-02-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getDirectDebitStatus</name>
-          <serviceId>getDirectDebitStatus-1.0/wsfront</serviceId>
+          <integrationId>getDirectDebitStatus-1.0/wsfront</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getDirectDebitStatusForL00</name>
-          <serviceId>getDirectDebitStatus-1.0/L00-mqfront</serviceId>
+          <integrationId>getDirectDebitStatus-1.0/L00-mqfront</integrationId>
           <group>payment</group>
           <protocol>mq</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getLogRecordListFromCD</name>
-          <serviceId>payment/getLogRecordListFromCD-1.0</serviceId>
+          <integrationId>payment/getLogRecordListFromCD-1.0</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1147,10 +1147,10 @@
               <debitStartDate>2015-02-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getLogRecordListFromERP</name>
-          <serviceId>payment/getLogRecordListFromERP-1.0</serviceId>
+          <integrationId>payment/getLogRecordListFromERP-1.0</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1159,10 +1159,10 @@
               <debitStartDate>2015-02-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPaymentList</name>
-          <serviceId>payment/getPaymentList-1.0</serviceId>
+          <integrationId>payment/getPaymentList-1.0</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1175,10 +1175,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>registerInvoice</name>
-          <serviceId>registerInvoiceCategory/registerInvoice</serviceId>
+          <integrationId>registerInvoiceCategory/registerInvoice</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1187,10 +1187,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>stopPaymentDemandInCD</name>
-          <serviceId>payment/stopPaymentDemandInCD-1.0</serviceId>
+          <integrationId>payment/stopPaymentDemandInCD-1.0</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1199,10 +1199,10 @@
               <debitStartDate>2015-02-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>stopPaymentInCD</name>
-          <serviceId>payment/stopPaymentInCD-1.0</serviceId>
+          <integrationId>payment/stopPaymentInCD-1.0</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1211,10 +1211,10 @@
               <debitStartDate>2015-02-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updatePayment</name>
-          <serviceId>updatePaymentCategory/updatePayment</serviceId>
+          <integrationId>updatePaymentCategory/updatePayment</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1223,10 +1223,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>validateAccountNumber</name>
-          <serviceId>validateAccountNumberCategory/validateAccountNumber</serviceId>
+          <integrationId>validateAccountNumberCategory/validateAccountNumber</integrationId>
           <group>payment</group>
           <protocol>http</protocol>
           <clients>
@@ -1239,10 +1239,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>cancelNote</name>
-          <serviceId>cancelNoteCategory/cancelNote</serviceId>
+          <integrationId>cancelNoteCategory/cancelNote</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1251,10 +1251,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>cancelTelephone</name>
-          <serviceId>person/cancelTelephone-1.0</serviceId>
+          <integrationId>person/cancelTelephone-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1263,10 +1263,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>connectPersonToCompany</name>
-          <serviceId>person/connectPersonToCompany-1.0</serviceId>
+          <integrationId>person/connectPersonToCompany-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1279,10 +1279,10 @@
               <debitStartDate>2014-09-06</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createAddress</name>
-          <serviceId>person/createAddress-1.0</serviceId>
+          <integrationId>person/createAddress-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1291,10 +1291,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createFakePerson</name>
-          <serviceId>person/createFakePerson-1.0</serviceId>
+          <integrationId>person/createFakePerson-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1303,10 +1303,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createNote</name>
-          <serviceId>createNoteCategory/createNote</serviceId>
+          <integrationId>createNoteCategory/createNote</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1315,10 +1315,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createPerson</name>
-          <serviceId>createPersonCategory/createPerson</serviceId>
+          <integrationId>createPersonCategory/createPerson</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1347,10 +1347,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createResidencyForTaxPurpose</name>
-          <serviceId>person/createResidencyForTaxPurpose-1.0</serviceId>
+          <integrationId>person/createResidencyForTaxPurpose-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1359,10 +1359,10 @@
               <debitStartDate>2015-10-24</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createTelephone</name>
-          <serviceId>person/createTelephone-1.0</serviceId>
+          <integrationId>person/createTelephone-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1371,10 +1371,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getAdditionalCustomerProfile</name>
-          <serviceId>getAdditionalCustomerProfile-1.0/getAdditionalCustomerProfile-1.0</serviceId>
+          <integrationId>getAdditionalCustomerProfile-1.0/getAdditionalCustomerProfile-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1383,10 +1383,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getAddressList</name>
-          <serviceId>person/getAddressList-1.0</serviceId>
+          <integrationId>person/getAddressList-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1403,10 +1403,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getContactInfo</name>
-          <serviceId>person/getContactInfo-1.0</serviceId>
+          <integrationId>person/getContactInfo-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1419,10 +1419,10 @@
               <debitStartDate>2015-05-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getCreditRating</name>
-          <serviceId>getCreditRatingCategory/getCreditRatingWS</serviceId>
+          <integrationId>getCreditRatingCategory/getCreditRatingWS</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1435,10 +1435,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getCustomerPreferenceHistoryList</name>
-          <serviceId>person/getCustomerPreferenceHistoryList-1.0</serviceId>
+          <integrationId>person/getCustomerPreferenceHistoryList-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1447,10 +1447,10 @@
               <debitStartDate>2015-05-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getCustomerPreferenceHistoryListForO24-MQ</name>
-          <serviceId>person/getCustomerPreferenceHistoryListForO24-MQ-1.0</serviceId>
+          <integrationId>person/getCustomerPreferenceHistoryListForO24-MQ-1.0</integrationId>
           <group>person</group>
           <protocol>mq</protocol>
           <clients>
@@ -1459,10 +1459,10 @@
               <debitStartDate>2015-05-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getCustomerPreferenceList</name>
-          <serviceId>person/getCustomerPreferenceList-1.0</serviceId>
+          <integrationId>person/getCustomerPreferenceList-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1479,10 +1479,10 @@
               <debitStartDate>2015-05-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getFolksamEmployee</name>
-          <serviceId>person/getFolksamEmployee-1.0</serviceId>
+          <integrationId>person/getFolksamEmployee-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1491,17 +1491,17 @@
               <debitStartDate>2015-10-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getHousehold</name>
-          <serviceId>getHouseholdCategory/getHousehold</serviceId>
+          <integrationId>getHouseholdCategory/getHousehold</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>person/getNoteList</name>
-          <serviceId>getNoteListCategory/getNoteList</serviceId>
+          <integrationId>getNoteListCategory/getNoteList</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1510,10 +1510,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>person/getNoteListH20</name>
-          <serviceId>getNoteListCategory/getNoteListH20</serviceId>
+          <integrationId>getNoteListCategory/getNoteListH20</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1522,10 +1522,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getOrCreatePersonInca</name>
-          <serviceId>getOrCreatePersonInca-1.0/front</serviceId>
+          <integrationId>getOrCreatePersonInca-1.0/front</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1534,10 +1534,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPerson-2.0</name>
-          <serviceId>person/getPerson-2.0</serviceId>
+          <integrationId>person/getPerson-2.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1546,10 +1546,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPerson</name>
-          <serviceId>getPersonCategory/getPerson</serviceId>
+          <integrationId>getPersonCategory/getPerson</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1573,10 +1573,10 @@
               <systemId>Y05</systemId>
             </backend>
           </backends>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPersonComposite</name>
-          <serviceId>person/getPersonComposite-1.0</serviceId>
+          <integrationId>person/getPersonComposite-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1585,10 +1585,10 @@
               <debitStartDate>2015-09-12</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPersonShort-2.0</name>
-          <serviceId>getPersonShortCategory/getPersonShort-2.0</serviceId>
+          <integrationId>getPersonShortCategory/getPersonShort-2.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1601,17 +1601,17 @@
               <debitStartDate>2014-09-06</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPersonShortH20-2.0</name>
-          <serviceId>getPersonShortCategory/getPersonShortH20-2.0</serviceId>
+          <integrationId>getPersonShortCategory/getPersonShortH20-2.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPersonShort</name>
-          <serviceId>getPersonShortCategory/getPersonShort</serviceId>
+          <integrationId>getPersonShortCategory/getPersonShort</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1680,10 +1680,10 @@
               <debitStartDate>2014-12-12</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPersonShortH20</name>
-          <serviceId>getPersonShortCategory/getPersonShortH20</serviceId>
+          <integrationId>getPersonShortCategory/getPersonShortH20</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1692,10 +1692,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getResidencyForTaxPurposeList</name>
-          <serviceId>person/getResidencyForTaxPurposeList-1.0</serviceId>
+          <integrationId>person/getResidencyForTaxPurposeList-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1704,24 +1704,24 @@
               <debitStartDate>2015-10-24</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getTelephoneList</name>
-          <serviceId>person/getTelephoneList-1.0</serviceId>
+          <integrationId>person/getTelephoneList-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getViewlog</name>
-          <serviceId>person/getViewlog-1.0</serviceId>
+          <integrationId>person/getViewlog-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>publishPerson</name>
-          <serviceId>publishPerson-1.0/publisher</serviceId>
+          <integrationId>publishPerson-1.0/publisher</integrationId>
           <group>person</group>
           <protocol>mq</protocol>
           <clients>
@@ -1734,10 +1734,10 @@
               <debitStartDate>2014-09-06</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>rerouteCustomer</name>
-          <serviceId>rerouteCustomer-1.0/rerouteCustomer-1.0</serviceId>
+          <integrationId>rerouteCustomer-1.0/rerouteCustomer-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1746,10 +1746,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>searchPerson</name>
-          <serviceId>searchPersonCategory/searchPerson</serviceId>
+          <integrationId>searchPersonCategory/searchPerson</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1766,10 +1766,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>searchPersonH20</name>
-          <serviceId>searchPersonCategory/searchPersonH20</serviceId>
+          <integrationId>searchPersonCategory/searchPersonH20</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1778,10 +1778,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>setCustomerPreference</name>
-          <serviceId>person/setCustomerPreference-1.0</serviceId>
+          <integrationId>person/setCustomerPreference-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1794,10 +1794,10 @@
               <debitStartDate>2015-02-25</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>setCustomerPreferenceForO24-MQ</name>
-          <serviceId>person/setCustomerPreferenceForO24-MQ-1.0</serviceId>
+          <integrationId>person/setCustomerPreferenceForO24-MQ-1.0</integrationId>
           <group>person</group>
           <protocol>mq</protocol>
           <clients>
@@ -1806,10 +1806,10 @@
               <debitStartDate>2015-05-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateAddress</name>
-          <serviceId>person/updateAddress-1.0</serviceId>
+          <integrationId>person/updateAddress-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1822,10 +1822,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateContactInfo</name>
-          <serviceId>person/updateContactInfo-1.0</serviceId>
+          <integrationId>person/updateContactInfo-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1850,17 +1850,17 @@
               <debitStartDate>2015-02-25</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateContactInfoRestricted</name>
-          <serviceId>person/updateContactInfoRestricted-1.0</serviceId>
+          <integrationId>person/updateContactInfoRestricted-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateNote</name>
-          <serviceId>updateNoteCategory/updateNote</serviceId>
+          <integrationId>updateNoteCategory/updateNote</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1869,10 +1869,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateResidencyForTaxPurpose</name>
-          <serviceId>person/updateResidencyForTaxPurpose-1.0</serviceId>
+          <integrationId>person/updateResidencyForTaxPurpose-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1881,10 +1881,10 @@
               <debitStartDate>2015-10-24</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updatesystemConnection</name>
-          <serviceId>person/updatesystemConnection-1.0</serviceId>
+          <integrationId>person/updatesystemConnection-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1897,10 +1897,10 @@
               <debitStartDate>2015-02-16</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateTelephone</name>
-          <serviceId>person/updateTelephone-1.0</serviceId>
+          <integrationId>person/updateTelephone-1.0</integrationId>
           <group>person</group>
           <protocol>http</protocol>
           <clients>
@@ -1909,10 +1909,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>approveDirectDebitConsent</name>
-          <serviceId>policy/approveDirectDebitConsent-1.0</serviceId>
+          <integrationId>policy/approveDirectDebitConsent-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -1921,10 +1921,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createDirectDebitConsent</name>
-          <serviceId>policy/createDirectDebitConsent-1.0</serviceId>
+          <integrationId>policy/createDirectDebitConsent-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -1933,10 +1933,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createLifeInsurancePolicyPrivate</name>
-          <serviceId>policy/createLifeInsurancePolicyPrivate-1.0</serviceId>
+          <integrationId>policy/createLifeInsurancePolicyPrivate-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -1945,10 +1945,10 @@
               <debitStartDate>2015-10-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>createPolicyId</name>
-          <serviceId>policy/createPolicyId-1.0</serviceId>
+          <integrationId>policy/createPolicyId-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -1957,10 +1957,10 @@
               <debitStartDate>2015-08-24</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getBrokerWarrantList</name>
-          <serviceId>getBrokerWarrantList-1.0/getBrokerWarrantList-1.0</serviceId>
+          <integrationId>getBrokerWarrantList-1.0/getBrokerWarrantList-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -1969,10 +1969,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getContractFromL12</name>
-          <serviceId>policy/getContractFromL12-1.0</serviceId>
+          <integrationId>policy/getContractFromL12-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -1981,10 +1981,10 @@
               <debitStartDate>2015-10-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getEventsFromL12</name>
-          <serviceId>policy/getEventsFromL12-1.0</serviceId>
+          <integrationId>policy/getEventsFromL12-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -1993,10 +1993,10 @@
               <debitStartDate>2015-10-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getInsurancePolicyForJ80</name>
-          <serviceId>policy/getInsurancePolicyForJ80-1.0</serviceId>
+          <integrationId>policy/getInsurancePolicyForJ80-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2005,10 +2005,10 @@
               <debitStartDate>2014-11-26</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getInsurancePolicyListForAlarmCenter</name>
-          <serviceId>policy/getInsurancePolicyListForAlarmCenter-1.0</serviceId>
+          <integrationId>policy/getInsurancePolicyListForAlarmCenter-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2017,10 +2017,10 @@
               <debitStartDate>2014-06-23</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getKPAPolicyList</name>
-          <serviceId>getKPAPolicyListCategory/getKPAPolicyListAFA</serviceId>
+          <integrationId>getKPAPolicyListCategory/getKPAPolicyListAFA</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2029,10 +2029,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getLifeInsurancePolicy</name>
-          <serviceId>policy/getLifeInsurancePolicy-1.0</serviceId>
+          <integrationId>policy/getLifeInsurancePolicy-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2041,10 +2041,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getLifeInsurancePolicyList</name>
-          <serviceId>policy/getLifeInsurancePolicyList-1.0</serviceId>
+          <integrationId>policy/getLifeInsurancePolicyList-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2053,24 +2053,24 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getLifeInsurancePolicyListForY04</name>
-          <serviceId>getLifeInsurancePolicyListForY04-1.0/mqfront</serviceId>
+          <integrationId>getLifeInsurancePolicyListForY04-1.0/mqfront</integrationId>
           <group>policy</group>
           <protocol>mq</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getLifeInsurancePolicyListFromL97-2.0</name>
-          <serviceId>policy/getLifeInsurancePolicyListFromL97-2.0</serviceId>
+          <integrationId>policy/getLifeInsurancePolicyListFromL97-2.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getLifeInsurancePolicyListFromL97</name>
-          <serviceId>policy/getLifeInsurancePolicyListFromL97-1.0</serviceId>
+          <integrationId>policy/getLifeInsurancePolicyListFromL97-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2079,10 +2079,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getLifeInsurancePrognosis</name>
-          <serviceId>policy/getLifeInsurancePrognosis-1.0</serviceId>
+          <integrationId>policy/getLifeInsurancePrognosis-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2091,10 +2091,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getLifeInsuranceSavings</name>
-          <serviceId>policy/getLifeInsuranceSavings-1.0</serviceId>
+          <integrationId>policy/getLifeInsuranceSavings-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2103,24 +2103,24 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>policy/getNoteList</name>
-          <serviceId>policy/getNoteList</serviceId>
+          <integrationId>policy/getNoteList</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>policy/getNoteListH20</name>
-          <serviceId>policy/getNoteListH20</serviceId>
+          <integrationId>policy/getNoteListH20</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPolicy</name>
-          <serviceId>getPolicyCategory/getPolicy</serviceId>
+          <integrationId>getPolicyCategory/getPolicy</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2137,10 +2137,10 @@
               <debitStartDate>2014-11-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPolicyList</name>
-          <serviceId>getPolicyListCategory/getPolicyList</serviceId>
+          <integrationId>getPolicyListCategory/getPolicyList</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2153,10 +2153,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPolicyListCivil</name>
-          <serviceId>getPolicyListCivilCategory/getPolicyListCivil</serviceId>
+          <integrationId>getPolicyListCivilCategory/getPolicyListCivil</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2165,17 +2165,17 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPolicyProperty</name>
-          <serviceId>getPolicyPropertyCategory/getPolicyProperty</serviceId>
+          <integrationId>getPolicyPropertyCategory/getPolicyProperty</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPolicyPropertyH20</name>
-          <serviceId>getPolicyPropertyCategory/getPolicyPropertyH20</serviceId>
+          <integrationId>getPolicyPropertyCategory/getPolicyPropertyH20</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2184,17 +2184,17 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPolicyPropertyList</name>
-          <serviceId>getPolicyPropertyListCategory/getPolicyPropertyList</serviceId>
+          <integrationId>getPolicyPropertyListCategory/getPolicyPropertyList</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getPolicyPropertyListH20</name>
-          <serviceId>getPolicyPropertyListCategory/getPolicyPropertyListH20</serviceId>
+          <integrationId>getPolicyPropertyListCategory/getPolicyPropertyListH20</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2203,17 +2203,17 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>searchPolicyProperty</name>
-          <serviceId>searchPolicyPropertyCategory/searchPolicyProperty</serviceId>
+          <integrationId>searchPolicyPropertyCategory/searchPolicyProperty</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>searchPolicyPropertyH20</name>
-          <serviceId>searchPolicyPropertyCategory/searchPolicyPropertyH20</serviceId>
+          <integrationId>searchPolicyPropertyCategory/searchPolicyPropertyH20</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2222,10 +2222,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateDirectDebitConsent</name>
-          <serviceId>policy/updateDirectDebitConsent-1.0</serviceId>
+          <integrationId>policy/updateDirectDebitConsent-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2234,10 +2234,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>updateLifeInsurancePolicy</name>
-          <serviceId>policy/updateLifeInsurancePolicy-1.0</serviceId>
+          <integrationId>policy/updateLifeInsurancePolicy-1.0</integrationId>
           <group>policy</group>
           <protocol>http</protocol>
           <clients>
@@ -2246,10 +2246,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>generatePDF</name>
-          <serviceId>generatePdfCategory/generatePdf</serviceId>
+          <integrationId>generatePdfCategory/generatePdf</integrationId>
           <group>print</group>
           <protocol>http</protocol>
           <clients>
@@ -2266,10 +2266,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getAppendixList</name>
-          <serviceId>getAppendixListCategory/getAppendixList</serviceId>
+          <integrationId>getAppendixListCategory/getAppendixList</integrationId>
           <group>print</group>
           <protocol>http</protocol>
           <clients>
@@ -2278,10 +2278,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getTemplateList</name>
-          <serviceId>getTemplateListCategory/getTemplateList</serviceId>
+          <integrationId>getTemplateListCategory/getTemplateList</integrationId>
           <group>print</group>
           <protocol>http</protocol>
           <clients>
@@ -2290,10 +2290,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>printFile</name>
-          <serviceId>printFileCategory/printFile</serviceId>
+          <integrationId>printFileCategory/printFile</integrationId>
           <group>print</group>
           <protocol>http</protocol>
           <clients>
@@ -2310,10 +2310,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>removePrintFile</name>
-          <serviceId>print/removePrintFile-1.0</serviceId>
+          <integrationId>print/removePrintFile-1.0</integrationId>
           <group>print</group>
           <protocol>http</protocol>
           <clients>
@@ -2322,10 +2322,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>sendEmail-2.0</name>
-          <serviceId>print/sendEmail-2.0</serviceId>
+          <integrationId>print/sendEmail-2.0</integrationId>
           <group>print</group>
           <protocol>http</protocol>
           <clients>
@@ -2334,17 +2334,17 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>sendEmail</name>
-          <serviceId>sendEmailCategory/sendEmail</serviceId>
+          <integrationId>sendEmailCategory/sendEmail</integrationId>
           <group>print</group>
           <protocol>http</protocol>
           <clients/>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getAvailableGroupInsuranceProductList</name>
-          <serviceId>product/getAvailableGroupInsuranceProductList-1.0</serviceId>
+          <integrationId>product/getAvailableGroupInsuranceProductList-1.0</integrationId>
           <group>product</group>
           <protocol>http</protocol>
           <clients>
@@ -2353,10 +2353,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getInsuranceProductAccountingData</name>
-          <serviceId>product/getInsuranceProductAccountingData-1.0</serviceId>
+          <integrationId>product/getInsuranceProductAccountingData-1.0</integrationId>
           <group>product</group>
           <protocol>http</protocol>
           <clients>
@@ -2365,10 +2365,10 @@
               <debitStartDate>2015-02-20</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>abortSigning</name>
-          <serviceId>security/abortSigning-1.0</serviceId>
+          <integrationId>security/abortSigning-1.0</integrationId>
           <group>security</group>
           <protocol>http</protocol>
           <clients>
@@ -2379,7 +2379,7 @@
           </clients>
           <relations>
             <using>
-              <serviceId>authenticateCategory/authenticate</serviceId>
+              <integrationId>authenticateCategory/authenticate</integrationId>
             </using>
           </relations>
           <backends>
@@ -2389,10 +2389,10 @@
               <systemId>I04</systemId>
             </backend>
           </backends>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>authenticate</name>
-          <serviceId>authenticateCategory/authenticate</serviceId>
+          <integrationId>authenticateCategory/authenticate</integrationId>
           <group>security</group>
           <protocol>http</protocol>
           <clients>
@@ -2401,10 +2401,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>changePassword</name>
-          <serviceId>changePasswordCategory/changePassword</serviceId>
+          <integrationId>changePasswordCategory/changePassword</integrationId>
           <group>security</group>
           <protocol>http</protocol>
           <clients>
@@ -2413,10 +2413,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getUser</name>
-          <serviceId>security/getUser-1.0</serviceId>
+          <integrationId>security/getUser-1.0</integrationId>
           <group>security</group>
           <protocol>http</protocol>
           <clients>
@@ -2429,10 +2429,10 @@
               <debitStartDate>2015-10-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>seal</name>
-          <serviceId>sealCategory/seal</serviceId>
+          <integrationId>sealCategory/seal</integrationId>
           <group>security</group>
           <protocol>http</protocol>
           <clients>
@@ -2445,10 +2445,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>sendSigningStatus</name>
-          <serviceId>security/sendSigningStatus-1.0</serviceId>
+          <integrationId>security/sendSigningStatus-1.0</integrationId>
           <group>security</group>
           <protocol>http</protocol>
           <clients>
@@ -2457,10 +2457,10 @@
               <debitStartDate>2015-10-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>sign</name>
-          <serviceId>security/sign-1.0</serviceId>
+          <integrationId>security/sign-1.0</integrationId>
           <group>security</group>
           <protocol>http</protocol>
           <clients>
@@ -2469,10 +2469,10 @@
               <debitStartDate>2015-10-10</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>calculateBankDate</name>
-          <serviceId>util/calculateBankDate-1.0</serviceId>
+          <integrationId>util/calculateBankDate-1.0</integrationId>
           <group>util</group>
           <protocol>http</protocol>
           <clients>
@@ -2481,10 +2481,10 @@
               <debitStartDate>2014-08-01</debitStartDate>
             </client>
           </clients>
-        </service>
-        <service>
+        </integration>
+        <integration>
           <name>getVehicle</name>
-          <serviceId>vehicle/getVehicle-1.0</serviceId>
+          <integrationId>vehicle/getVehicle-1.0</integrationId>
           <group>vehicle</group>
           <protocol>http</protocol>
           <clients>
@@ -2493,8 +2493,8 @@
               <debitStartDate>2015-02-16</debitStartDate>
             </client>
           </clients>
-        </service>
-      </services>
-    </getServiceListResponse>
+        </integration>
+      </integrations>
+    </getintegrationListResponse>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>

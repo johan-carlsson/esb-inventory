@@ -14,10 +14,10 @@
         <id>I05</id>
         <role>Architect</role>
       </system>
-      <service>
+      <integration>
         <id>security/abortSigning-1.0</id> 
         <role>Develop</role>
-      </service>
+      </integration>
     </on>
   </contact>
   <contact>

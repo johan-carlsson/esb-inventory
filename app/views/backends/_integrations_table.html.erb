@@ -1,0 +1,8 @@
+<% integrations||=@integrations %>
+<% table_options||={} %>
+
+<%= redpill_table(integrations,table_options) do |table| 
+  table.add_column(:name => :name,:order => "name", :width => "50%") { |o| link_to(o.name, subscriptions_integration_url(o)) }
+  table.add_column(:name => :group,:order => "group", :width => "50%",&:group)
+  table.row_linker { |o| subscriptions_integration_url(o) }
+end %>

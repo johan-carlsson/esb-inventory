@@ -24,8 +24,8 @@ class Role
     all.find_all { |role | role.on==s }
   end
 
-  def self.find_all_by_service_id(service_id)
-    s=Service.find_by_id(service_id)
+  def self.find_all_by_integration_id(integration_id)
+    s=Integration.find_by_id(integration_id)
     roles=all.find_all { |role | role.on==s }
     if s.system
       inherited_roles=self.find_all_by_system_id(s.system.id).map{|r| r.inherited=true;r}

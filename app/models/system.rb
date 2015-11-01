@@ -17,8 +17,8 @@ class System
     @properties=[]
   end
 
-  def services
-   Service.find_all_by_system_id(self.id)
+  def integrations
+   Integration.find_all_by_system_id(self.id)
   end
 
   def backends
@@ -30,7 +30,7 @@ class System
   end
 
   def provides
-   services + backends + clients
+   integrations + backends + clients
   end
 
   def provide_count

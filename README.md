@@ -1,5 +1,5 @@
 #ESB Inventory
-ESB Inventory is a simple web application that helps you keep track of your ESB services, clients and systems. 
+ESB Inventory is a simple web application that helps you keep track of your ESB integrations, clients and systems. 
 
 #Demo
 http://esb-inventory.herokuapp.com/

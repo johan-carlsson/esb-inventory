@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  VALID_SORT_KEYS=["id","identifier","name","client_id","service_id","starts_at","group","service","client","class","system","on_name","contact","phone","email"]
-  VALID_NUMERIC_SORT_KEYS=["service_count","client_count","provide_count"]
+  VALID_SORT_KEYS=["id","identifier","name","client_id","integration_id","starts_at","group","integration","client","class","system","on_name","contact","phone","email"]
+  VALID_NUMERIC_SORT_KEYS=["integration_count","client_count","provide_count"]
 
 
   def filter_and_sort(collection,keys,params)

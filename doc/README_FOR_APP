@@ -2,7 +2,7 @@ Use this README file to introduce your application and point to useful places in
 Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
 
 == API/Model ==
-Service:
+Integration:
  - name
  - id
  - group
@@ -14,8 +14,8 @@ Client: < System
    - system_id
    * properties
 
-ServiceClients:
-  - serviceId
+IntegrationClients:
+  - integrationId
   - clientId
   - startDate
   - endDate
@@ -26,13 +26,13 @@ Backend: < System
   - system_id
   * properties
 
-ServiceBackends:
-  - service_id
+IntegrationBackends:
+  - integration_id
   - backend_id
 
-ServiceRelations: (Used by getPerson, Uses createDocument)
- - service_id
- - related_service_id
+IntegrationRelations: (Used by getPerson, Uses createDocument)
+ - integration_id
+ - related_integration_id
  - RelationType, Uses/UsedBy
 
 #(NO, extrapolate this) All combinations should be returnd by backend/regitry. (All directions)

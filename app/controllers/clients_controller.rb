@@ -4,7 +4,7 @@ class ClientsController < ApplicationController
   def index
     @show_csv_export_button=true
     params[:order] ||= 'name'
-    keys=["name","identifier","service_count"]
+    keys=["name","identifier","integration_count"]
     @clients = filter_and_sort(Client.all,keys,params)
 
     respond_to do |format|
@@ -28,8 +28,8 @@ class ClientsController < ApplicationController
   # GET /clients/1/subscriptions
   # GET /clients/1/subscriptions.json
   def subscriptions
-    params[:order] ||= 'service'
-    keys=["service","starts_at"]
+    params[:order] ||= 'integration'
+    keys=["integration","starts_at"]
     @client = Client.find_by_id(params[:id])
     @subscriptions = filter_and_sort(@client.subscriptions,keys,params)
 

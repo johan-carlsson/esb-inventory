@@ -18,9 +18,9 @@ class ClientSubscriptionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create subscription and a new service" do
+  test "should create subscription and a new integration" do
     assert_difference('Subscription.count') do
-      post :create,  :client_id => @client.id, subscription: { service_name: "A new service", :tag_list => "Hej, hello"}
+      post :create,  :client_id => @client.id, subscription: { integration_name: "A new integration", :tag_list => "Hej, hello"}
     end
 
     assert_redirected_to client_subscription_path(@client,assigns(:subscription))

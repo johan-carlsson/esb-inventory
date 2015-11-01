@@ -22,8 +22,8 @@ module ApplicationHelper
     ["clients","client_subscriptions","client_contacts"].include?(controller.controller_name)
   end
 
-  def select_services_sidebar_item?
-    ["services","service_subscriptions"].include?(controller.controller_name)
+  def select_integrations_sidebar_item?
+    ["integrations","integration_subscriptions"].include?(controller.controller_name)
   end
 
   def select_backends_sidebar_item?

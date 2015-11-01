@@ -1,12 +1,12 @@
-class Service 
+class Integration 
   include ActiveModel::Model
-  attr_accessor :identifier, :name, :group, :system_id
+  attr_accessor :identifier, :name, :group, :system_id,:type
   attr_accessor :protocol, :format
   attr_accessor :properties
   attr_accessor :description,:tags
 
   def self.all
-    Registry.services
+    Registry.integrations
   end
 
   def self.find_by_id(id)
@@ -23,7 +23,7 @@ class Service
   end
 
   def subscriptions
-   Subscription.find_all_by_service_id(self.id) 
+   Subscription.find_all_by_integration_id(self.id) 
   end
 
   def client_count
@@ -31,15 +31,15 @@ class Service
   end
 
   def relations
-   ServiceRelation.find_all_by_service_id(self.id) 
+   IntegrationRelation.find_all_by_integration_id(self.id) 
   end
 
   def backends
-   ServiceBackend.find_all_by_service_id(self.id).map {|s| s.backend}
+   IntegrationBackend.find_all_by_integration_id(self.id).map {|s| s.backend}
   end
 
   def contact_roles
-    Role.find_all_by_service_id(self.id)
+    Role.find_all_by_integration_id(self.id)
   end
 
   def system

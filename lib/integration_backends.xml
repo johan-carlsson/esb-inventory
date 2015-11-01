@@ -1,21 +1,21 @@
-<services>
-  <service>
+<integrations>
+  <integration>
     <id>claim/getClaimListMotorFromY75-1.0</id>
     <backendId>R61 Auth</backendId>
     <backendId>Y75</backendId>
-  </service>
-  <service>
+  </integration>
+  <integration>
     <id>security/abortSigning-1.0</id>
     <backendId>R61 Auth</backendId>
     <backendId>Y75</backendId>
-  </service>
-  <service>
+  </integration>
+  <integration>
     <id>estate/getTaxAssessmentUnitList-2.0</id>
     <backendId>R61 Auth</backendId>
-  </service>
-  <service>
+  </integration>
+  <integration>
     <id>getPersonShortCategory/getPersonShort</id>
     <backendId>R61 Auth</backendId>
     <backendId>Y05</backendId>
-  </service>
-</services>
+  </integration>
+</integrations>
