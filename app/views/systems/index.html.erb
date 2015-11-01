@@ -1,4 +1,5 @@
 <% systems||=@systems%>
+<% pages||=PaginationHelper.pages(systems,params) %>
 <% content_for :window_header do %>
 <%= if controller.action_name == "index"
 	"systems"
@@ -8,8 +9,8 @@ end %>
 <% end %>
 
 <div id="result">
-  <%= render :partial => 'shared/table_toolbar', :locals => {:collection => systems, :show_csv_export_button => true} %>
+  <%= render :partial => 'shared/table_toolbar', :locals => {:collection => systems, :show_csv_export_button => true, :pages => pages} %>
 	<div id="table">
-    <%= render :partial => "table", :locals => {:systems => systems} %>	
+    <%= render :partial => "table", :locals => {:systems => pages.current_page} %>	
 	</div>
 </div>

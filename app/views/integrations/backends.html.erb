@@ -1,10 +1,11 @@
 <% backends||=@backends %>
+<% pages||=PaginationHelper.pages(backends,params) %>
 <%= render :partial => "integration" %>
 
 <%= render :partial => "tabs" %>
 <div id="result">
-  <%= render :partial => "shared/table_toolbar", :locals => {:name => "backends", :collection => backends} %>
+  <%= render :partial => "shared/table_toolbar", :locals => {:name => "backends", :collection => backends, :pages => pages} %>
   <div id="table">
-    <%= render :partial => "backends/table", :locals => {:backends => backends} %>
+    <%= render :partial => "backends/table", :locals => {:backends => pages.current_page} %>
   </div>
 </div>

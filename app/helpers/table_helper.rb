@@ -152,8 +152,8 @@ module TableHelper
 
   def paginator_text(collection=[])
     return if collection.empty?
-    from = (collection.current_page.to_i*collection.per_page.to_i)-(collection.per_page.to_i)+1 unless collection.total_entries < 1
-    to =  collection.current_page.to_i*collection.per_page.to_i
+    from = (collection.current_page_number.to_i*collection.per_page.to_i)-(collection.per_page.to_i)+1 unless collection.total_entries < 1
+    to =  collection.current_page_number.to_i*collection.per_page.to_i
     to =  collection.total_entries if to > collection.total_entries
     "#{from.to_i} - #{ to.to_i } " + "of" + " #{collection.total_entries}"
   end

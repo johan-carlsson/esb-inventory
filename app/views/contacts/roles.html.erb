@@ -1,10 +1,11 @@
 <% roles||=@roles %>
+<% pages||=PaginationHelper.pages(roles,params) %>
 <%= render :partial => "contact" %>
 
 <%= render :partial => "tabs" %>
 <div id="result">
 		<div id="table">
-      <%= render :partial => "shared/table_toolbar", :locals => {:name => "roles", :collection => roles} %>
-      <%= render :partial => "roles_table", :locals => {:roles => roles} %>
+      <%= render :partial => "shared/table_toolbar", :locals => {:name => "roles", :collection => roles, :pages => pages} %>
+      <%= render :partial => "roles_table", :locals => {:roles => pages.current_page} %>
 		</div>
 </div>

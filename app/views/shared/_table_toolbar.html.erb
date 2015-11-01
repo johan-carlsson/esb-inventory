@@ -1,4 +1,5 @@
 <% collection||=[] %>
+<% pages||=[] %>
 <% name||=controller.controller_name %>
 <% show_csv_export_button=@show_csv_export_button %>
 <div id="table_toolbar_panel">
@@ -9,6 +10,10 @@
 	<div id="filter_toolbar">
 	<%= render :partial => 'shared/filter'  %>
 	</div>
+
+  <div id="paginator">
+    <%= render :partial => 'shared/paginator', :locals => {:pages => pages} %>
+  </div>
 
 	<div class="clr"></div>	
 </div>

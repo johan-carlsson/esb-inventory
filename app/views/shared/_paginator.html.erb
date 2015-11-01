@@ -1,17 +1,17 @@
-<% collection||=[] %>
+<% pages||=[] %>
 <%= redpill_toolbar do |toolbar| %>
-  <% if !collection.empty? %>    
+  <% if !pages.empty? %>    
     <%= toolbar.item({:class => :left, :tooltip => "#{shortcut_modifier}-," },
-								               {:method => :get, :url => {:params => params.merge({:page => collection.previous_page})} }, 
-										           {:href => url_for(:params => params.merge({:page => collection.previous_page})), 
-										           :title => "#{shortcut_modifier}-," ,:accesskey => ","}, collection.previous_page.blank?) %>
+								               {:method => :get, :url => {:params => params.merge({:page => pages.previous_page_number})} }, 
+										           {:href => url_for(:params => params.merge({:page => pages.previous_page_number})), 
+										           :title => "#{shortcut_modifier}-," ,:accesskey => ","}, pages.previous_page_number.blank?) %>
 		
     <%= toolbar.item({:class => :right, :tooltip => "#{shortcut_modifier}-." },
-								               {:method => :get, :url => {:params => params.merge({:page => collection.next_page})} }, 
-										           {:href => url_for(:params => params.merge({:page => collection.next_page})),
-										           :title => "#{shortcut_modifier}-." , :accesskey => "."}, collection.next_page.blank?) %>
+								               {:method => :get, :url => {:params => params.merge({:page => pages.next_page_number})} }, 
+										           {:href => url_for(:params => params.merge({:page => pages.next_page_number})),
+										           :title => "#{shortcut_modifier}-." , :accesskey => "."}, pages.next_page_number.blank?) %>
 
-		<%= toolbar.text(paginator_text(collection),:id => :paginator_text) %>
+		<%= toolbar.text(paginator_text(pages),:id => :paginator_text) %>
 
 	<% else %>
 	  <%= toolbar.disabled_item(:class => "left") %>

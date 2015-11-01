@@ -67,5 +67,6 @@ Document:
 
 
 == TODO(Later) ==
+* Rename app to "Integration Directory"
 * Implement an "active" cache. Call/try to call the API list methods every X(ex 1.hour)
 Or at least use the cached value if an cache update failes

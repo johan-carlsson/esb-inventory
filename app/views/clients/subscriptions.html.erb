@@ -1,10 +1,11 @@
 <% subscriptions||=@subscriptions %>
+<% pages||=PaginationHelper.pages(subscriptions,params) %>
 <%= render :partial => "client" %>
 
 <%= render :partial => "tabs" %>
 <div id="result">
 		<div id="table">
-      <%= render :partial => "shared/table_toolbar", :locals => {:name => "integrations", :collection => subscriptions} %>
-      <%= render :partial => "subscriptions_table", :locals => {:subscriptions => subscriptions} %>
+      <%= render :partial => "shared/table_toolbar", :locals => {:name => "integrations", :collection => subscriptions, :pages => pages} %>
+      <%= render :partial => "subscriptions_table", :locals => {:subscriptions => pages.current_page} %>
 		</div>
 </div>
