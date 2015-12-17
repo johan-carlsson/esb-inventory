@@ -22,6 +22,14 @@ class Subscription
     Integration.find_by_id(self.integration_id)    
   end
 
+  def ended?
+    self.ends_at && self.ends_at <= Date.today
+  end
+
+  def started?
+    self.starts_at && self.starts_at <= Date.today
+  end
+
   def persisted?
     true
   end
