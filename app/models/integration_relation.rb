@@ -1,6 +1,6 @@
 class IntegrationRelation
   include ActiveModel::Model
-  attr_accessor :integration_id, :relation_type, :related_integration_id
+  attr_accessor :integration_id, :relation_type, :related_integration_id, :description
 
   def self.all
     Registry.integration_relations
@@ -22,7 +22,7 @@ class IntegrationRelation
   end
 
   def flip
-     if relation_type == "Use"
+     if relation_type == "Using"
        t=integration_id
        self.integration_id=related_integration_id
        self.related_integration_id=t
@@ -31,7 +31,7 @@ class IntegrationRelation
        t=integration_id
        self.integration_id=related_integration_id
        self.related_integration_id=t
-       self.relation_type="Use"
+       self.relation_type="Using"
      end
      self
   end
