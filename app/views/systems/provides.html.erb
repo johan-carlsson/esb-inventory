@@ -1,11 +1,12 @@
 <% provides||=@provides %>
 <% pages||=PaginationHelper.pages(provides,params) %>
+<% show_csv_export_button=true %>
 <%= render :partial => "system" %>
 
 <%= render :partial => "tabs" %>
 <div id="result">
 		<div id="table">
-      <%= render :partial => "shared/table_toolbar", :locals => {:name => "provides", :collection => provides, :pages => pages} %>
+      <%= render :partial => "shared/table_toolbar", :locals => {:name => "provides", :collection => provides, :pages => pages, :show_csv_export_button => show_csv_export_button} %>
       <%= render :partial => "provides_table", :locals => {:provides => pages.current_page} %>
 		</div>
 </div>

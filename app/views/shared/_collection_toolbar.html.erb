@@ -1,6 +1,7 @@
 <% name||=controller.action_name %>
 <% collection||=@collection %>
-<% show_csv_export_button=@show_csv_export_button %>
+<% show_csv_export_button||=@show_csv_export_button %>
+<% show_debit_report_button||=@show_debit_report_button %>
 <% hide_email_button=@hide_email_button %>
 
 <% name.downcase! %>
@@ -10,6 +11,12 @@
   <%= toolbar.text(name.titlecase) %>
   <% if show_csv_export_button %>									
     <%= toolbar.item({:class => :export, :tooltip => "Export %s csv" % name },
+                     {:format => :csv, :order => params[:order], :search_for => params[:search_for]},
+                     {},
+                     @csv_export_button_disabled) %>
+  <% end %>
+  <% if show_debit_report_button %>									
+    <%= toolbar.item({:class => :report, :tooltip => "Export debit report" % name },
                      {:format => :csv},
                      {},
                      @csv_export_button_disabled) %>

@@ -34,6 +34,7 @@ class BackendsController < ApplicationController
 
     respond_to do |format|
       format.html
+      format.csv # backends.csv.rb
       format.json { render json: @integrations }
     end
   end
@@ -48,6 +49,7 @@ class BackendsController < ApplicationController
 
     respond_to do |format|
       format.html 
+      format.csv  {render :template => "shared/contacts.csv.rb"}
       format.json { render json: @roles }
     end
   end

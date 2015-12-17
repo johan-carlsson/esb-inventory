@@ -1,11 +1,12 @@
 <% relations||=@relations %>
 <% pages||=PaginationHelper.pages(relations,params) %>
+<% show_csv_export_button=true %>
 <%= render :partial => "integration" %>
 
 <%= render :partial => "tabs" %>
 <div id="result">
 		<div id="table">
-      <%= render :partial => "shared/table_toolbar", :locals => {:name => "relations", :collection => relations, :pages => pages} %>
+      <%= render :partial => "shared/table_toolbar", :locals => {:name => "relations", :collection => relations, :pages => pages, :show_csv_export_button => show_csv_export_button} %>
       <%= render :partial => "relations_table", :locals => {:relations => pages.current_page} %>
 		</div>
 </div>

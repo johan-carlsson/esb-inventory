@@ -1,11 +1,12 @@
 <% subscriptions||=@subscriptions %>
 <% pages||=PaginationHelper.pages(subscriptions,params) %>
+<% show_csv_export_button=true %>
 <%= render :partial => "client" %>
 
 <%= render :partial => "tabs" %>
 <div id="result">
 		<div id="table">
-      <%= render :partial => "shared/table_toolbar", :locals => {:name => "integrations", :collection => subscriptions, :pages => pages} %>
+      <%= render :partial => "shared/table_toolbar", :locals => {:name => "integrations", :collection => subscriptions, :pages => pages, :show_csv_export_button => show_csv_export_button} %>
       <%= render :partial => "subscriptions_table", :locals => {:subscriptions => pages.current_page} %>
 		</div>
 </div>
