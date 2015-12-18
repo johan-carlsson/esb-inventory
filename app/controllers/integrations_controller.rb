@@ -43,7 +43,7 @@ class IntegrationsController < ApplicationController
   # GET /integrations/1/relations.json
   def relations
     params[:order]||='relation_type'
-    keys=["relation_type","related_integration"]
+    keys=["relation_type","related_integration","description"]
     @integration=Integration.find_by_id(params[:id])
     @relations = filter_and_sort(@integration.relations,keys,params)
 
