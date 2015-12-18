@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  VALID_SORT_KEYS=["id","identifier","name","client_id","integration_id","starts_at","ends_at","group","integration","client","class","system","on_name","contact","phone","email"]
+  VALID_SORT_KEYS=["id","identifier","name","client_id","integration_id","starts_at","ends_at","group","integration","client","class","system","on_name","contact","phone","email", "description"]
   VALID_NUMERIC_SORT_KEYS=["integration_count","client_count","provide_count"]
 
 

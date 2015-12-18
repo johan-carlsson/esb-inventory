@@ -4,7 +4,7 @@
 <%= redpill_table(relations,table_options) do |table| 
   table.add_column(:name => "Realtion",:order => "relation_type", :width =>"20%") { |o| o.relation_type}
   table.add_column(:name => "Integration",:order => "related_integration", :width =>"30%") { |o| o.related_integration}
-  table.add_column(:name => "Description",:order => "related_integration", :width =>"40%") { |o| o.description}
+  table.add_column(:name => "Description",:order => "description", :width =>"40%") { |o| o.description}
   table.row_linker { |o| integration_url(o.related_integration_id) }
 end %>
 
