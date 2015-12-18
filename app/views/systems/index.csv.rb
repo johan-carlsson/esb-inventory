@@ -1,11 +1,11 @@
-response.headers["Content-Disposition"] = 'attachment; filename=clients.csv'
+response.headers["Content-Disposition"] = 'attachment; filename=systems.csv'
 CSV.generate do |csv|
-  csv << ["Name", "Id", "Number of integrations"]
-  @clients.each do |client|
+  csv << ["Name", "Id", "Provides"]
+  @systems.each do |system|
     csv << [
-     client.name,
-     client.id,
-     client.subscriptions.count
+     system.name,
+     system.id,
+     system.provide_count
     ]
   end
 end

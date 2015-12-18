@@ -2,7 +2,6 @@ class IntegrationsController < ApplicationController
   # GET /integrations
   # GET /integrations.json
   def index
-    @show_csv_export_button=true
     params[:order]||='name'
     keys=["name","group","client_count","type"]
     @integrations = filter_and_sort(Integration.all,keys,params)
@@ -35,6 +34,7 @@ class IntegrationsController < ApplicationController
 
     respond_to do |format|
       format.html 
+      format.csv 
       format.json { render json: @subscriptions }
     end
   end
@@ -49,6 +49,7 @@ class IntegrationsController < ApplicationController
 
     respond_to do |format|
       format.html 
+      format.csv
       format.json { render json: @relations }
     end
   end
@@ -64,6 +65,7 @@ class IntegrationsController < ApplicationController
 
     respond_to do |format|
       format.html 
+      format.csv 
       format.json { render json: @backends }
     end
   end
@@ -79,6 +81,7 @@ class IntegrationsController < ApplicationController
 
     respond_to do |format|
       format.html 
+      format.csv { render template: "shared/contacts.csv.rb"}
       format.json { render json: @roles }
     end
   end

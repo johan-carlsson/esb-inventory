@@ -1,5 +1,6 @@
 <% integrations||=@integrations %>
 <% pages||=PaginationHelper.pages(integrations,params) %>
+<% show_csv_export_button=true %> 
 <% content_for :window_header do %>
 <%= if controller.action_name == "index"
 	"Integrations"
@@ -9,7 +10,7 @@ end %>
 <% end %>
 
 <div id="result">
-  <%= render :partial => 'shared/table_toolbar', :locals => {:collection => integrations, :show_csv_export_button => true, :pages => pages} %>
+  <%= render :partial => 'shared/table_toolbar', :locals => {:collection => integrations, :show_csv_export_button => show_csv_export_button, :pages => pages} %>
 	<div id="table">
     <%= render :partial => "table", :locals => {:integrations => pages.current_page} %>	
 	</div>

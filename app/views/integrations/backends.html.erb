@@ -1,10 +1,11 @@
 <% backends||=@backends %>
 <% pages||=PaginationHelper.pages(backends,params) %>
+<% show_csv_export_button=true %>
 <%= render :partial => "integration" %>
 
 <%= render :partial => "tabs" %>
 <div id="result">
-  <%= render :partial => "shared/table_toolbar", :locals => {:name => "backends", :collection => backends, :pages => pages} %>
+  <%= render :partial => "shared/table_toolbar", :locals => {:name => "backends", :collection => backends, :pages => pages, :show_csv_export_button => show_csv_export_button} %>
   <div id="table">
     <%= render :partial => "backends/table", :locals => {:backends => pages.current_page} %>
   </div>

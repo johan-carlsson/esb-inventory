@@ -20,6 +20,7 @@ class SystemsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to provides_system_url(@system) }
+      format.csv # index.csv.rb
       format.json { render json: @system }
     end
   end
@@ -34,6 +35,7 @@ class SystemsController < ApplicationController
 
     respond_to do |format|
       format.html
+      format.csv # index.csv.rb
       format.json { render json: @provides }
     end
   end
@@ -49,6 +51,7 @@ class SystemsController < ApplicationController
 
     respond_to do |format|
       format.html 
+      format.csv  {render :template => "shared/contacts.csv.rb"}
       format.json { render json: @roles }
     end
   end

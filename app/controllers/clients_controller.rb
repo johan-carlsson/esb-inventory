@@ -2,7 +2,6 @@ class ClientsController < ApplicationController
   # GET /clients
   # GET /clients.json
   def index
-    @show_csv_export_button=true
     params[:order] ||= 'name'
     keys=["name","identifier","integration_count"]
     @clients = filter_and_sort(Client.all,keys,params)
@@ -35,6 +34,7 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       format.html
+      format.csv 
       format.json { render json: @subscriptions }
     end
   end
@@ -49,6 +49,7 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       format.html 
+      format.csv { render template: "shared/contacts.csv.rb"}
       format.json { render json: @roles }
     end
   end
