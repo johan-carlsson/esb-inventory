@@ -1,5 +1,5 @@
 response.headers["Content-Disposition"] = 'attachment; filename=integrations.csv'
-CSV.generate do |csv|
+CSV.generate(:col_sep => ";") do |csv|
   csv << ["Integration", "Client since", "Client to"]
   @subscriptions.each do |subscription|
     csv << [

@@ -1,5 +1,5 @@
 response.headers["Content-Disposition"] = 'attachment; filename=contacts.csv'
-CSV.generate do |csv|
+CSV.generate(:col_sep => ";") do |csv|
   csv << ["Contact", "Email","Role"]
   @roles.each do |role|
     csv << [
