@@ -28,7 +28,7 @@ class IntegrationsController < ApplicationController
   # GET /integrations/1/subscriptions.json
   def subscriptions
     params[:order]||='client'
-    keys=["client","starts_at"]
+    keys=["client","starts_at","ends_at","debit_system"]
     @integration=Integration.find_by_id(params[:id])
     @subscriptions = filter_and_sort(@integration.subscriptions,keys,params)
 

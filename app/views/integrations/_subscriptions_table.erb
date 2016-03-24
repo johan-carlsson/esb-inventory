@@ -2,9 +2,10 @@
 <% table_options||={} %>
 
 <%= redpill_table(subscriptions,table_options) do |table| 
-  table.add_column(:name => "Client",:order => "client", :width =>"40%") { |o| o.client_id}
-  table.add_column(:name => "Client since",:order => "starts_at", :width =>"30%") { |o| o.starts_at}
-  table.add_column(:name => "Client to",:order => "ends_at", :width =>"30%") { |o| o.ends_at}
+  table.add_column(:name => "Client",:order => "client", :width =>"30%") { |o| o.client_id}
+  table.add_column(:name => "Client since",:order => "starts_at", :width =>"20%") { |o| o.starts_at}
+  table.add_column(:name => "Client to",:order => "ends_at", :width =>"20%") { |o| o.ends_at}
+  table.add_column(:name => "Debit system",:order => "debit_system",:width =>"20%") { |o| o.debit_system}
   table.row_class { |o| o.ended? && "inactive"}
   table.row_linker { |o| client_url(o.client_id) }
 end %>
