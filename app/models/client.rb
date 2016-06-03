@@ -1,6 +1,6 @@
 class Client
   include ActiveModel::Model
-  attr_accessor  :identifier,:name, :system_id
+  attr_accessor  :identifier,:name, :group, :system_id
   attr_accessor :properties
   attr_accessor :description,:tags
 
@@ -23,6 +23,10 @@ class Client
 
   def system
     System.find_by_id(system_id)
+  end
+
+  def group
+    @group || (system && system.group)
   end
 
   def subscriptions

@@ -3,7 +3,7 @@ class BackendsController < ApplicationController
   # GET /backends.json
   def index
     params[:order] ||= 'name'
-    keys=["name","identifier","integration_count"]
+    keys=["name","group","identifier","integration_count"]
     @backends = filter_and_sort(Backend.all,keys,params)
 
     respond_to do |format|

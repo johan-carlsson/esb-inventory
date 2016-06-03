@@ -3,7 +3,7 @@ class SystemsController < ApplicationController
   # GET /systems.json
   def index
     params[:order] ||= 'name'
-    keys=["name","identifier","provide_count"]
+    keys=["name","group","identifier","provide_count"]
     @systems = filter_and_sort(System.all,keys,params)
 
     respond_to do |format|

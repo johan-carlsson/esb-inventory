@@ -13,8 +13,8 @@
 	<tr>
 	  <th><%= "System" %>:</th>
     <td><%= client.system && link_to(client.system,system_path(client.system))%></td>
-    <th></th>
-    <td></td>
+	  <th><%= "Group" %>:</th>
+    <td><%= client.group %></td>
 	</tr>
 </table>
 

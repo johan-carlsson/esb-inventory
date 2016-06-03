@@ -5,6 +5,7 @@
   table.add_column(:name => :name,:order => "name", :width => "40%") { |o| link_to(o.name, subscriptions_integration_url(o)) }
   table.add_column(:name => :group,:order => "group", :width => "20%",&:group)
   table.add_column(:name => :type,:order => "type", :width => "20%",&:type)
+  table.add_column(:name => :protocol,:order => "protocol", :width => "20%",&:protocol)
   table.add_column(:name => "Clients",:order => "client_count", :width => "20%",&:client_count)
   table.row_linker { |o| subscriptions_integration_url(o) }
 end %>

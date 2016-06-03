@@ -3,7 +3,7 @@ class ClientsController < ApplicationController
   # GET /clients.json
   def index
     params[:order] ||= 'name'
-    keys=["name","identifier","integration_count"]
+    keys=["name","group", "identifier","integration_count"]
     @clients = filter_and_sort(Client.all,keys,params)
 
     respond_to do |format|

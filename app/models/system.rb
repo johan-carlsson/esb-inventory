@@ -1,6 +1,6 @@
 class System 
   include ActiveModel::Model
-  attr_accessor :identifier, :name
+  attr_accessor :identifier, :name, :group
   attr_accessor :properties
   attr_accessor :description,:tags
 

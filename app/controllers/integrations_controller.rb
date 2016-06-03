@@ -3,7 +3,7 @@ class IntegrationsController < ApplicationController
   # GET /integrations.json
   def index
     params[:order]||='name'
-    keys=["name","group","client_count","type"]
+    keys=["name","group","client_count","type","protocol"]
     @integrations = filter_and_sort(Integration.all,keys,params)
 
     respond_to do |format|
