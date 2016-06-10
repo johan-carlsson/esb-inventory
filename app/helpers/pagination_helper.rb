@@ -36,7 +36,7 @@ module PaginationHelper
     end
     
     def previous_page_number
-      if (@current_page != 1 && @pages.length <= @current_page)
+      if (@current_page != 1 && @current_page <= @pages.length)
         @current_page-1
       end
     end
